@@ -41,7 +41,7 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
         }
         else
         {
-            if !validPhoneNumber(value: txtMobileNumber.text!)
+            if !isvalidPhoneNumber(value: txtMobileNumber.text!)
             {
                 self.showAlert(title: "Alert", message: "Mobile Number must of 10 digits")
             }

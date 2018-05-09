@@ -20,6 +20,9 @@
 		18F6CB4A20A2C8CB0087955D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CB4920A2C8CB0087955D /* SignInViewController.swift */; };
 		18F6CB4C20A2CC330087955D /* CustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CB4B20A2CC330087955D /* CustomClass.swift */; };
 		18F6CB4E20A2F7260087955D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CB4D20A2F7250087955D /* SignUpViewController.swift */; };
+		18F6CB5020A30E370087955D /* VerifyOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CB4F20A30E370087955D /* VerifyOTPViewController.swift */; };
+		18F6CB5220A317B10087955D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CB5120A317B10087955D /* MenuViewController.swift */; };
+		18F6CB5420A317CD0087955D /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CB5320A317CD0087955D /* SlideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		18F6CB4920A2C8CB0087955D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		18F6CB4B20A2CC330087955D /* CustomClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomClass.swift; sourceTree = "<group>"; };
 		18F6CB4D20A2F7250087955D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		18F6CB4F20A30E370087955D /* VerifyOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTPViewController.swift; sourceTree = "<group>"; };
+		18F6CB5120A317B10087955D /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		18F6CB5320A317CD0087955D /* SlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,9 @@
 				18F6CB1520A2BD5F0087955D /* Main.storyboard */,
 				18F6CB4920A2C8CB0087955D /* SignInViewController.swift */,
 				18F6CB4D20A2F7250087955D /* SignUpViewController.swift */,
+				18F6CB4F20A30E370087955D /* VerifyOTPViewController.swift */,
+				18F6CB5120A317B10087955D /* MenuViewController.swift */,
+				18F6CB5320A317CD0087955D /* SlideViewController.swift */,
 				18F6CB1820A2BD610087955D /* Assets.xcassets */,
 				18F6CB1A20A2BD610087955D /* LaunchScreen.storyboard */,
 				18F6CB1D20A2BD610087955D /* Info.plist */,
@@ -295,8 +304,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F6CB4C20A2CC330087955D /* CustomClass.swift in Sources */,
+				18F6CB5220A317B10087955D /* MenuViewController.swift in Sources */,
 				18F6CB1220A2BD5F0087955D /* AppDelegate.swift in Sources */,
 				18F6CB4E20A2F7260087955D /* SignUpViewController.swift in Sources */,
+				18F6CB5020A30E370087955D /* VerifyOTPViewController.swift in Sources */,
+				18F6CB5420A317CD0087955D /* SlideViewController.swift in Sources */,
 				18F6CB4A20A2C8CB0087955D /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
