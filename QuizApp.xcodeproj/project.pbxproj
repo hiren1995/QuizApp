@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		18F6CB1220A2BD5F0087955D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CB1120A2BD5F0087955D /* AppDelegate.swift */; };
-		18F6CB1420A2BD5F0087955D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CB1320A2BD5F0087955D /* ViewController.swift */; };
 		18F6CB1720A2BD5F0087955D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F6CB1520A2BD5F0087955D /* Main.storyboard */; };
 		18F6CB1920A2BD610087955D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F6CB1820A2BD610087955D /* Assets.xcassets */; };
 		18F6CB1C20A2BD610087955D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F6CB1A20A2BD610087955D /* LaunchScreen.storyboard */; };
 		18F6CB2720A2BD610087955D /* QuizAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CB2620A2BD610087955D /* QuizAppTests.swift */; };
 		18F6CB3220A2BD610087955D /* QuizAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CB3120A2BD610087955D /* QuizAppUITests.swift */; };
+		18F6CB4520A2C1890087955D /* Raleway_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18F6CB4120A2C1730087955D /* Raleway_Bold.ttf */; };
+		18F6CB4620A2C1890087955D /* Raleway_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18F6CB4320A2C1740087955D /* Raleway_Light.ttf */; };
+		18F6CB4720A2C1890087955D /* Raleway_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18F6CB4220A2C1740087955D /* Raleway_Medium.ttf */; };
+		18F6CB4820A2C1890087955D /* Raleway_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18F6CB4420A2C1740087955D /* Raleway_Regular.ttf */; };
+		18F6CB4A20A2C8CB0087955D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CB4920A2C8CB0087955D /* SignInViewController.swift */; };
+		18F6CB4C20A2CC330087955D /* CustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CB4B20A2CC330087955D /* CustomClass.swift */; };
+		18F6CB4E20A2F7260087955D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CB4D20A2F7250087955D /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +42,6 @@
 /* Begin PBXFileReference section */
 		18F6CB0E20A2BD5F0087955D /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F6CB1120A2BD5F0087955D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18F6CB1320A2BD5F0087955D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18F6CB1620A2BD5F0087955D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18F6CB1820A2BD610087955D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18F6CB1B20A2BD610087955D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		18F6CB2D20A2BD610087955D /* QuizAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F6CB3120A2BD610087955D /* QuizAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppUITests.swift; sourceTree = "<group>"; };
 		18F6CB3320A2BD610087955D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18F6CB4120A2C1730087955D /* Raleway_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Raleway_Bold.ttf; sourceTree = "<group>"; };
+		18F6CB4220A2C1740087955D /* Raleway_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Raleway_Medium.ttf; sourceTree = "<group>"; };
+		18F6CB4320A2C1740087955D /* Raleway_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Raleway_Light.ttf; sourceTree = "<group>"; };
+		18F6CB4420A2C1740087955D /* Raleway_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Raleway_Regular.ttf; sourceTree = "<group>"; };
+		18F6CB4920A2C8CB0087955D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		18F6CB4B20A2CC330087955D /* CustomClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomClass.swift; sourceTree = "<group>"; };
+		18F6CB4D20A2F7250087955D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,8 @@
 		18F6CB0520A2BD5F0087955D = {
 			isa = PBXGroup;
 			children = (
+				18F6CB4020A2C1430087955D /* Custom Files */,
+				18F6CB3F20A2C11A0087955D /* Custom Fonts */,
 				18F6CB1020A2BD5F0087955D /* QuizApp */,
 				18F6CB2520A2BD610087955D /* QuizAppTests */,
 				18F6CB3020A2BD610087955D /* QuizAppUITests */,
@@ -98,8 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				18F6CB1120A2BD5F0087955D /* AppDelegate.swift */,
-				18F6CB1320A2BD5F0087955D /* ViewController.swift */,
 				18F6CB1520A2BD5F0087955D /* Main.storyboard */,
+				18F6CB4920A2C8CB0087955D /* SignInViewController.swift */,
+				18F6CB4D20A2F7250087955D /* SignUpViewController.swift */,
 				18F6CB1820A2BD610087955D /* Assets.xcassets */,
 				18F6CB1A20A2BD610087955D /* LaunchScreen.storyboard */,
 				18F6CB1D20A2BD610087955D /* Info.plist */,
@@ -123,6 +138,25 @@
 				18F6CB3320A2BD610087955D /* Info.plist */,
 			);
 			path = QuizAppUITests;
+			sourceTree = "<group>";
+		};
+		18F6CB3F20A2C11A0087955D /* Custom Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				18F6CB4120A2C1730087955D /* Raleway_Bold.ttf */,
+				18F6CB4320A2C1740087955D /* Raleway_Light.ttf */,
+				18F6CB4220A2C1740087955D /* Raleway_Medium.ttf */,
+				18F6CB4420A2C1740087955D /* Raleway_Regular.ttf */,
+			);
+			path = "Custom Fonts";
+			sourceTree = "<group>";
+		};
+		18F6CB4020A2C1430087955D /* Custom Files */ = {
+			isa = PBXGroup;
+			children = (
+				18F6CB4B20A2CC330087955D /* CustomClass.swift */,
+			);
+			path = "Custom Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +263,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F6CB4520A2C1890087955D /* Raleway_Bold.ttf in Resources */,
+				18F6CB4620A2C1890087955D /* Raleway_Light.ttf in Resources */,
+				18F6CB4720A2C1890087955D /* Raleway_Medium.ttf in Resources */,
+				18F6CB4820A2C1890087955D /* Raleway_Regular.ttf in Resources */,
 				18F6CB1C20A2BD610087955D /* LaunchScreen.storyboard in Resources */,
 				18F6CB1920A2BD610087955D /* Assets.xcassets in Resources */,
 				18F6CB1720A2BD5F0087955D /* Main.storyboard in Resources */,
@@ -256,8 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18F6CB1420A2BD5F0087955D /* ViewController.swift in Sources */,
+				18F6CB4C20A2CC330087955D /* CustomClass.swift in Sources */,
 				18F6CB1220A2BD5F0087955D /* AppDelegate.swift in Sources */,
+				18F6CB4E20A2F7260087955D /* SignUpViewController.swift in Sources */,
+				18F6CB4A20A2C8CB0087955D /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
