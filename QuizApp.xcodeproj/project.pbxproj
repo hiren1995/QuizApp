@@ -33,6 +33,8 @@
 		18F839A020A449B700E8523E /* LeaderBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8399F20A449B600E8523E /* LeaderBoardViewController.swift */; };
 		18F839A220A449D700E8523E /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F839A120A449D700E8523E /* AboutUsViewController.swift */; };
 		18F839A420A4546500E8523E /* QuizListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F839A320A4546500E8523E /* QuizListCollectionViewCell.swift */; };
+		18FE49CB20A46DC400502F2A /* AllQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE49CA20A46DC400502F2A /* AllQuizViewController.swift */; };
+		18FE49CD20A46DDA00502F2A /* GlobalQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE49CC20A46DDA00502F2A /* GlobalQuizViewController.swift */; };
 		7A4670E35074F075EC600A09 /* Pods_QuizAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A01BEC936F148E341A3D5 /* Pods_QuizAppTests.framework */; };
 		C186CC5154C10FB47FACE2DA /* Pods_QuizAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C722863061402245F102F6ED /* Pods_QuizAppUITests.framework */; };
 		EE3A7ED89260C76255604B34 /* Pods_QuizApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B33EB92FFD200EFCBAF679F6 /* Pods_QuizApp.framework */; };
@@ -84,6 +86,8 @@
 		18F8399F20A449B600E8523E /* LeaderBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardViewController.swift; sourceTree = "<group>"; };
 		18F839A120A449D700E8523E /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		18F839A320A4546500E8523E /* QuizListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizListCollectionViewCell.swift; sourceTree = "<group>"; };
+		18FE49CA20A46DC400502F2A /* AllQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuizViewController.swift; sourceTree = "<group>"; };
+		18FE49CC20A46DDA00502F2A /* GlobalQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalQuizViewController.swift; sourceTree = "<group>"; };
 		47724E1A3B6E836029C877D0 /* Pods-QuizAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuizAppUITests/Pods-QuizAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		562A01BEC936F148E341A3D5 /* Pods_QuizAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65683701F20D2849E86C8D39 /* Pods-QuizAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuizAppTests/Pods-QuizAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				18F8399520A4134400E8523E /* DashBoardTabBarController.swift */,
 				18F8399D20A4499100E8523E /* QuizListViewController.swift */,
 				18F8399F20A449B600E8523E /* LeaderBoardViewController.swift */,
+				18FE49CA20A46DC400502F2A /* AllQuizViewController.swift */,
+				18FE49CC20A46DDA00502F2A /* GlobalQuizViewController.swift */,
 				18F839A120A449D700E8523E /* AboutUsViewController.swift */,
 				18F839A320A4546500E8523E /* QuizListCollectionViewCell.swift */,
 				18F6CB1820A2BD610087955D /* Assets.xcassets */,
@@ -412,6 +418,7 @@
 				"${BUILT_PRODUCTS_DIR}/CropViewController/CropViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/PageMenu/PageMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -421,6 +428,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CropViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PageMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -458,9 +466,11 @@
 				18F8399820A420E300E8523E /* Raleway_Light.ttf in Sources */,
 				18F8399920A420E300E8523E /* Raleway_Medium.ttf in Sources */,
 				18F8399A20A420E300E8523E /* Raleway_Regular.ttf in Sources */,
+				18FE49CD20A46DDA00502F2A /* GlobalQuizViewController.swift in Sources */,
 				18F839A020A449B700E8523E /* LeaderBoardViewController.swift in Sources */,
 				18F6CB4C20A2CC330087955D /* CustomClass.swift in Sources */,
 				18F6CB5220A317B10087955D /* MenuViewController.swift in Sources */,
+				18FE49CB20A46DC400502F2A /* AllQuizViewController.swift in Sources */,
 				18F8399620A4134400E8523E /* DashBoardTabBarController.swift in Sources */,
 				18F839A220A449D700E8523E /* AboutUsViewController.swift in Sources */,
 				18F839A420A4546500E8523E /* QuizListCollectionViewCell.swift in Sources */,

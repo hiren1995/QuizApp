@@ -12,6 +12,7 @@ target 'QuizApp' do
   pod 'MBProgressHUD'
   pod 'Kingfisher'
   pod 'CropViewController'
+  pod 'PageMenu'
   
 
   target 'QuizAppTests' do
