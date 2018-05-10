@@ -8,14 +8,42 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
 
+    @IBOutlet var MenuTableView: UITableView!
+    
+    var list = ["Quiz List","LeaderBoard","About Us","Logout"]
+    var imglist = ["ic_quiz_list","ic_leader","ic_settings","logout"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        MenuTableView.delegate = self
+        MenuTableView.dataSource = self
+        
         // Do any additional setup after loading the view.
     }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       return list.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = MenuTableView.dequeueReusableCell(withIdentifier: "menuTableViewCell", for: indexPath) as! MenuTableViewCell
+        
+        cell.imgList.image = UIImage(named: imglist[indexPath.row])
+        cell.lblList.text = list[indexPath.row]
+        
+        return cell
+        
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    
+        return 70
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

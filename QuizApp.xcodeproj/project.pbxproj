@@ -28,6 +28,10 @@
 		18F8399820A420E300E8523E /* Raleway_Light.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CB4320A2C1740087955D /* Raleway_Light.ttf */; };
 		18F8399920A420E300E8523E /* Raleway_Medium.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CB4220A2C1740087955D /* Raleway_Medium.ttf */; };
 		18F8399A20A420E300E8523E /* Raleway_Regular.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CB4420A2C1740087955D /* Raleway_Regular.ttf */; };
+		18F8399C20A4255D00E8523E /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8399B20A4255D00E8523E /* MenuTableViewCell.swift */; };
+		18F8399E20A4499100E8523E /* QuizListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8399D20A4499100E8523E /* QuizListViewController.swift */; };
+		18F839A020A449B700E8523E /* LeaderBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8399F20A449B600E8523E /* LeaderBoardViewController.swift */; };
+		18F839A220A449D700E8523E /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F839A120A449D700E8523E /* AboutUsViewController.swift */; };
 		7A4670E35074F075EC600A09 /* Pods_QuizAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A01BEC936F148E341A3D5 /* Pods_QuizAppTests.framework */; };
 		C186CC5154C10FB47FACE2DA /* Pods_QuizAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C722863061402245F102F6ED /* Pods_QuizAppUITests.framework */; };
 		EE3A7ED89260C76255604B34 /* Pods_QuizApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B33EB92FFD200EFCBAF679F6 /* Pods_QuizApp.framework */; };
@@ -74,6 +78,10 @@
 		18F6CB5120A317B10087955D /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		18F6CB5320A317CD0087955D /* SlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
 		18F8399520A4134400E8523E /* DashBoardTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardTabBarController.swift; sourceTree = "<group>"; };
+		18F8399B20A4255D00E8523E /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		18F8399D20A4499100E8523E /* QuizListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizListViewController.swift; sourceTree = "<group>"; };
+		18F8399F20A449B600E8523E /* LeaderBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardViewController.swift; sourceTree = "<group>"; };
+		18F839A120A449D700E8523E /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		47724E1A3B6E836029C877D0 /* Pods-QuizAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuizAppUITests/Pods-QuizAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		562A01BEC936F148E341A3D5 /* Pods_QuizAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65683701F20D2849E86C8D39 /* Pods-QuizAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuizAppTests/Pods-QuizAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,8 +154,12 @@
 				18F6CB4D20A2F7250087955D /* SignUpViewController.swift */,
 				18F6CB4F20A30E370087955D /* VerifyOTPViewController.swift */,
 				18F6CB5120A317B10087955D /* MenuViewController.swift */,
+				18F8399B20A4255D00E8523E /* MenuTableViewCell.swift */,
 				18F6CB5320A317CD0087955D /* SlideViewController.swift */,
 				18F8399520A4134400E8523E /* DashBoardTabBarController.swift */,
+				18F8399D20A4499100E8523E /* QuizListViewController.swift */,
+				18F8399F20A449B600E8523E /* LeaderBoardViewController.swift */,
+				18F839A120A449D700E8523E /* AboutUsViewController.swift */,
 				18F6CB1820A2BD610087955D /* Assets.xcassets */,
 				18F6CB1A20A2BD610087955D /* LaunchScreen.storyboard */,
 				18F6CB1D20A2BD610087955D /* Info.plist */,
@@ -443,11 +455,15 @@
 				18F8399820A420E300E8523E /* Raleway_Light.ttf in Sources */,
 				18F8399920A420E300E8523E /* Raleway_Medium.ttf in Sources */,
 				18F8399A20A420E300E8523E /* Raleway_Regular.ttf in Sources */,
+				18F839A020A449B700E8523E /* LeaderBoardViewController.swift in Sources */,
 				18F6CB4C20A2CC330087955D /* CustomClass.swift in Sources */,
 				18F6CB5220A317B10087955D /* MenuViewController.swift in Sources */,
 				18F8399620A4134400E8523E /* DashBoardTabBarController.swift in Sources */,
+				18F839A220A449D700E8523E /* AboutUsViewController.swift in Sources */,
+				18F8399E20A4499100E8523E /* QuizListViewController.swift in Sources */,
 				18F6CB1220A2BD5F0087955D /* AppDelegate.swift in Sources */,
 				18F6CB4E20A2F7260087955D /* SignUpViewController.swift in Sources */,
+				18F8399C20A4255D00E8523E /* MenuTableViewCell.swift in Sources */,
 				18F6CB5020A30E370087955D /* VerifyOTPViewController.swift in Sources */,
 				18F6CB5420A317CD0087955D /* SlideViewController.swift in Sources */,
 				18F6CB4A20A2C8CB0087955D /* SignInViewController.swift in Sources */,

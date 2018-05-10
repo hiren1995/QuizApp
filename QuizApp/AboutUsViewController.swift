@@ -1,5 +1,5 @@
 //
-//  DashBoardTabBarController.swift
+//  AboutUsViewController.swift
 //  QuizApp
 //
 //  Created by Apple on 10/05/18.
@@ -7,17 +7,25 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
-class DashBoardTabBarController: UITabBarController {
+class AboutUsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func btnMenu(_ sender: UIButton) {
+        
+        
+        let slidemenu = self.slideMenuController()
+        
+        slidemenu?.openLeft()
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
