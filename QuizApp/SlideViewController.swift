@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
-class SlideViewController: UIViewController {
+class SlideViewController: SlideMenuController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,19 @@ class SlideViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func awakeFromNib() {
+        
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "dashBoardTabBarController") {
+            self.mainViewController = controller
+        }
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "menuViewController") {
+            self.leftViewController = controller
+        }
+        super.awakeFromNib()
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 

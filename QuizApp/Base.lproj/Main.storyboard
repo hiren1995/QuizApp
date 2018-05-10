@@ -175,6 +175,145 @@
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="30.134932533733135"/>
         </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="bHq-GY-CPb">
+            <objects>
+                <viewController storyboardIdentifier="menuViewController" id="1wG-N1-QwC" customClass="MenuViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tYz-fQ-QN4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nJY-8q-9KS">
+                                <rect key="frame" x="75" y="67" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="ViewborderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="ViewcornerRadius">
+                                        <real key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="ViewborderColor">
+                                        <color key="value" red="0.31372549020000001" green="0.48627450979999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LCY-aE-OJl">
+                                <rect key="frame" x="0.0" y="269" width="375" height="398"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aCS-NV-JSv">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aCS-NV-JSv" id="Ds2-EL-UmP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8NX-TG-6Lv">
+                                <rect key="frame" x="16" y="211" width="238" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kwe-YJ-PDJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="79y-Dt-DFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639.20000000000005" y="700.29985007496259"/>
+        </scene>
+        <!--Slide View Controller-->
+        <scene sceneID="OaK-Jf-Igo">
+            <objects>
+                <viewController storyboardIdentifier="slideViewController" id="eGl-o9-M0Y" customClass="SlideViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BSF-lK-ccL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oY4-uI-vBu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B9d-6D-ngy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="702"/>
+        </scene>
+        <!--LEADERBOARD-->
+        <scene sceneID="NbH-dW-zPA">
+            <objects>
+                <viewController id="DYi-iX-Mht" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E9k-mr-jyx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="nPd-Id-Q0s"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="LEADERBOARD" image="ic_leader_gray" id="jyp-oN-XgO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W58-DM-VFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="1049"/>
+        </scene>
+        <!--ABOUT US-->
+        <scene sceneID="AdV-RY-kuv">
+            <objects>
+                <viewController id="tzA-gH-fAS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7hC-TC-XR2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZSz-RT-jfz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ABOUT US" image="ic_settings_gray" id="y17-vb-79M"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJt-bJ-xEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686" y="1465"/>
+        </scene>
+        <!--QUIZ LIST-->
+        <scene sceneID="VRE-8N-cHu">
+            <objects>
+                <viewController id="SX6-bI-jBu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dqd-C7-8Lg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ecI-Xi-mAl"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="QUIZ LIST" image="ic_quiz_list_gray" id="zOW-54-JtY">
+                        <color key="badgeColor" red="0.31372549020000001" green="0.48627450979999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P06-MW-rSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="288"/>
+        </scene>
+        <!--Dash Board Tab Bar Controller-->
+        <scene sceneID="uIM-xE-kVY">
+            <objects>
+                <tabBarController storyboardIdentifier="dashBoardTabBarController" id="Yak-8K-DgS" customClass="DashBoardTabBarController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="afh-eI-TnP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.31372549020000001" green="0.48627450979999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="SX6-bI-jBu" kind="relationship" relationship="viewControllers" id="pvL-rd-LmB"/>
+                        <segue destination="DYi-iX-Mht" kind="relationship" relationship="viewControllers" id="X6M-vg-TjA"/>
+                        <segue destination="tzA-gH-fAS" kind="relationship" relationship="viewControllers" id="aiG-M0-gCU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V4E-YL-0Pg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686" y="701"/>
+        </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="eOJ-B4-8Qq">
             <objects>
@@ -410,6 +549,9 @@
         <image name="dummy" width="600" height="410"/>
         <image name="facebook_icon" width="128" height="128"/>
         <image name="google_icon" width="64" height="64"/>
+        <image name="ic_leader_gray" width="21" height="21"/>
+        <image name="ic_quiz_list_gray" width="21" height="21"/>
+        <image name="ic_settings_gray" width="21" height="21"/>
         <image name="pencil" width="32" height="32"/>
         <image name="quiz__app_logo" width="128" height="128"/>
     </resources>

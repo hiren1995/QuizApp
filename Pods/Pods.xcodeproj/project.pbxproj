@@ -1,0 +1,2200 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0096C6816AC3D92834AB65C49518C177 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CE294F2A5CA2CA376937E083B47F24 /* ImageView+Kingfisher.swift */; };
+		0202529E7E89D7A404EF0E317F6F2978 /* Pods-QuizAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A32722B730A7A955D548F3FD839FD92D /* Pods-QuizAppUITests-dummy.m */; };
+		03E0A134F1DDF33EA16F004F1A230CA1 /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307A77F0289D170919A37F6DCA49AD0E /* FormatIndicatedCacheSerializer.swift */; };
+		0720EA7E74BB968B2AE845EA973B98C6 /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D94D497C3E1B5B254061D085FC7354B7 /* zh-Hant.lproj */; };
+		0968524ED4DE8DF7834055C5B6089D72 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D2C92B75FA95A07A5A8C549595BB71 /* MBProgressHUD-dummy.m */; };
+		0EDBD3986C72A47E60F9FE61F5DA015A /* id.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 947EB439B5CAD0C74EBFA283A6B9830F /* id.lproj */; };
+		0F4AEBAA3351ADE1BA93E653CC99ED6E /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FED44821CB1886491400B3250632E097 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F7B8B5734BE246CFF027C92F1A7B0CF /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 00E90FDA9687293E45AE834D69FBECC8 /* es.lproj */; };
+		0F9693E825CE97F1F2F1FB199C916F7B /* CropViewController-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF008A242B1A3782C16C1849EC61C1 /* CropViewController-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		103228D906B112AA75562E8B17179127 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BB37D0DD23FBE5FA9ADFC1EBBF02AD /* Indicator.swift */; };
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64BBECFCDC79AE036F08FCDBFC28BF /* Timeline.swift */; };
+		114397DE4A2DC0204868A79F4BE13769 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F954D76EAF408B81664FAD864AA7AC2 /* Filter.swift */; };
+		1306EAAD5CEEDD66AA8FB44C913FC7B6 /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 058B3E647CDE8482A138F6F30084C306 /* tr.lproj */; };
+		14CA32AACADBC7D008311E6F720D583D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D13DFDA7A63514E0003EC6428D444CD /* Foundation.framework */; };
+		154E7EBE39B5E1AFF3083F707F4C3888 /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5CC61219A5D6B6E22968C08674237590 /* ru.lproj */; };
+		18A4A9F185D9FBAC41DF1A8181A072EA /* TOCropViewControllerTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = E49813933BBD9B0C11A4EC04D6B91579 /* TOCropViewControllerTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19DEC266274BA00C2CCA2DEC9393CA85 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1536325EA55C3BFF94CBEBCD60F73860 /* zh-Hans.lproj */; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DBF7225077231CDFBB821CAE7DF4BA8B /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21D1C1D98FFA6773AEEC0B2CAE34DDF7 /* Pods-QuizAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B2D870F921F9A08769AA502F3286980 /* Pods-QuizAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2270830B277F1A54439654D537543E35 /* TOCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E30A979649409B490BA191D717E3398E /* TOCropViewController.m */; };
+		2283375C0C99789CF47EEDA0CE9D3D80 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F089283349F794676B991FDEC9327CE0 /* ImageProcessor.swift */; };
+		22CED4CDADFEC911E1D55D65BCECC02A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A3CE8C17799A4F6D4675F1D4CC0B54 /* SwiftyJSON.swift */; };
+		28A794912ED1E06B05D96DF5ED0AED19 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 416E2566D5E00F0D79E02326F9A413D4 /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2ABE0F8940C00BD429E33ED7F7C9EA1D /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0984210B5F231C6810D9B6F9ED936885 /* KingfisherOptionsInfo.swift */; };
+		3464228E4F1F63DBCA803CC848A6A8C0 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798673050851946080C5F4BB4A32C8 /* Resource.swift */; };
+		361959341E585965320C3DF9342DA7D2 /* CropViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 99D51F7A35D8CF28D9960F2A3DC50DD1 /* CropViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AA728A73956D2CE8A0B85247FEB4D /* TaskDelegate.swift */; };
+		37249EB3C1BE689482D7588FEFEB8F03 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 82AD4B6FE0B972C3031D52D44620F32B /* nl.lproj */; };
+		3C4A3D8D76BBF6B9048D1DD9FB7A5002 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D13DFDA7A63514E0003EC6428D444CD /* Foundation.framework */; };
+		3D0D9B1B4609FDDD2FC097DB32636791 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C31F68C94DBF065EB8D09F7EB84E6AD8 /* SwiftyJSON-dummy.m */; };
+		403E3E170DCF269D5CBA1C530ECA901B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D13DFDA7A63514E0003EC6428D444CD /* Foundation.framework */; };
+		4074AA6F2557EF7970DEDE67B04433B6 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B7F4462E24F2D8EBD86B319050AD1 /* AnimatedImageView.swift */; };
+		498DC29155467AC093701C1AF5EE3807 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4E2324627C84BF9387F70840E8124 /* Placeholder.swift */; };
+		4B3A33F1AF045B2DEF94E952227005D8 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4ED1EBFDED89FF0D6595A77D1D95832C /* Base.lproj */; };
+		4E2F003BC44D6FE9D24D35FF6D352D21 /* ms.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A4ED20069A6235A35471B5DD44D21221 /* ms.lproj */; };
+		509A5621DAB44B06929B30ACCA7CA598 /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FD80B2D35449660FF8D57E5609609ECF /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40315C2B16069B7AD11C4B4E01898AD4 /* Request.swift */; };
+		55B3FEE4E11FFECAA5D9962BC0449CF0 /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7D11576801880FA09C046C25679896D3 /* da.lproj */; };
+		55F42AD3FBA2138A10EA7E118369EA66 /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 26559628A164582B41E6395EF04A5DD3 /* vi.lproj */; };
+		577307E54A008BF24939C5CE99D758EA /* ar.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F548479EBCDBAFCC8246133AB67F80F4 /* ar.lproj */; };
+		5BF6EFAF25F5D727E4D7B7D9B5B69732 /* UIImage+CropRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 143934774DD056B3C5B7CEAD8D36D8A7 /* UIImage+CropRotate.m */; };
+		5E907BFD602CCF1CFB95F027DE7CE03D /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4370655B93D8A7462B6D8B992FB1CE66 /* ko.lproj */; };
+		5EFE3C1316AE3DF65B81286439987953 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCF852EDDA2E315866E28C0CE765F21 /* QuartzCore.framework */; };
+		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFA16947B693F02C08F5491A5310561 /* DispatchQueue+Alamofire.swift */; };
+		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009358763E3C61BA2A51580F9D9175B4 /* ServerTrustPolicy.swift */; };
+		6486781D756A9D71FE5C6E56CC9A343F /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF31DA51C3AC89EC8976CA29F91C10FC /* ImageCache.swift */; };
+		653BC7F1DF6A3F93D814739335E9D774 /* CropViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 952ED8F9FD9B1571151D9A2A0ECF0CE1 /* CropViewController-dummy.m */; };
+		6A9CD3F554BE527124B5870A7C11159D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D13DFDA7A63514E0003EC6428D444CD /* Foundation.framework */; };
+		6BF4D4ABECB360BF4EA78CDE51D06EA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D13DFDA7A63514E0003EC6428D444CD /* Foundation.framework */; };
+		6D33D81A4B45052570579514F30C81BD /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F7969663448EC51B12C4005E21BB967A /* ja.lproj */; };
+		72D12B27E4D1DE7E7F4DE78D15A4A139 /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5801B520E00B32B507B9E4C92A84175D /* pt.lproj */; };
+		73A16D5FD01C8F4001E23BA1207C567F /* TOCropViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = ADEBE86AA43F9754706600058D29277C /* TOCropViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D13DFDA7A63514E0003EC6428D444CD /* Foundation.framework */; };
+		740A23BACE1E1E3F55AB422A5F3A350F /* TOCropScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A3473DC2C9485A894A2796CAB61307 /* TOCropScrollView.m */; };
+		747A7839E0F0BF4680331F91541DF98D /* CropViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE9BC6C01B8DC4D4E8BD5F804BAC2AC1 /* CropViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A16960F930F1A00E9B10D7EA480F919 /* SlideMenuControllerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 575EFA52353E1CB5A8991A78081FB86F /* SlideMenuControllerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B2A61E55C43E9B12E5B7DD852456AEE /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9895B3DD03B3C131D4665F70F3EBA7E0 /* ImageTransition.swift */; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6097DB364660EB1F358DE025FCC9D1FA /* SessionDelegate.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFF3D523AE3BEEF073B06BBDBBE0F2 /* Result.swift */; };
+		816204A270F2215B4E5D3C994A4B79E7 /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59666746E6C2DC04A39D43C499E62D3E /* CropViewController.swift */; };
+		84CF440A4E3CCDEE93FA2475748A9934 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD694420301FEF04E8705F064293111 /* CFNetwork.framework */; };
+		856065023D6E6D76AE223A9D8E47A11A /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 78DC593A80F61074FFCE3555C0724D0A /* de.lproj */; };
+		897C38C8E3C31950E2E93A4D6937CCC4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 967D9A5E0C599AD61799DBEE49A79772 /* MBProgressHUD.m */; };
+		8A4C55A2B7F0D7464CC11B83CFF4ED88 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D952115D446A8C1E029AB98555D7CE9B /* en.lproj */; };
+		8EE2E92B19ED567B742895CA16B1EFC4 /* TOCropToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2C3BD71A45E86A878C2EB347F10218 /* TOCropToolbar.m */; };
+		8F96859CDAB70D1FB2CE12CF8A6A0B4D /* TOCropOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43F894E52200D7DB678D46D52086EC /* TOCropOverlayView.m */; };
+		95156987028D309F91AC55FBDFE01643 /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70017B6B2E69697BEECD489355EAB245 /* Kingfisher-dummy.m */; };
+		97F467F9B77D74541B01D95A4D0244C9 /* Pods-QuizAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DB29E0F24509C858B48D30019A662B /* Pods-QuizAppTests-dummy.m */; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FDB00236DE1E9B7C99737C62D44BAF /* AFError.swift */; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31BAC6C5AEF799A3B129AF3DD38F783 /* NetworkReachabilityManager.swift */; };
+		A51528CF66088BF36C1F0E766FFF7F37 /* TOCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E64EEBCFA00333504EEF1ED42AFB8A /* TOCropView.m */; };
+		A5BF8DBDD8660DBCFE712657F3D82BDA /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = EED20D4FB4FD439FB474FDB03D13EFEC /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A63D2CF5027CC5032A5ADE3D6C79F738 /* TOCropViewControllerTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = F128DE172CDB3F2383A6ABDA6BC31C08 /* TOCropViewControllerTransitioning.m */; };
+		A88672AFDA4674ADECD7CA886EFEDB98 /* TOActivityCroppedImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9546CEFA74512EA1E8280454A30E1D8F /* TOActivityCroppedImageProvider.m */; };
+		A8A79840E81BFA3D8DCC29BE71F1AEC4 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E0DBC599FD387120F5FF3D9D6EA2C1 /* KingfisherManager.swift */; };
+		A8C0B19796145AA184048B33E2B5E5FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D13DFDA7A63514E0003EC6428D444CD /* Foundation.framework */; };
+		A9D2A6547EE5F6532EF8D1F1870BF158 /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD16EC00B44B70877DAB76354D86EBF /* CacheSerializer.swift */; };
+		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB2C3ADD5571A562DC18D534B4A4B1C /* Alamofire-dummy.m */; };
+		AA92E08B0061083C80081B4CB3916AFC /* TOCropToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 1694C50CBB43042451DED1B5230A9217 /* TOCropToolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103ADFA7FADC236AC40044D8957C3193 /* SessionManager.swift */; };
+		B564B930C3B6CCFCC109ABF374B21CE6 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C1B978C133AA8684A41E9A27FCD944 /* ImageModifier.swift */; };
+		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B52FF854369DC214357AFC22EDE1CD /* MultipartFormData.swift */; };
+		B8F7A1F6ACF40DD52820D4F0528DFD87 /* Pods-QuizApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E9EAF629A052C12F7BF0DF4898F12AD /* Pods-QuizApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B924069CD75769E22765912C66A87BF3 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07F9084294693BF4224C8AD521C8DED /* Image.swift */; };
+		BA4DF38E820FF6B40FFABF8B1BBCC615 /* Kingfisher.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D78479A097D0667687014535E5921DB /* Kingfisher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533F4B4B97DDBCF025CAEE2825686907 /* Validation.swift */; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A40310B04BA2537A5498CCD1BE581 /* ParameterEncoding.swift */; };
+		BE9FB5E8188E0B68DB277B09A06E79BA /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D7728612AFB0105F196602077B37FA /* ImagePrefetcher.swift */; };
+		BFC3AAFFCCFE94270FA4A3040449FA18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43AF6C796D69980CB99461B9D15E720B /* CoreGraphics.framework */; };
+		BFC4BCB6E05AFC08BC442B15340222D4 /* TOActivityCroppedImageProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B72931E156209046F97E0B4292E739 /* TOActivityCroppedImageProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C32C7FE70764DE37935F6A5D80CB17C7 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47378DDEE9CD357CA783AAB394E25C8 /* RequestModifier.swift */; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EA312FDD0BBDD6FE56C8ACFA999284 /* Response.swift */; };
+		CC1912ACC7D85E93A80D5BE9EBCF1B14 /* TOCropScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 082DAF6012B18AA7231F480EC4696F27 /* TOCropScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE38861F1268294930C074FC3F807E55 /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB23DBDA476AD9ABE84FA7D41F08E5 /* ThreadHelper.swift */; };
+		CEEB7C897409C08DF53289E307AB987C /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3974B0115BE0AE4758673E3C7167888A /* String+MD5.swift */; };
+		D01ACB45BEA4587E63C2B7E6A5527717 /* TOCropOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 573E2B57FD53981012B899DCFEA8D6D6 /* TOCropOverlayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0FAA9F5FFB5DC4F21E2C12E65A96525 /* pl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6A2242C09F45D57C00436729A59A8 /* pl.lproj */; };
+		D1575AAADDCEA395E3828EBAC2A772FA /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF0D2C0912D04914F09ADCC4371664 /* Box.swift */; };
+		D241130CE10C05D189A4C7F9F210C5E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D13DFDA7A63514E0003EC6428D444CD /* Foundation.framework */; };
+		D9B0D4C7CBD1D5672CA642064F382885 /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D5939A855E5231B80532F432DBB4BA48 /* it.lproj */; };
+		DA7A5ECA4C0B39776007BE89B99227EF /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D70F21512969EEC05A58EF8B0759F8 /* ImageDownloader.swift */; };
+		DD34406D4FEDFF5AA8EDCD0BE96E751C /* Pods-QuizAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28CE0263E9B9096C08106310379689F6 /* Pods-QuizAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFE0A1B25EB3CEB521A00687C0870788 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3FA22B602F9E6EADB618FA6AC8393BCD /* fr.lproj */; };
+		E80493437FDBFDD2003078A9E9CD8519 /* TOCropViewController-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 952EB1A0BE421F7F6A735B39B9C58D9E /* TOCropViewController-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E904E5E681B14CCD366725F1805F8843 /* SlideMenuControllerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 690FDD5930A69EDA0E4A163BAD4A02A6 /* SlideMenuControllerSwift-dummy.m */; };
+		E9E5F082818BE1AA4722E77DD066450F /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE07FB04B40DA8760105B7732DFA90C1 /* Kingfisher.swift */; };
+		EB5BEE96B18D274358771C9FE445D490 /* TOCroppedImageAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC43C04C14086F03861666527756247 /* TOCroppedImageAttributes.m */; };
+		EC222B9CB098B132C257FD72366C7A5E /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32A70A68D00A29254915C6D2277FAEA /* SlideMenuController.swift */; };
+		EDD24E1C52E370C16C6A3A86A9DE02B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D13DFDA7A63514E0003EC6428D444CD /* Foundation.framework */; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14596288815EEE702E23BA8F1C29EF09 /* Notifications.swift */; };
+		F48092EDA4149596739EB46FD47FDEC7 /* TOCropView.h in Headers */ = {isa = PBXBuildFile; fileRef = BE73AD6DB0F1B53AD3B2321298166E27 /* TOCropView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBCA2F43A2FCA11A6619C370B8D6548 /* ResponseSerialization.swift */; };
+		F6E60F17EC69B42042CA84FB2F0C7DF3 /* UIImage+CropRotate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E3DF5E3929082DD21DE904F03649C3A /* UIImage+CropRotate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299799FE6591E0E3EFCE19B87490F873 /* Alamofire.swift */; };
+		F9E4DF63FA480731355CC706021224F5 /* TOCropViewControllerBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC390281E0C3BE42F4FCA43A604D6E35 /* TOCropViewControllerBundle.bundle */; };
+		FB5AACC29F6D4273238B19983F44C97F /* Pods-QuizApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C8FC4EE0441EB4D3E183D90081C8A /* Pods-QuizApp-dummy.m */; };
+		FE62A3C7EB117F0B7722548878D253D8 /* TOCroppedImageAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 340DBCE1BC3D6E0263EEF83481962E7C /* TOCroppedImageAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FED97351EC4705507DAB175106B819C8 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D45B287BAE4D9875A31CECECCDAC7D /* UIButton+Kingfisher.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B8414C22E26958D46AFDA01F043D2C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
+			remoteInfo = Alamofire;
+		};
+		4D782E90190A8384D325F5545CAE5927 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2990770985796EEC3C38E8AB9E52CB0D;
+			remoteInfo = "CropViewController-TOCropViewControllerBundle";
+		};
+		6E9B72F24BA146F5A1D7623B9BAB7931 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AEC202531AF47B692B3C9DA6D58675C;
+			remoteInfo = CropViewController;
+		};
+		7CEAFBA4175E54711A0456F612ED081D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4006CB1F7B13173073658E351F85C78A;
+			remoteInfo = "Pods-QuizApp";
+		};
+		940D4C17C7C8049B8F1511BD64C315BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27000828D7C2C5E64DEA43F3AC94A250;
+			remoteInfo = SwiftyJSON;
+		};
+		B5A07AC339E34223902FFE24F34E32E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4006CB1F7B13173073658E351F85C78A;
+			remoteInfo = "Pods-QuizApp";
+		};
+		C03E5CB24623D8FD5148933CA28A749A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41FA54D12162DAD51D02FC58A2CD5034;
+			remoteInfo = MBProgressHUD;
+		};
+		CD0A9CF629C07A4058254A076B4D4E38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C86F2C8A1E6A3B6D196EB68101A7B292;
+			remoteInfo = SlideMenuControllerSwift;
+		};
+		D12E1B846D2AA06104E5FA98ED89B2D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F87037150ABE2C9238B54E8F6E33F36;
+			remoteInfo = Kingfisher;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00322843922E94F16DFD4D791A6EEA46 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		009358763E3C61BA2A51580F9D9175B4 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		00BB37D0DD23FBE5FA9ADFC1EBBF02AD /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Indicator.swift; sourceTree = "<group>"; };
+		00E90FDA9687293E45AE834D69FBECC8 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = es.lproj; path = "Objective-C/TOCropViewController/es.lproj"; sourceTree = "<group>"; };
+		038A2518D58E8D034B6CAB48D13887BD /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		058B3E647CDE8482A138F6F30084C306 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = tr.lproj; path = "Objective-C/TOCropViewController/tr.lproj"; sourceTree = "<group>"; };
+		082DAF6012B18AA7231F480EC4696F27 /* TOCropScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropScrollView.h; path = "Objective-C/TOCropViewController/Views/TOCropScrollView.h"; sourceTree = "<group>"; };
+		0880994D30C598F503902393DED035E3 /* Pods-QuizAppUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QuizAppUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0984210B5F231C6810D9B6F9ED936885 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
+		0E9EAF629A052C12F7BF0DF4898F12AD /* Pods-QuizApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-QuizApp-umbrella.h"; sourceTree = "<group>"; };
+		103ADFA7FADC236AC40044D8957C3193 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		143934774DD056B3C5B7CEAD8D36D8A7 /* UIImage+CropRotate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CropRotate.m"; path = "Objective-C/TOCropViewController/Models/UIImage+CropRotate.m"; sourceTree = "<group>"; };
+		14596288815EEE702E23BA8F1C29EF09 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		1536325EA55C3BFF94CBEBCD60F73860 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hans.lproj"; path = "Objective-C/TOCropViewController/zh-Hans.lproj"; sourceTree = "<group>"; };
+		1694C50CBB43042451DED1B5230A9217 /* TOCropToolbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropToolbar.h; path = "Objective-C/TOCropViewController/Views/TOCropToolbar.h"; sourceTree = "<group>"; };
+		16A075FD10C0CC48018638F047848472 /* Pods-QuizApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QuizApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1ACF008A242B1A3782C16C1849EC61C1 /* CropViewController-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CropViewController-Bridging-Header.h"; path = "Swift/CropViewController/CropViewController-Bridging-Header.h"; sourceTree = "<group>"; };
+		1B996FAE3DF08D5770425984FC64C96E /* Pods-QuizAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QuizAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1BF8067F99D3EF0DE35CCF09BD825AA0 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
+		1D5F0EC802544D03907325E853CEB672 /* Pods-QuizApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-QuizApp-resources.sh"; sourceTree = "<group>"; };
+		1DFA16947B693F02C08F5491A5310561 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		1F4C8FC4EE0441EB4D3E183D90081C8A /* Pods-QuizApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QuizApp-dummy.m"; sourceTree = "<group>"; };
+		1FFF48363665EC8EFF362E0E0BBC66A2 /* Pods-QuizApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-QuizApp.modulemap"; sourceTree = "<group>"; };
+		23D45B287BAE4D9875A31CECECCDAC7D /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Kingfisher.swift"; path = "Sources/UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		26559628A164582B41E6395EF04A5DD3 /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = vi.lproj; path = "Objective-C/TOCropViewController/vi.lproj"; sourceTree = "<group>"; };
+		27E64EEBCFA00333504EEF1ED42AFB8A /* TOCropView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropView.m; path = "Objective-C/TOCropViewController/Views/TOCropView.m"; sourceTree = "<group>"; };
+		28CE0263E9B9096C08106310379689F6 /* Pods-QuizAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-QuizAppTests-umbrella.h"; sourceTree = "<group>"; };
+		299799FE6591E0E3EFCE19B87490F873 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		2A64BBECFCDC79AE036F08FCDBFC28BF /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		2D13DFDA7A63514E0003EC6428D444CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		307A77F0289D170919A37F6DCA49AD0E /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
+		340DBCE1BC3D6E0263EEF83481962E7C /* TOCroppedImageAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCroppedImageAttributes.h; path = "Objective-C/TOCropViewController/Models/TOCroppedImageAttributes.h"; sourceTree = "<group>"; };
+		350A9B3AF437378FDB997EE462A51075 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		36DE9DBDA55FCA21B039EE1B6E01CFC9 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		384B9C99F5D4947BBBD1BB038F6C3273 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3930E947B1ABBA762135B5183D7BBCF5 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		3974B0115BE0AE4758673E3C7167888A /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/String+MD5.swift"; sourceTree = "<group>"; };
+		39B4E2324627C84BF9387F70840E8124 /* Placeholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Placeholder.swift; path = Sources/Placeholder.swift; sourceTree = "<group>"; };
+		3ACCE9E051986E0C25AAAAE1F23C0F71 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		3AD6A2242C09F45D57C00436729A59A8 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = pl.lproj; path = "Objective-C/TOCropViewController/pl.lproj"; sourceTree = "<group>"; };
+		3BF69110A225CF778151977B72942D97 /* Kingfisher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.xcconfig; sourceTree = "<group>"; };
+		3DB2C3ADD5571A562DC18D534B4A4B1C /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		3F43F894E52200D7DB678D46D52086EC /* TOCropOverlayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropOverlayView.m; path = "Objective-C/TOCropViewController/Views/TOCropOverlayView.m"; sourceTree = "<group>"; };
+		3FA22B602F9E6EADB618FA6AC8393BCD /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fr.lproj; path = "Objective-C/TOCropViewController/fr.lproj"; sourceTree = "<group>"; };
+		40315C2B16069B7AD11C4B4E01898AD4 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		416E2566D5E00F0D79E02326F9A413D4 /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		41D7728612AFB0105F196602077B37FA /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/ImagePrefetcher.swift; sourceTree = "<group>"; };
+		42F57F22B04FF3753D5DD3F89F5AD265 /* Pods-QuizAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QuizAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4370655B93D8A7462B6D8B992FB1CE66 /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ko.lproj; path = "Objective-C/TOCropViewController/ko.lproj"; sourceTree = "<group>"; };
+		43AF6C796D69980CB99461B9D15E720B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		4B2D870F921F9A08769AA502F3286980 /* Pods-QuizAppUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-QuizAppUITests-umbrella.h"; sourceTree = "<group>"; };
+		4ED1EBFDED89FF0D6595A77D1D95832C /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = Base.lproj; path = "Objective-C/TOCropViewController/Base.lproj"; sourceTree = "<group>"; };
+		4F954D76EAF408B81664FAD864AA7AC2 /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Filter.swift; sourceTree = "<group>"; };
+		4FE58F352711BEB39CDD8FDFB042F1CD /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SlideMenuControllerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		533F4B4B97DDBCF025CAEE2825686907 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		54EFF3D523AE3BEEF073B06BBDBBE0F2 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		573E2B57FD53981012B899DCFEA8D6D6 /* TOCropOverlayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropOverlayView.h; path = "Objective-C/TOCropViewController/Views/TOCropOverlayView.h"; sourceTree = "<group>"; };
+		575EFA52353E1CB5A8991A78081FB86F /* SlideMenuControllerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlideMenuControllerSwift-umbrella.h"; sourceTree = "<group>"; };
+		57A3CE8C17799A4F6D4675F1D4CC0B54 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		5801B520E00B32B507B9E4C92A84175D /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = pt.lproj; path = "Objective-C/TOCropViewController/pt.lproj"; sourceTree = "<group>"; };
+		59666746E6C2DC04A39D43C499E62D3E /* CropViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropViewController.swift; path = Swift/CropViewController/CropViewController.swift; sourceTree = "<group>"; };
+		5CC61219A5D6B6E22968C08674237590 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ru.lproj; path = "Objective-C/TOCropViewController/ru.lproj"; sourceTree = "<group>"; };
+		5E8BDCA4BCF352A37FD003D14F8B99AE /* Pods-QuizAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QuizAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		6097DB364660EB1F358DE025FCC9D1FA /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		62E1500EE69D0F1F09F8E2CA34948E4B /* Pods-QuizAppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-QuizAppUITests.modulemap"; sourceTree = "<group>"; };
+		63EBC17A038CF3E367EA4003CE32D81F /* Pods-QuizAppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-QuizAppTests-frameworks.sh"; sourceTree = "<group>"; };
+		66CF0D2C0912D04914F09ADCC4371664 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Box.swift; sourceTree = "<group>"; };
+		6732CD01FCAC011219F47CE92F44C9E4 /* CropViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CropViewController.xcconfig; sourceTree = "<group>"; };
+		6889AF5B10DD4F6CDEB5A0C7F0A27D59 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		689CFBC1AFF889F3A0A8A98DB88E471E /* Pods-QuizAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-QuizAppTests.modulemap"; sourceTree = "<group>"; };
+		690FDD5930A69EDA0E4A163BAD4A02A6 /* SlideMenuControllerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SlideMenuControllerSwift-dummy.m"; sourceTree = "<group>"; };
+		6A0DB058B2352D7A76820495C9D3539C /* SlideMenuControllerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlideMenuControllerSwift-prefix.pch"; sourceTree = "<group>"; };
+		6AC0A4FC9152AEB7F041EEEE7D6A78BB /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
+		6D78479A097D0667687014535E5921DB /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
+		6FD694420301FEF04E8705F064293111 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		70017B6B2E69697BEECD489355EAB245 /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
+		7208ECA593F41B39CC1D3CE19A2F47F6 /* Pods-QuizApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-QuizApp-frameworks.sh"; sourceTree = "<group>"; };
+		7358893D3B969758DA2345448E3991A1 /* Pods_QuizAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74A3473DC2C9485A894A2796CAB61307 /* TOCropScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropScrollView.m; path = "Objective-C/TOCropViewController/Views/TOCropScrollView.m"; sourceTree = "<group>"; };
+		74BDE89C56094B686E2188B1032432A5 /* Pods_QuizAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7645DF606291288D5CC146715194ECAF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78DC593A80F61074FFCE3555C0724D0A /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = de.lproj; path = "Objective-C/TOCropViewController/de.lproj"; sourceTree = "<group>"; };
+		7BCF852EDDA2E315866E28C0CE765F21 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		7C6663E5E4DE13DC319B366F57844513 /* Pods-QuizAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QuizAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7D11576801880FA09C046C25679896D3 /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = da.lproj; path = "Objective-C/TOCropViewController/da.lproj"; sourceTree = "<group>"; };
+		7E6EC0C97640F1AFC844508259DB2588 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		82AD4B6FE0B972C3031D52D44620F32B /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = nl.lproj; path = "Objective-C/TOCropViewController/nl.lproj"; sourceTree = "<group>"; };
+		82D70F21512969EEC05A58EF8B0759F8 /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/ImageDownloader.swift; sourceTree = "<group>"; };
+		83B52FF854369DC214357AFC22EDE1CD /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		83D2C92B75FA95A07A5A8C549595BB71 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		841A40310B04BA2537A5498CCD1BE581 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		84B72931E156209046F97E0B4292E739 /* TOActivityCroppedImageProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOActivityCroppedImageProvider.h; path = "Objective-C/TOCropViewController/Models/TOActivityCroppedImageProvider.h"; sourceTree = "<group>"; };
+		8B327DC4CD746BC0AF2757CB66F3CB3B /* Pods-QuizAppUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-QuizAppUITests-frameworks.sh"; sourceTree = "<group>"; };
+		8B3B7F4462E24F2D8EBD86B319050AD1 /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/AnimatedImageView.swift; sourceTree = "<group>"; };
+		8B918275FB82B0B9CCF1B19684FD3807 /* Pods-QuizApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QuizApp.release.xcconfig"; sourceTree = "<group>"; };
+		8DA71B48608C6ABADECDA131BC2D52F1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E3DF5E3929082DD21DE904F03649C3A /* UIImage+CropRotate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+CropRotate.h"; path = "Objective-C/TOCropViewController/Models/UIImage+CropRotate.h"; sourceTree = "<group>"; };
+		9255677ADE0344922A64AC740B7C1641 /* Pods-QuizAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QuizAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		947EB439B5CAD0C74EBFA283A6B9830F /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = id.lproj; path = "Objective-C/TOCropViewController/id.lproj"; sourceTree = "<group>"; };
+		952EB1A0BE421F7F6A735B39B9C58D9E /* TOCropViewController-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TOCropViewController-Bridging-Header.h"; path = "Objective-C/TOCropViewController/TOCropViewController-Bridging-Header.h"; sourceTree = "<group>"; };
+		952ED8F9FD9B1571151D9A2A0ECF0CE1 /* CropViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CropViewController-dummy.m"; sourceTree = "<group>"; };
+		9546CEFA74512EA1E8280454A30E1D8F /* TOActivityCroppedImageProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOActivityCroppedImageProvider.m; path = "Objective-C/TOCropViewController/Models/TOActivityCroppedImageProvider.m"; sourceTree = "<group>"; };
+		967D9A5E0C599AD61799DBEE49A79772 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		977F66EC0FA4E939E5A36A98CD437D77 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9895B3DD03B3C131D4665F70F3EBA7E0 /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/ImageTransition.swift; sourceTree = "<group>"; };
+		9978CAFCEEE8B4D8201B2617A9FBAC60 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99D51F7A35D8CF28D9960F2A3DC50DD1 /* CropViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CropViewController.h; path = Swift/CropViewController/CropViewController.h; sourceTree = "<group>"; };
+		A0698703E81E0658B24EF481ADA09D73 /* CropViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CropViewController.modulemap; sourceTree = "<group>"; };
+		A07F9084294693BF4224C8AD521C8DED /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image.swift; sourceTree = "<group>"; };
+		A32722B730A7A955D548F3FD839FD92D /* Pods-QuizAppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QuizAppUITests-dummy.m"; sourceTree = "<group>"; };
+		A32A70A68D00A29254915C6D2277FAEA /* SlideMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlideMenuController.swift; path = Source/SlideMenuController.swift; sourceTree = "<group>"; };
+		A40AAA953B95A255E1F954F4FAF6E498 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kingfisher.modulemap; sourceTree = "<group>"; };
+		A4ED20069A6235A35471B5DD44D21221 /* ms.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ms.lproj; path = "Objective-C/TOCropViewController/ms.lproj"; sourceTree = "<group>"; };
+		A7C1B978C133AA8684A41E9A27FCD944 /* ImageModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageModifier.swift; path = Sources/ImageModifier.swift; sourceTree = "<group>"; };
+		ADEBE86AA43F9754706600058D29277C /* TOCropViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropViewController.h; path = "Objective-C/TOCropViewController/TOCropViewController.h"; sourceTree = "<group>"; };
+		AE07FB04B40DA8760105B7732DFA90C1 /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/Kingfisher.swift; sourceTree = "<group>"; };
+		AFFC549333F65AF41B3D6867457EE8AB /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3798673050851946080C5F4BB4A32C8 /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/Resource.swift; sourceTree = "<group>"; };
+		B3E3D5945CC7E53F9CAF980170CCF05B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3FB23DBDA476AD9ABE84FA7D41F08E5 /* ThreadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadHelper.swift; path = Sources/ThreadHelper.swift; sourceTree = "<group>"; };
+		B91DA14A746BC61A81A94780470914B6 /* SlideMenuControllerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SlideMenuControllerSwift.modulemap; sourceTree = "<group>"; };
+		BE2C3BD71A45E86A878C2EB347F10218 /* TOCropToolbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropToolbar.m; path = "Objective-C/TOCropViewController/Views/TOCropToolbar.m"; sourceTree = "<group>"; };
+		BE73AD6DB0F1B53AD3B2321298166E27 /* TOCropView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropView.h; path = "Objective-C/TOCropViewController/Views/TOCropView.h"; sourceTree = "<group>"; };
+		C0DB29E0F24509C858B48D30019A662B /* Pods-QuizAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QuizAppTests-dummy.m"; sourceTree = "<group>"; };
+		C2B2A1E193D4F905F067FDFA3857D71F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C31F68C94DBF065EB8D09F7EB84E6AD8 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		C9B3674C4B2420E29599115EE2B0E267 /* Pods-QuizAppUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-QuizAppUITests-resources.sh"; sourceTree = "<group>"; };
+		C9C3E66EDA5034EE5B49C468F40F213A /* Pods-QuizAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QuizAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CBC43C04C14086F03861666527756247 /* TOCroppedImageAttributes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCroppedImageAttributes.m; path = "Objective-C/TOCropViewController/Models/TOCroppedImageAttributes.m"; sourceTree = "<group>"; };
+		CBD1460EE709DEB6F4C436DBAE7C2402 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		CCF6891C6F60F9539493304D32F53C5C /* SlideMenuControllerSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SlideMenuControllerSwift.xcconfig; sourceTree = "<group>"; };
+		CF0AA728A73956D2CE8A0B85247FEB4D /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		CF4D7F5582B3A17036DF8EDDAC1D0488 /* CropViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CropViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E0DBC599FD387120F5FF3D9D6EA2C1 /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/KingfisherManager.swift; sourceTree = "<group>"; };
+		D31BAC6C5AEF799A3B129AF3DD38F783 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		D3FDB00236DE1E9B7C99737C62D44BAF /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		D47378DDEE9CD357CA783AAB394E25C8 /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/RequestModifier.swift; sourceTree = "<group>"; };
+		D5939A855E5231B80532F432DBB4BA48 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = it.lproj; path = "Objective-C/TOCropViewController/it.lproj"; sourceTree = "<group>"; };
+		D6F87496FAE44399EB2B9D0CFD0D42DF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7E0AA2903B7B517A5FC2DDA860FA387 /* Pods-QuizApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QuizApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D89C01D2826C6A1FC3EBBBEE2102E6B1 /* Pods-QuizAppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QuizAppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D9200A625B0D9D3291559CFE38AE626B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D94D497C3E1B5B254061D085FC7354B7 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hant.lproj"; path = "Objective-C/TOCropViewController/zh-Hant.lproj"; sourceTree = "<group>"; };
+		D952115D446A8C1E029AB98555D7CE9B /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = "Objective-C/TOCropViewController/en.lproj"; sourceTree = "<group>"; };
+		DBF7225077231CDFBB821CAE7DF4BA8B /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		DD0E2618541182AEC867350EDBE0AF2D /* Pods_QuizApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E17AE37763410F314D778306FDD30C80 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1EA312FDD0BBDD6FE56C8ACFA999284 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		E30A979649409B490BA191D717E3398E /* TOCropViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropViewController.m; path = "Objective-C/TOCropViewController/TOCropViewController.m"; sourceTree = "<group>"; };
+		E49813933BBD9B0C11A4EC04D6B91579 /* TOCropViewControllerTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropViewControllerTransitioning.h; path = "Objective-C/TOCropViewController/Models/TOCropViewControllerTransitioning.h"; sourceTree = "<group>"; };
+		E8CC02F9085C7AA0964341468FB8224A /* CropViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CropViewController-prefix.pch"; sourceTree = "<group>"; };
+		EE9BC6C01B8DC4D4E8BD5F804BAC2AC1 /* CropViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CropViewController-umbrella.h"; sourceTree = "<group>"; };
+		EED20D4FB4FD439FB474FDB03D13EFEC /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		EFD16EC00B44B70877DAB76354D86EBF /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/CacheSerializer.swift; sourceTree = "<group>"; };
+		F089283349F794676B991FDEC9327CE0 /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/ImageProcessor.swift; sourceTree = "<group>"; };
+		F128DE172CDB3F2383A6ABDA6BC31C08 /* TOCropViewControllerTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropViewControllerTransitioning.m; path = "Objective-C/TOCropViewController/Models/TOCropViewControllerTransitioning.m"; sourceTree = "<group>"; };
+		F2CE294F2A5CA2CA376937E083B47F24 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		F3E9936D2D380DD98441219F82F67620 /* ResourceBundle-TOCropViewControllerBundle-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TOCropViewControllerBundle-Info.plist"; sourceTree = "<group>"; };
+		F4EB918E90FF023D3D6D278E4720C296 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		F548479EBCDBAFCC8246133AB67F80F4 /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ar.lproj; path = "Objective-C/TOCropViewController/ar.lproj"; sourceTree = "<group>"; };
+		F7969663448EC51B12C4005E21BB967A /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ja.lproj; path = "Objective-C/TOCropViewController/ja.lproj"; sourceTree = "<group>"; };
+		FBB5306E1394A90F0CC8503ED4E1A34C /* Pods-QuizAppTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-QuizAppTests-resources.sh"; sourceTree = "<group>"; };
+		FC10FAB6DE4A56C15E5D2F9C9D9C6B45 /* Pods-QuizApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QuizApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		FC390281E0C3BE42F4FCA43A604D6E35 /* TOCropViewControllerBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TOCropViewControllerBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD80B2D35449660FF8D57E5609609ECF /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
+		FEBCA2F43A2FCA11A6619C370B8D6548 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		FED44821CB1886491400B3250632E097 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		FF31DA51C3AC89EC8976CA29F91C10FC /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/ImageCache.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C022991A2C02A8390D966CEBA9BCC08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD24E1C52E370C16C6A3A86A9DE02B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34899EFE1CCA82F8AEC91F66962CB74D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8C0B19796145AA184048B33E2B5E5FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		786693363846C19F2BD760E78D4D05A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C56E748454BA402CD475AEF8EA68FB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BF4D4ABECB360BF4EA78CDE51D06EA5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99195E4207764744AEC07ECCBCD550EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A05AD251435FB24E096BBA193F9C99F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CF440A4E3CCDEE93FA2475748A9934 /* CFNetwork.framework in Frameworks */,
+				403E3E170DCF269D5CBA1C530ECA901B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB6ACECF394422441277DC77F37C9F94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D241130CE10C05D189A4C7F9F210C5E5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B57774E30FD88AE26F9037E1360E947B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFC3AAFFCCFE94270FA4A3040449FA18 /* CoreGraphics.framework in Frameworks */,
+				14CA32AACADBC7D008311E6F720D583D /* Foundation.framework in Frameworks */,
+				5EFE3C1316AE3DF65B81286439987953 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C00B11385E06F3BF160635D6602CF322 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A9CD3F554BE527124B5870A7C11159D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2D350FFFC8BF7F7DB6E1689DA15D955 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C4A3D8D76BBF6B9048D1DD9FB7A5002 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45482F4C7ABD47912A3871934C930F04 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		182F79C02939D75356CE1C09D559AFBD /* CropViewController */ = {
+			isa = PBXGroup;
+			children = (
+				99D51F7A35D8CF28D9960F2A3DC50DD1 /* CropViewController.h */,
+				59666746E6C2DC04A39D43C499E62D3E /* CropViewController.swift */,
+				1ACF008A242B1A3782C16C1849EC61C1 /* CropViewController-Bridging-Header.h */,
+				84B72931E156209046F97E0B4292E739 /* TOActivityCroppedImageProvider.h */,
+				9546CEFA74512EA1E8280454A30E1D8F /* TOActivityCroppedImageProvider.m */,
+				573E2B57FD53981012B899DCFEA8D6D6 /* TOCropOverlayView.h */,
+				3F43F894E52200D7DB678D46D52086EC /* TOCropOverlayView.m */,
+				340DBCE1BC3D6E0263EEF83481962E7C /* TOCroppedImageAttributes.h */,
+				CBC43C04C14086F03861666527756247 /* TOCroppedImageAttributes.m */,
+				082DAF6012B18AA7231F480EC4696F27 /* TOCropScrollView.h */,
+				74A3473DC2C9485A894A2796CAB61307 /* TOCropScrollView.m */,
+				1694C50CBB43042451DED1B5230A9217 /* TOCropToolbar.h */,
+				BE2C3BD71A45E86A878C2EB347F10218 /* TOCropToolbar.m */,
+				BE73AD6DB0F1B53AD3B2321298166E27 /* TOCropView.h */,
+				27E64EEBCFA00333504EEF1ED42AFB8A /* TOCropView.m */,
+				ADEBE86AA43F9754706600058D29277C /* TOCropViewController.h */,
+				E30A979649409B490BA191D717E3398E /* TOCropViewController.m */,
+				952EB1A0BE421F7F6A735B39B9C58D9E /* TOCropViewController-Bridging-Header.h */,
+				E49813933BBD9B0C11A4EC04D6B91579 /* TOCropViewControllerTransitioning.h */,
+				F128DE172CDB3F2383A6ABDA6BC31C08 /* TOCropViewControllerTransitioning.m */,
+				8E3DF5E3929082DD21DE904F03649C3A /* UIImage+CropRotate.h */,
+				143934774DD056B3C5B7CEAD8D36D8A7 /* UIImage+CropRotate.m */,
+				40B5F53A2F4A86D08CC7082698B0DC2B /* Resources */,
+				AF159923E5587B010189BC26EB8E8B17 /* Support Files */,
+			);
+			path = CropViewController;
+			sourceTree = "<group>";
+		};
+		29E5E463DD2DE40E28A63049D6E3A665 /* Kingfisher */ = {
+			isa = PBXGroup;
+			children = (
+				8B3B7F4462E24F2D8EBD86B319050AD1 /* AnimatedImageView.swift */,
+				66CF0D2C0912D04914F09ADCC4371664 /* Box.swift */,
+				EFD16EC00B44B70877DAB76354D86EBF /* CacheSerializer.swift */,
+				4F954D76EAF408B81664FAD864AA7AC2 /* Filter.swift */,
+				307A77F0289D170919A37F6DCA49AD0E /* FormatIndicatedCacheSerializer.swift */,
+				A07F9084294693BF4224C8AD521C8DED /* Image.swift */,
+				FF31DA51C3AC89EC8976CA29F91C10FC /* ImageCache.swift */,
+				82D70F21512969EEC05A58EF8B0759F8 /* ImageDownloader.swift */,
+				A7C1B978C133AA8684A41E9A27FCD944 /* ImageModifier.swift */,
+				41D7728612AFB0105F196602077B37FA /* ImagePrefetcher.swift */,
+				F089283349F794676B991FDEC9327CE0 /* ImageProcessor.swift */,
+				9895B3DD03B3C131D4665F70F3EBA7E0 /* ImageTransition.swift */,
+				F2CE294F2A5CA2CA376937E083B47F24 /* ImageView+Kingfisher.swift */,
+				00BB37D0DD23FBE5FA9ADFC1EBBF02AD /* Indicator.swift */,
+				6D78479A097D0667687014535E5921DB /* Kingfisher.h */,
+				AE07FB04B40DA8760105B7732DFA90C1 /* Kingfisher.swift */,
+				D2E0DBC599FD387120F5FF3D9D6EA2C1 /* KingfisherManager.swift */,
+				0984210B5F231C6810D9B6F9ED936885 /* KingfisherOptionsInfo.swift */,
+				39B4E2324627C84BF9387F70840E8124 /* Placeholder.swift */,
+				D47378DDEE9CD357CA783AAB394E25C8 /* RequestModifier.swift */,
+				B3798673050851946080C5F4BB4A32C8 /* Resource.swift */,
+				3974B0115BE0AE4758673E3C7167888A /* String+MD5.swift */,
+				B3FB23DBDA476AD9ABE84FA7D41F08E5 /* ThreadHelper.swift */,
+				23D45B287BAE4D9875A31CECECCDAC7D /* UIButton+Kingfisher.swift */,
+				D4566A8242545CA6D1B056E7E35EC100 /* Support Files */,
+			);
+			path = Kingfisher;
+			sourceTree = "<group>";
+		};
+		3E7355F6A6C87B23B73720C7368644A3 /* Pods-QuizApp */ = {
+			isa = PBXGroup;
+			children = (
+				8DA71B48608C6ABADECDA131BC2D52F1 /* Info.plist */,
+				1FFF48363665EC8EFF362E0E0BBC66A2 /* Pods-QuizApp.modulemap */,
+				16A075FD10C0CC48018638F047848472 /* Pods-QuizApp-acknowledgements.markdown */,
+				FC10FAB6DE4A56C15E5D2F9C9D9C6B45 /* Pods-QuizApp-acknowledgements.plist */,
+				1F4C8FC4EE0441EB4D3E183D90081C8A /* Pods-QuizApp-dummy.m */,
+				7208ECA593F41B39CC1D3CE19A2F47F6 /* Pods-QuizApp-frameworks.sh */,
+				1D5F0EC802544D03907325E853CEB672 /* Pods-QuizApp-resources.sh */,
+				0E9EAF629A052C12F7BF0DF4898F12AD /* Pods-QuizApp-umbrella.h */,
+				D7E0AA2903B7B517A5FC2DDA860FA387 /* Pods-QuizApp.debug.xcconfig */,
+				8B918275FB82B0B9CCF1B19684FD3807 /* Pods-QuizApp.release.xcconfig */,
+			);
+			name = "Pods-QuizApp";
+			path = "Target Support Files/Pods-QuizApp";
+			sourceTree = "<group>";
+		};
+		40B5F53A2F4A86D08CC7082698B0DC2B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F548479EBCDBAFCC8246133AB67F80F4 /* ar.lproj */,
+				4ED1EBFDED89FF0D6595A77D1D95832C /* Base.lproj */,
+				7D11576801880FA09C046C25679896D3 /* da.lproj */,
+				78DC593A80F61074FFCE3555C0724D0A /* de.lproj */,
+				D952115D446A8C1E029AB98555D7CE9B /* en.lproj */,
+				00E90FDA9687293E45AE834D69FBECC8 /* es.lproj */,
+				3FA22B602F9E6EADB618FA6AC8393BCD /* fr.lproj */,
+				947EB439B5CAD0C74EBFA283A6B9830F /* id.lproj */,
+				D5939A855E5231B80532F432DBB4BA48 /* it.lproj */,
+				F7969663448EC51B12C4005E21BB967A /* ja.lproj */,
+				4370655B93D8A7462B6D8B992FB1CE66 /* ko.lproj */,
+				A4ED20069A6235A35471B5DD44D21221 /* ms.lproj */,
+				82AD4B6FE0B972C3031D52D44620F32B /* nl.lproj */,
+				3AD6A2242C09F45D57C00436729A59A8 /* pl.lproj */,
+				5801B520E00B32B507B9E4C92A84175D /* pt.lproj */,
+				5CC61219A5D6B6E22968C08674237590 /* ru.lproj */,
+				058B3E647CDE8482A138F6F30084C306 /* tr.lproj */,
+				26559628A164582B41E6395EF04A5DD3 /* vi.lproj */,
+				1536325EA55C3BFF94CBEBCD60F73860 /* zh-Hans.lproj */,
+				D94D497C3E1B5B254061D085FC7354B7 /* zh-Hant.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		45482F4C7ABD47912A3871934C930F04 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6FD694420301FEF04E8705F064293111 /* CFNetwork.framework */,
+				43AF6C796D69980CB99461B9D15E720B /* CoreGraphics.framework */,
+				2D13DFDA7A63514E0003EC6428D444CD /* Foundation.framework */,
+				7BCF852EDDA2E315866E28C0CE765F21 /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4FCDCB719B0C7761DB4D682E7DA14686 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2B2A1E193D4F905F067FDFA3857D71F /* Info.plist */,
+				F4EB918E90FF023D3D6D278E4720C296 /* SwiftyJSON.modulemap */,
+				7E6EC0C97640F1AFC844508259DB2588 /* SwiftyJSON.xcconfig */,
+				C31F68C94DBF065EB8D09F7EB84E6AD8 /* SwiftyJSON-dummy.m */,
+				3930E947B1ABBA762135B5183D7BBCF5 /* SwiftyJSON-prefix.pch */,
+				FED44821CB1886491400B3250632E097 /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		51BBADC609FBB5A069BA2E81A6875E2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9978CAFCEEE8B4D8201B2617A9FBAC60 /* Alamofire.framework */,
+				CF4D7F5582B3A17036DF8EDDAC1D0488 /* CropViewController.framework */,
+				AFFC549333F65AF41B3D6867457EE8AB /* Kingfisher.framework */,
+				36DE9DBDA55FCA21B039EE1B6E01CFC9 /* MBProgressHUD.framework */,
+				DD0E2618541182AEC867350EDBE0AF2D /* Pods_QuizApp.framework */,
+				74BDE89C56094B686E2188B1032432A5 /* Pods_QuizAppTests.framework */,
+				7358893D3B969758DA2345448E3991A1 /* Pods_QuizAppUITests.framework */,
+				4FE58F352711BEB39CDD8FDFB042F1CD /* SlideMenuControllerSwift.framework */,
+				384B9C99F5D4947BBBD1BB038F6C3273 /* SwiftyJSON.framework */,
+				FC390281E0C3BE42F4FCA43A604D6E35 /* TOCropViewControllerBundle.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5579CAF52ED81D0FC840C9921177EE80 /* Pods-QuizAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6889AF5B10DD4F6CDEB5A0C7F0A27D59 /* Info.plist */,
+				62E1500EE69D0F1F09F8E2CA34948E4B /* Pods-QuizAppUITests.modulemap */,
+				0880994D30C598F503902393DED035E3 /* Pods-QuizAppUITests-acknowledgements.markdown */,
+				D89C01D2826C6A1FC3EBBBEE2102E6B1 /* Pods-QuizAppUITests-acknowledgements.plist */,
+				A32722B730A7A955D548F3FD839FD92D /* Pods-QuizAppUITests-dummy.m */,
+				8B327DC4CD746BC0AF2757CB66F3CB3B /* Pods-QuizAppUITests-frameworks.sh */,
+				C9B3674C4B2420E29599115EE2B0E267 /* Pods-QuizAppUITests-resources.sh */,
+				4B2D870F921F9A08769AA502F3286980 /* Pods-QuizAppUITests-umbrella.h */,
+				42F57F22B04FF3753D5DD3F89F5AD265 /* Pods-QuizAppUITests.debug.xcconfig */,
+				7C6663E5E4DE13DC319B366F57844513 /* Pods-QuizAppUITests.release.xcconfig */,
+			);
+			name = "Pods-QuizAppUITests";
+			path = "Target Support Files/Pods-QuizAppUITests";
+			sourceTree = "<group>";
+		};
+		5C71348C363B76543392F047D8761BAD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E7355F6A6C87B23B73720C7368644A3 /* Pods-QuizApp */,
+				AB187A2DD2D1BEFF09651C09A6B306A6 /* Pods-QuizAppTests */,
+				5579CAF52ED81D0FC840C9921177EE80 /* Pods-QuizAppUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		64919C7B821204130F9265873DD17391 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A97B01779A94127C03A881203706E92 /* Alamofire */,
+				182F79C02939D75356CE1C09D559AFBD /* CropViewController */,
+				29E5E463DD2DE40E28A63049D6E3A665 /* Kingfisher */,
+				9ECC0C7EB31FF735D622CF0E9DFB4F69 /* MBProgressHUD */,
+				BE153553EF0B730EA126DD34910B71DE /* SlideMenuControllerSwift */,
+				8C1AC68FEDBE897EE485BF5EECD3DD09 /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		68C4BC16ECC8C7D80264C387B880385D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				038A2518D58E8D034B6CAB48D13887BD /* Alamofire.modulemap */,
+				00322843922E94F16DFD4D791A6EEA46 /* Alamofire.xcconfig */,
+				3DB2C3ADD5571A562DC18D534B4A4B1C /* Alamofire-dummy.m */,
+				3ACCE9E051986E0C25AAAAE1F23C0F71 /* Alamofire-prefix.pch */,
+				DBF7225077231CDFBB821CAE7DF4BA8B /* Alamofire-umbrella.h */,
+				D6F87496FAE44399EB2B9D0CFD0D42DF /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				64919C7B821204130F9265873DD17391 /* Pods */,
+				51BBADC609FBB5A069BA2E81A6875E2B /* Products */,
+				5C71348C363B76543392F047D8761BAD /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8C1AC68FEDBE897EE485BF5EECD3DD09 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				57A3CE8C17799A4F6D4675F1D4CC0B54 /* SwiftyJSON.swift */,
+				4FCDCB719B0C7761DB4D682E7DA14686 /* Support Files */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		9A97B01779A94127C03A881203706E92 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDB00236DE1E9B7C99737C62D44BAF /* AFError.swift */,
+				299799FE6591E0E3EFCE19B87490F873 /* Alamofire.swift */,
+				1DFA16947B693F02C08F5491A5310561 /* DispatchQueue+Alamofire.swift */,
+				83B52FF854369DC214357AFC22EDE1CD /* MultipartFormData.swift */,
+				D31BAC6C5AEF799A3B129AF3DD38F783 /* NetworkReachabilityManager.swift */,
+				14596288815EEE702E23BA8F1C29EF09 /* Notifications.swift */,
+				841A40310B04BA2537A5498CCD1BE581 /* ParameterEncoding.swift */,
+				40315C2B16069B7AD11C4B4E01898AD4 /* Request.swift */,
+				E1EA312FDD0BBDD6FE56C8ACFA999284 /* Response.swift */,
+				FEBCA2F43A2FCA11A6619C370B8D6548 /* ResponseSerialization.swift */,
+				54EFF3D523AE3BEEF073B06BBDBBE0F2 /* Result.swift */,
+				009358763E3C61BA2A51580F9D9175B4 /* ServerTrustPolicy.swift */,
+				6097DB364660EB1F358DE025FCC9D1FA /* SessionDelegate.swift */,
+				103ADFA7FADC236AC40044D8957C3193 /* SessionManager.swift */,
+				CF0AA728A73956D2CE8A0B85247FEB4D /* TaskDelegate.swift */,
+				2A64BBECFCDC79AE036F08FCDBFC28BF /* Timeline.swift */,
+				533F4B4B97DDBCF025CAEE2825686907 /* Validation.swift */,
+				68C4BC16ECC8C7D80264C387B880385D /* Support Files */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		9ECC0C7EB31FF735D622CF0E9DFB4F69 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				EED20D4FB4FD439FB474FDB03D13EFEC /* MBProgressHUD.h */,
+				967D9A5E0C599AD61799DBEE49A79772 /* MBProgressHUD.m */,
+				A3017225B60A8CA826A8CB4A9A82D179 /* Support Files */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		A3017225B60A8CA826A8CB4A9A82D179 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D9200A625B0D9D3291559CFE38AE626B /* Info.plist */,
+				1BF8067F99D3EF0DE35CCF09BD825AA0 /* MBProgressHUD.modulemap */,
+				CBD1460EE709DEB6F4C436DBAE7C2402 /* MBProgressHUD.xcconfig */,
+				83D2C92B75FA95A07A5A8C549595BB71 /* MBProgressHUD-dummy.m */,
+				350A9B3AF437378FDB997EE462A51075 /* MBProgressHUD-prefix.pch */,
+				416E2566D5E00F0D79E02326F9A413D4 /* MBProgressHUD-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBProgressHUD";
+			sourceTree = "<group>";
+		};
+		AB187A2DD2D1BEFF09651C09A6B306A6 /* Pods-QuizAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				E17AE37763410F314D778306FDD30C80 /* Info.plist */,
+				689CFBC1AFF889F3A0A8A98DB88E471E /* Pods-QuizAppTests.modulemap */,
+				9255677ADE0344922A64AC740B7C1641 /* Pods-QuizAppTests-acknowledgements.markdown */,
+				1B996FAE3DF08D5770425984FC64C96E /* Pods-QuizAppTests-acknowledgements.plist */,
+				C0DB29E0F24509C858B48D30019A662B /* Pods-QuizAppTests-dummy.m */,
+				63EBC17A038CF3E367EA4003CE32D81F /* Pods-QuizAppTests-frameworks.sh */,
+				FBB5306E1394A90F0CC8503ED4E1A34C /* Pods-QuizAppTests-resources.sh */,
+				28CE0263E9B9096C08106310379689F6 /* Pods-QuizAppTests-umbrella.h */,
+				C9C3E66EDA5034EE5B49C468F40F213A /* Pods-QuizAppTests.debug.xcconfig */,
+				5E8BDCA4BCF352A37FD003D14F8B99AE /* Pods-QuizAppTests.release.xcconfig */,
+			);
+			name = "Pods-QuizAppTests";
+			path = "Target Support Files/Pods-QuizAppTests";
+			sourceTree = "<group>";
+		};
+		AC1F0493935A5069043C025C2C9F37BB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				977F66EC0FA4E939E5A36A98CD437D77 /* Info.plist */,
+				B91DA14A746BC61A81A94780470914B6 /* SlideMenuControllerSwift.modulemap */,
+				CCF6891C6F60F9539493304D32F53C5C /* SlideMenuControllerSwift.xcconfig */,
+				690FDD5930A69EDA0E4A163BAD4A02A6 /* SlideMenuControllerSwift-dummy.m */,
+				6A0DB058B2352D7A76820495C9D3539C /* SlideMenuControllerSwift-prefix.pch */,
+				575EFA52353E1CB5A8991A78081FB86F /* SlideMenuControllerSwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SlideMenuControllerSwift";
+			sourceTree = "<group>";
+		};
+		AF159923E5587B010189BC26EB8E8B17 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A0698703E81E0658B24EF481ADA09D73 /* CropViewController.modulemap */,
+				6732CD01FCAC011219F47CE92F44C9E4 /* CropViewController.xcconfig */,
+				952ED8F9FD9B1571151D9A2A0ECF0CE1 /* CropViewController-dummy.m */,
+				E8CC02F9085C7AA0964341468FB8224A /* CropViewController-prefix.pch */,
+				EE9BC6C01B8DC4D4E8BD5F804BAC2AC1 /* CropViewController-umbrella.h */,
+				B3E3D5945CC7E53F9CAF980170CCF05B /* Info.plist */,
+				F3E9936D2D380DD98441219F82F67620 /* ResourceBundle-TOCropViewControllerBundle-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CropViewController";
+			sourceTree = "<group>";
+		};
+		BE153553EF0B730EA126DD34910B71DE /* SlideMenuControllerSwift */ = {
+			isa = PBXGroup;
+			children = (
+				A32A70A68D00A29254915C6D2277FAEA /* SlideMenuController.swift */,
+				AC1F0493935A5069043C025C2C9F37BB /* Support Files */,
+			);
+			path = SlideMenuControllerSwift;
+			sourceTree = "<group>";
+		};
+		D4566A8242545CA6D1B056E7E35EC100 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7645DF606291288D5CC146715194ECAF /* Info.plist */,
+				A40AAA953B95A255E1F954F4FAF6E498 /* Kingfisher.modulemap */,
+				3BF69110A225CF778151977B72942D97 /* Kingfisher.xcconfig */,
+				70017B6B2E69697BEECD489355EAB245 /* Kingfisher-dummy.m */,
+				6AC0A4FC9152AEB7F041EEEE7D6A78BB /* Kingfisher-prefix.pch */,
+				FD80B2D35449660FF8D57E5609609ECF /* Kingfisher-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Kingfisher";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		146362ACE97AC0F467DD7F270631F31B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F7A1F6ACF40DD52820D4F0528DFD87 /* Pods-QuizApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		197B7877D5D346F405BDD059EF96DBDC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28A794912ED1E06B05D96DF5ED0AED19 /* MBProgressHUD-umbrella.h in Headers */,
+				A5BF8DBDD8660DBCFE712657F3D82BDA /* MBProgressHUD.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A598968A13EF597B0F9A3D1E281E821 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD34406D4FEDFF5AA8EDCD0BE96E751C /* Pods-QuizAppTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		990BA7763E808F0675389E9BBCE0C294 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A16960F930F1A00E9B10D7EA480F919 /* SlideMenuControllerSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAC64445FEDEAF2B5D1F2DA90889A468 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F9693E825CE97F1F2F1FB199C916F7B /* CropViewController-Bridging-Header.h in Headers */,
+				747A7839E0F0BF4680331F91541DF98D /* CropViewController-umbrella.h in Headers */,
+				361959341E585965320C3DF9342DA7D2 /* CropViewController.h in Headers */,
+				BFC4BCB6E05AFC08BC442B15340222D4 /* TOActivityCroppedImageProvider.h in Headers */,
+				D01ACB45BEA4587E63C2B7E6A5527717 /* TOCropOverlayView.h in Headers */,
+				FE62A3C7EB117F0B7722548878D253D8 /* TOCroppedImageAttributes.h in Headers */,
+				CC1912ACC7D85E93A80D5BE9EBCF1B14 /* TOCropScrollView.h in Headers */,
+				AA92E08B0061083C80081B4CB3916AFC /* TOCropToolbar.h in Headers */,
+				F48092EDA4149596739EB46FD47FDEC7 /* TOCropView.h in Headers */,
+				E80493437FDBFDD2003078A9E9CD8519 /* TOCropViewController-Bridging-Header.h in Headers */,
+				73A16D5FD01C8F4001E23BA1207C567F /* TOCropViewController.h in Headers */,
+				18A4A9F185D9FBAC41DF1A8181A072EA /* TOCropViewControllerTransitioning.h in Headers */,
+				F6E60F17EC69B42042CA84FB2F0C7DF3 /* UIImage+CropRotate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADBBCEED9A9F8B15B7F98467EA6FB0E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				509A5621DAB44B06929B30ACCA7CA598 /* Kingfisher-umbrella.h in Headers */,
+				BA4DF38E820FF6B40FFABF8B1BBCC615 /* Kingfisher.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA69C8E7ADF73DDC8ABDFBA5236201F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21D1C1D98FFA6773AEEC0B2CAE34DDF7 /* Pods-QuizAppUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEC42845AA7E7071F821150F0D8D71EF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F4AEBAA3351ADE1BA93E653CC99ED6E /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0AEC202531AF47B692B3C9DA6D58675C /* CropViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C94AB5CFFD9BD7A84D287FA666E218DD /* Build configuration list for PBXNativeTarget "CropViewController" */;
+			buildPhases = (
+				ED10DC5059EB5959AF20F9D28D58FE3C /* Sources */,
+				AB6ACECF394422441277DC77F37C9F94 /* Frameworks */,
+				ABD4C0DEB8F26E58093C47DF7D91AA7E /* Resources */,
+				BAC64445FEDEAF2B5D1F2DA90889A468 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D80F071166F353F7DC29E3E7B71DA23B /* PBXTargetDependency */,
+			);
+			name = CropViewController;
+			productName = CropViewController;
+			productReference = CF4D7F5582B3A17036DF8EDDAC1D0488 /* CropViewController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		27000828D7C2C5E64DEA43F3AC94A250 /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 520A16D4DC0CEBD584DD8DCAFB245DAC /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				C84EE17E73CB1B8616DD48942D245DA4 /* Sources */,
+				34899EFE1CCA82F8AEC91F66962CB74D /* Frameworks */,
+				EEC42845AA7E7071F821150F0D8D71EF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = 384B9C99F5D4947BBBD1BB038F6C3273 /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2990770985796EEC3C38E8AB9E52CB0D /* CropViewController-TOCropViewControllerBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7D1E52E129036332F742ED3AAB86681 /* Build configuration list for PBXNativeTarget "CropViewController-TOCropViewControllerBundle" */;
+			buildPhases = (
+				42730E5FDBE34D803F22732D1F5CAADF /* Sources */,
+				786693363846C19F2BD760E78D4D05A9 /* Frameworks */,
+				44A007444A6C6368E10C3B1BC1C3C695 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CropViewController-TOCropViewControllerBundle";
+			productName = "CropViewController-TOCropViewControllerBundle";
+			productReference = FC390281E0C3BE42F4FCA43A604D6E35 /* TOCropViewControllerBundle.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		3A20E9A2B226723E15D850F5BF6D564C /* Pods-QuizAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1672E2E92D1A6F58B5F85B1707C6E34A /* Build configuration list for PBXNativeTarget "Pods-QuizAppTests" */;
+			buildPhases = (
+				8787D5C2543F7B067557143C433B858E /* Sources */,
+				2C022991A2C02A8390D966CEBA9BCC08 /* Frameworks */,
+				4A598968A13EF597B0F9A3D1E281E821 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4ACAFB977747191607B0DFEF1CA91DCB /* PBXTargetDependency */,
+			);
+			name = "Pods-QuizAppTests";
+			productName = "Pods-QuizAppTests";
+			productReference = 74BDE89C56094B686E2188B1032432A5 /* Pods_QuizAppTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4006CB1F7B13173073658E351F85C78A /* Pods-QuizApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3936698B2F24DC8E8E8043F4C629F05D /* Build configuration list for PBXNativeTarget "Pods-QuizApp" */;
+			buildPhases = (
+				ACD0249AB45C6A95667852D75BE3F66E /* Sources */,
+				C00B11385E06F3BF160635D6602CF322 /* Frameworks */,
+				146362ACE97AC0F467DD7F270631F31B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77DB2375199A0BA879A324ED0A4C48A7 /* PBXTargetDependency */,
+				E3B1F4BA3A00056080B71A2FC3EFB6A7 /* PBXTargetDependency */,
+				DC2AA8ADEC4DCFC20320916FB388F258 /* PBXTargetDependency */,
+				9FADB858CDF4C37D72C925A0BFDC05D7 /* PBXTargetDependency */,
+				1C5367749E04F9CA8A5CE88E1A7DEE9C /* PBXTargetDependency */,
+				8C954DB7984BD4262E575E941EF26523 /* PBXTargetDependency */,
+			);
+			name = "Pods-QuizApp";
+			productName = "Pods-QuizApp";
+			productReference = DD0E2618541182AEC867350EDBE0AF2D /* Pods_QuizApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		41FA54D12162DAD51D02FC58A2CD5034 /* MBProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC1874913BA1F82C4953C3C7F551AB22 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
+			buildPhases = (
+				FE8E0446C3B3B52779E8DE373E495A61 /* Sources */,
+				B57774E30FD88AE26F9037E1360E947B /* Frameworks */,
+				197B7877D5D346F405BDD059EF96DBDC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MBProgressHUD;
+			productName = MBProgressHUD;
+			productReference = 36DE9DBDA55FCA21B039EE1B6E01CFC9 /* MBProgressHUD.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4F87037150ABE2C9238B54E8F6E33F36 /* Kingfisher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E151CD202797E4A2B6521EE8BECB6DE /* Build configuration list for PBXNativeTarget "Kingfisher" */;
+			buildPhases = (
+				154F6D32400678B08A7CB2E5FD292972 /* Sources */,
+				A05AD251435FB24E096BBA193F9C99F0 /* Frameworks */,
+				BADBBCEED9A9F8B15B7F98467EA6FB0E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kingfisher;
+			productName = Kingfisher;
+			productReference = AFFC549333F65AF41B3D6867457EE8AB /* Kingfisher.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				32B9974868188C4803318E36329C87FE /* Sources */,
+				99195E4207764744AEC07ECCBCD550EB /* Frameworks */,
+				B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 9978CAFCEEE8B4D8201B2617A9FBAC60 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C351A53514AD803EAF5E8C7192D4E359 /* Pods-QuizAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5D61F269CCAE9A31B60D09EAB26F7B0 /* Build configuration list for PBXNativeTarget "Pods-QuizAppUITests" */;
+			buildPhases = (
+				B49CD393EAB1383985F293EFA77AEEC8 /* Sources */,
+				C2D350FFFC8BF7F7DB6E1689DA15D955 /* Frameworks */,
+				DA69C8E7ADF73DDC8ABDFBA5236201F7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80E71580D8D789473FBB357822F6DF0B /* PBXTargetDependency */,
+			);
+			name = "Pods-QuizAppUITests";
+			productName = "Pods-QuizAppUITests";
+			productReference = 7358893D3B969758DA2345448E3991A1 /* Pods_QuizAppUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C86F2C8A1E6A3B6D196EB68101A7B292 /* SlideMenuControllerSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 884B4B01F65B07BFC3CDAC7EB43175CC /* Build configuration list for PBXNativeTarget "SlideMenuControllerSwift" */;
+			buildPhases = (
+				6B077B94C02FB4C855EF9666731CFE44 /* Sources */,
+				8C56E748454BA402CD475AEF8EA68FB4 /* Frameworks */,
+				990BA7763E808F0675389E9BBCE0C294 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlideMenuControllerSwift;
+			productName = SlideMenuControllerSwift;
+			productReference = 4FE58F352711BEB39CDD8FDFB042F1CD /* SlideMenuControllerSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 51BBADC609FBB5A069BA2E81A6875E2B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
+				0AEC202531AF47B692B3C9DA6D58675C /* CropViewController */,
+				2990770985796EEC3C38E8AB9E52CB0D /* CropViewController-TOCropViewControllerBundle */,
+				4F87037150ABE2C9238B54E8F6E33F36 /* Kingfisher */,
+				41FA54D12162DAD51D02FC58A2CD5034 /* MBProgressHUD */,
+				4006CB1F7B13173073658E351F85C78A /* Pods-QuizApp */,
+				3A20E9A2B226723E15D850F5BF6D564C /* Pods-QuizAppTests */,
+				C351A53514AD803EAF5E8C7192D4E359 /* Pods-QuizAppUITests */,
+				C86F2C8A1E6A3B6D196EB68101A7B292 /* SlideMenuControllerSwift */,
+				27000828D7C2C5E64DEA43F3AC94A250 /* SwiftyJSON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44A007444A6C6368E10C3B1BC1C3C695 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				577307E54A008BF24939C5CE99D758EA /* ar.lproj in Resources */,
+				4B3A33F1AF045B2DEF94E952227005D8 /* Base.lproj in Resources */,
+				55B3FEE4E11FFECAA5D9962BC0449CF0 /* da.lproj in Resources */,
+				856065023D6E6D76AE223A9D8E47A11A /* de.lproj in Resources */,
+				8A4C55A2B7F0D7464CC11B83CFF4ED88 /* en.lproj in Resources */,
+				0F7B8B5734BE246CFF027C92F1A7B0CF /* es.lproj in Resources */,
+				DFE0A1B25EB3CEB521A00687C0870788 /* fr.lproj in Resources */,
+				0EDBD3986C72A47E60F9FE61F5DA015A /* id.lproj in Resources */,
+				D9B0D4C7CBD1D5672CA642064F382885 /* it.lproj in Resources */,
+				6D33D81A4B45052570579514F30C81BD /* ja.lproj in Resources */,
+				5E907BFD602CCF1CFB95F027DE7CE03D /* ko.lproj in Resources */,
+				4E2F003BC44D6FE9D24D35FF6D352D21 /* ms.lproj in Resources */,
+				37249EB3C1BE689482D7588FEFEB8F03 /* nl.lproj in Resources */,
+				D0FAA9F5FFB5DC4F21E2C12E65A96525 /* pl.lproj in Resources */,
+				72D12B27E4D1DE7E7F4DE78D15A4A139 /* pt.lproj in Resources */,
+				154E7EBE39B5E1AFF3083F707F4C3888 /* ru.lproj in Resources */,
+				1306EAAD5CEEDD66AA8FB44C913FC7B6 /* tr.lproj in Resources */,
+				55F42AD3FBA2138A10EA7E118369EA66 /* vi.lproj in Resources */,
+				19DEC266274BA00C2CCA2DEC9393CA85 /* zh-Hans.lproj in Resources */,
+				0720EA7E74BB968B2AE845EA973B98C6 /* zh-Hant.lproj in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABD4C0DEB8F26E58093C47DF7D91AA7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E4DF63FA480731355CC706021224F5 /* TOCropViewControllerBundle.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		154F6D32400678B08A7CB2E5FD292972 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4074AA6F2557EF7970DEDE67B04433B6 /* AnimatedImageView.swift in Sources */,
+				D1575AAADDCEA395E3828EBAC2A772FA /* Box.swift in Sources */,
+				A9D2A6547EE5F6532EF8D1F1870BF158 /* CacheSerializer.swift in Sources */,
+				114397DE4A2DC0204868A79F4BE13769 /* Filter.swift in Sources */,
+				03E0A134F1DDF33EA16F004F1A230CA1 /* FormatIndicatedCacheSerializer.swift in Sources */,
+				B924069CD75769E22765912C66A87BF3 /* Image.swift in Sources */,
+				6486781D756A9D71FE5C6E56CC9A343F /* ImageCache.swift in Sources */,
+				DA7A5ECA4C0B39776007BE89B99227EF /* ImageDownloader.swift in Sources */,
+				B564B930C3B6CCFCC109ABF374B21CE6 /* ImageModifier.swift in Sources */,
+				BE9FB5E8188E0B68DB277B09A06E79BA /* ImagePrefetcher.swift in Sources */,
+				2283375C0C99789CF47EEDA0CE9D3D80 /* ImageProcessor.swift in Sources */,
+				7B2A61E55C43E9B12E5B7DD852456AEE /* ImageTransition.swift in Sources */,
+				0096C6816AC3D92834AB65C49518C177 /* ImageView+Kingfisher.swift in Sources */,
+				103228D906B112AA75562E8B17179127 /* Indicator.swift in Sources */,
+				95156987028D309F91AC55FBDFE01643 /* Kingfisher-dummy.m in Sources */,
+				E9E5F082818BE1AA4722E77DD066450F /* Kingfisher.swift in Sources */,
+				A8A79840E81BFA3D8DCC29BE71F1AEC4 /* KingfisherManager.swift in Sources */,
+				2ABE0F8940C00BD429E33ED7F7C9EA1D /* KingfisherOptionsInfo.swift in Sources */,
+				498DC29155467AC093701C1AF5EE3807 /* Placeholder.swift in Sources */,
+				C32C7FE70764DE37935F6A5D80CB17C7 /* RequestModifier.swift in Sources */,
+				3464228E4F1F63DBCA803CC848A6A8C0 /* Resource.swift in Sources */,
+				CEEB7C897409C08DF53289E307AB987C /* String+MD5.swift in Sources */,
+				CE38861F1268294930C074FC3F807E55 /* ThreadHelper.swift in Sources */,
+				FED97351EC4705507DAB175106B819C8 /* UIButton+Kingfisher.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32B9974868188C4803318E36329C87FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */,
+				A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */,
+				F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */,
+				61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */,
+				B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */,
+				A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */,
+				EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */,
+				BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */,
+				5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */,
+				CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */,
+				F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */,
+				7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */,
+				62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */,
+				7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */,
+				AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */,
+				3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */,
+				10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */,
+				BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42730E5FDBE34D803F22732D1F5CAADF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B077B94C02FB4C855EF9666731CFE44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC222B9CB098B132C257FD72366C7A5E /* SlideMenuController.swift in Sources */,
+				E904E5E681B14CCD366725F1805F8843 /* SlideMenuControllerSwift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8787D5C2543F7B067557143C433B858E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97F467F9B77D74541B01D95A4D0244C9 /* Pods-QuizAppTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACD0249AB45C6A95667852D75BE3F66E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB5AACC29F6D4273238B19983F44C97F /* Pods-QuizApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B49CD393EAB1383985F293EFA77AEEC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0202529E7E89D7A404EF0E317F6F2978 /* Pods-QuizAppUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C84EE17E73CB1B8616DD48942D245DA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D0D9B1B4609FDDD2FC097DB32636791 /* SwiftyJSON-dummy.m in Sources */,
+				22CED4CDADFEC911E1D55D65BCECC02A /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED10DC5059EB5959AF20F9D28D58FE3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653BC7F1DF6A3F93D814739335E9D774 /* CropViewController-dummy.m in Sources */,
+				816204A270F2215B4E5D3C994A4B79E7 /* CropViewController.swift in Sources */,
+				A88672AFDA4674ADECD7CA886EFEDB98 /* TOActivityCroppedImageProvider.m in Sources */,
+				8F96859CDAB70D1FB2CE12CF8A6A0B4D /* TOCropOverlayView.m in Sources */,
+				EB5BEE96B18D274358771C9FE445D490 /* TOCroppedImageAttributes.m in Sources */,
+				740A23BACE1E1E3F55AB422A5F3A350F /* TOCropScrollView.m in Sources */,
+				8EE2E92B19ED567B742895CA16B1EFC4 /* TOCropToolbar.m in Sources */,
+				A51528CF66088BF36C1F0E766FFF7F37 /* TOCropView.m in Sources */,
+				2270830B277F1A54439654D537543E35 /* TOCropViewController.m in Sources */,
+				A63D2CF5027CC5032A5ADE3D6C79F738 /* TOCropViewControllerTransitioning.m in Sources */,
+				5BF6EFAF25F5D727E4D7B7D9B5B69732 /* UIImage+CropRotate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE8E0446C3B3B52779E8DE373E495A61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0968524ED4DE8DF7834055C5B6089D72 /* MBProgressHUD-dummy.m in Sources */,
+				897C38C8E3C31950E2E93A4D6937CCC4 /* MBProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C5367749E04F9CA8A5CE88E1A7DEE9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SlideMenuControllerSwift;
+			target = C86F2C8A1E6A3B6D196EB68101A7B292 /* SlideMenuControllerSwift */;
+			targetProxy = CD0A9CF629C07A4058254A076B4D4E38 /* PBXContainerItemProxy */;
+		};
+		4ACAFB977747191607B0DFEF1CA91DCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-QuizApp";
+			target = 4006CB1F7B13173073658E351F85C78A /* Pods-QuizApp */;
+			targetProxy = B5A07AC339E34223902FFE24F34E32E7 /* PBXContainerItemProxy */;
+		};
+		77DB2375199A0BA879A324ED0A4C48A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
+			targetProxy = 4B8414C22E26958D46AFDA01F043D2C4 /* PBXContainerItemProxy */;
+		};
+		80E71580D8D789473FBB357822F6DF0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-QuizApp";
+			target = 4006CB1F7B13173073658E351F85C78A /* Pods-QuizApp */;
+			targetProxy = 7CEAFBA4175E54711A0456F612ED081D /* PBXContainerItemProxy */;
+		};
+		8C954DB7984BD4262E575E941EF26523 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = 27000828D7C2C5E64DEA43F3AC94A250 /* SwiftyJSON */;
+			targetProxy = 940D4C17C7C8049B8F1511BD64C315BC /* PBXContainerItemProxy */;
+		};
+		9FADB858CDF4C37D72C925A0BFDC05D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			target = 41FA54D12162DAD51D02FC58A2CD5034 /* MBProgressHUD */;
+			targetProxy = C03E5CB24623D8FD5148933CA28A749A /* PBXContainerItemProxy */;
+		};
+		D80F071166F353F7DC29E3E7B71DA23B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CropViewController-TOCropViewControllerBundle";
+			target = 2990770985796EEC3C38E8AB9E52CB0D /* CropViewController-TOCropViewControllerBundle */;
+			targetProxy = 4D782E90190A8384D325F5545CAE5927 /* PBXContainerItemProxy */;
+		};
+		DC2AA8ADEC4DCFC20320916FB388F258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kingfisher;
+			target = 4F87037150ABE2C9238B54E8F6E33F36 /* Kingfisher */;
+			targetProxy = D12E1B846D2AA06104E5FA98ED89B2D5 /* PBXContainerItemProxy */;
+		};
+		E3B1F4BA3A00056080B71A2FC3EFB6A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CropViewController;
+			target = 0AEC202531AF47B692B3C9DA6D58675C /* CropViewController */;
+			targetProxy = 6E9B72F24BA146F5A1D7623B9BAB7931 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0236C168F6BC2361C3304C1CF9A5DB66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B918275FB82B0B9CCF1B19684FD3807 /* Pods-QuizApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-QuizApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-QuizApp/Pods-QuizApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		112A1A441E2D6A0B407B85C18B476BDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6732CD01FCAC011219F47CE92F44C9E4 /* CropViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CropViewController/CropViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CropViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CropViewController/CropViewController.modulemap";
+				PRODUCT_MODULE_NAME = CropViewController;
+				PRODUCT_NAME = CropViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		11C646173332AB34A673683F2AD44104 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCF6891C6F60F9539493304D32F53C5C /* SlideMenuControllerSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SlideMenuControllerSwift/SlideMenuControllerSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SlideMenuControllerSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SlideMenuControllerSwift/SlideMenuControllerSwift.modulemap";
+				PRODUCT_MODULE_NAME = SlideMenuControllerSwift;
+				PRODUCT_NAME = SlideMenuControllerSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		255AFE6C21D3EBCA738A510D1FF31A12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C6663E5E4DE13DC319B366F57844513 /* Pods-QuizAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-QuizAppUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-QuizAppUITests/Pods-QuizAppUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4B95A92122631CDF2033C24ACD34245F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6732CD01FCAC011219F47CE92F44C9E4 /* CropViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CropViewController/CropViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CropViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CropViewController/CropViewController.modulemap";
+				PRODUCT_MODULE_NAME = CropViewController;
+				PRODUCT_NAME = CropViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4BED6E56E8C8B4CDA9659584987E4F93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCF6891C6F60F9539493304D32F53C5C /* SlideMenuControllerSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SlideMenuControllerSwift/SlideMenuControllerSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SlideMenuControllerSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SlideMenuControllerSwift/SlideMenuControllerSwift.modulemap";
+				PRODUCT_MODULE_NAME = SlideMenuControllerSwift;
+				PRODUCT_NAME = SlideMenuControllerSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4EA4E83EAC9E24975FFB1D17A96A7DB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6732CD01FCAC011219F47CE92F44C9E4 /* CropViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CropViewController";
+				INFOPLIST_FILE = "Target Support Files/CropViewController/ResourceBundle-TOCropViewControllerBundle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = TOCropViewControllerBundle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		553022A828EE1991F07D2D73F565AEF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		559B44DAFA23CEECAC36F504A73B6292 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E6EC0C97640F1AFC844508259DB2588 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		58CE816B060A41D32CEC095441D0E3E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		5CD279A46F054755499A015D44757CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7E0AA2903B7B517A5FC2DDA860FA387 /* Pods-QuizApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-QuizApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-QuizApp/Pods-QuizApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		915DA59784D403F4A0FA799966508BB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9C3E66EDA5034EE5B49C468F40F213A /* Pods-QuizAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-QuizAppTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-QuizAppTests/Pods-QuizAppTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A18C9CC7E37563F2891E7DC87F2DE6CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00322843922E94F16DFD4D791A6EEA46 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A2BA2879474A50CC2B87B1B630AA9DEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6732CD01FCAC011219F47CE92F44C9E4 /* CropViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CropViewController";
+				INFOPLIST_FILE = "Target Support Files/CropViewController/ResourceBundle-TOCropViewControllerBundle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = TOCropViewControllerBundle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		BAA2E479EC70F24BB9AE752A95108C62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBD1460EE709DEB6F4C436DBAE7C2402 /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
+				PRODUCT_MODULE_NAME = MBProgressHUD;
+				PRODUCT_NAME = MBProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C070354495C9DA1ED2957E0203A51D3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BF69110A225CF778151977B72942D97 /* Kingfisher.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kingfisher/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
+				PRODUCT_MODULE_NAME = Kingfisher;
+				PRODUCT_NAME = Kingfisher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C8AF34ED53D4A85EB922321777C889F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBD1460EE709DEB6F4C436DBAE7C2402 /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
+				PRODUCT_MODULE_NAME = MBProgressHUD;
+				PRODUCT_NAME = MBProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D4CBCD3EA9F7E26A85F6D1BBB4CA55B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BF69110A225CF778151977B72942D97 /* Kingfisher.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kingfisher/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
+				PRODUCT_MODULE_NAME = Kingfisher;
+				PRODUCT_NAME = Kingfisher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DCCE26C9DCCE2F28A24DB1FFC7E0FB88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E8BDCA4BCF352A37FD003D14F8B99AE /* Pods-QuizAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-QuizAppTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-QuizAppTests/Pods-QuizAppTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EA0ADC75B20BB62958101306980460E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00322843922E94F16DFD4D791A6EEA46 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F6EE42FA54E1650CBB822E33EC1236C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E6EC0C97640F1AFC844508259DB2588 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F85A56E210E5ADC309725A016D5CA429 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42F57F22B04FF3753D5DD3F89F5AD265 /* Pods-QuizAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-QuizAppUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-QuizAppUITests/Pods-QuizAppUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1672E2E92D1A6F58B5F85B1707C6E34A /* Build configuration list for PBXNativeTarget "Pods-QuizAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				915DA59784D403F4A0FA799966508BB7 /* Debug */,
+				DCCE26C9DCCE2F28A24DB1FFC7E0FB88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				553022A828EE1991F07D2D73F565AEF8 /* Debug */,
+				58CE816B060A41D32CEC095441D0E3E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3936698B2F24DC8E8E8043F4C629F05D /* Build configuration list for PBXNativeTarget "Pods-QuizApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CD279A46F054755499A015D44757CAB /* Debug */,
+				0236C168F6BC2361C3304C1CF9A5DB66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0ADC75B20BB62958101306980460E6 /* Debug */,
+				A18C9CC7E37563F2891E7DC87F2DE6CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		520A16D4DC0CEBD584DD8DCAFB245DAC /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6EE42FA54E1650CBB822E33EC1236C2 /* Debug */,
+				559B44DAFA23CEECAC36F504A73B6292 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E151CD202797E4A2B6521EE8BECB6DE /* Build configuration list for PBXNativeTarget "Kingfisher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4CBCD3EA9F7E26A85F6D1BBB4CA55B7 /* Debug */,
+				C070354495C9DA1ED2957E0203A51D3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		884B4B01F65B07BFC3CDAC7EB43175CC /* Build configuration list for PBXNativeTarget "SlideMenuControllerSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11C646173332AB34A673683F2AD44104 /* Debug */,
+				4BED6E56E8C8B4CDA9659584987E4F93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5D61F269CCAE9A31B60D09EAB26F7B0 /* Build configuration list for PBXNativeTarget "Pods-QuizAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85A56E210E5ADC309725A016D5CA429 /* Debug */,
+				255AFE6C21D3EBCA738A510D1FF31A12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C94AB5CFFD9BD7A84D287FA666E218DD /* Build configuration list for PBXNativeTarget "CropViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				112A1A441E2D6A0B407B85C18B476BDB /* Debug */,
+				4B95A92122631CDF2033C24ACD34245F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC1874913BA1F82C4953C3C7F551AB22 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8AF34ED53D4A85EB922321777C889F0 /* Debug */,
+				BAA2E479EC70F24BB9AE752A95108C62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7D1E52E129036332F742ED3AAB86681 /* Build configuration list for PBXNativeTarget "CropViewController-TOCropViewControllerBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EA4E83EAC9E24975FFB1D17A96A7DB4 /* Debug */,
+				A2BA2879474A50CC2B87B1B630AA9DEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -47,7 +47,11 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
             }
             else
             {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 
+                let slideViewController = storyboard.instantiateViewController(withIdentifier: "slideViewController") as! SlideViewController
+                
+                self.present(slideViewController, animated: true, completion: nil)
             }
             
         }
