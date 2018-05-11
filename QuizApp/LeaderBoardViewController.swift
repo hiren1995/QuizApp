@@ -47,7 +47,7 @@ class LeaderBoardViewController: UIViewController {
         
         //pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
         
-        pageMenu =  CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0, y: 80, width: self.view.frame.width, height: self.view.frame.height-100), pageMenuOptions: parameters)
+        pageMenu =  CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0, y: 80, width: self.view.frame.width, height: self.view.frame.height-110), pageMenuOptions: parameters)
         
         
         

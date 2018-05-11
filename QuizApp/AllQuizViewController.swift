@@ -8,14 +8,54 @@
 
 import UIKit
 
-class AllQuizViewController: UIViewController {
-
+class AllQuizViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
+    @IBOutlet var AllQuizTableView: UITableView!
+    
+    
+    var quizlist = ["Quiz 1","Quiz 2","Quiz 3" ,"Quiz 4","Quiz 5" , "Quiz 6","Quiz 7" , "Quiz 8","Quiz 9" , "Quiz 10"]
+    var quizimg = ["quiz1","quiz2","quiz1","quiz2","quiz1","quiz2","quiz1","quiz2","quiz1","quiz2"]
+    var status = ["(Finished)","(Attempted)","(Finished)","(Attempted)","(Finished)","(Attempted)","(Finished)","(Attempted)","(Finished)","(Attempted)"]
+    var time = ["01:00:00 - 01:15:00" , "05:00:00 - 05:30:00","01:00:00 - 01:15:00" , "05:00:00 - 05:30:00","01:00:00 - 01:15:00" , "05:00:00 - 05:30:00","01:00:00 - 01:15:00" , "05:00:00 - 05:30:00","01:00:00 - 01:15:00" , "05:00:00 - 05:30:00"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        AllQuizTableView.delegate = self
+        AllQuizTableView.dataSource = self
+        
         // Do any additional setup after loading the view.
     }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return quizlist.count
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = AllQuizTableView.dequeueReusableCell(withIdentifier: "allQuizTableViewCell", for: indexPath) as! AllQuizTableViewCell
+        
+        cell.imgQuiz.image = UIImage(named: quizimg[indexPath.row])
+        cell.lblQuizName.text = quizlist[indexPath.row]
+        cell.lblQuizStatus.text = status[indexPath.row]
+        cell.lblQuizTime.text = time[indexPath.row]
+        
+        
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 128
+        
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return 0
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
