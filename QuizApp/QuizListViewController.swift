@@ -41,6 +41,8 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         cell.imgQuiz.image = UIImage(named: imgquiz[indexPath.row])
         cell.lblQuiz.text = quizlist[indexPath.row]
         
+        cell.btn
+        
         return cell
         
     }

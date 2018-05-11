@@ -45,6 +45,15 @@ class AllQuizViewController: UIViewController,UITableViewDelegate,UITableViewDat
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let particularQuizViewController = storyboard.instantiateViewController(withIdentifier: "particularQuizViewController") as! ParticularQuizViewController
+        self.present(particularQuizViewController, animated: true, completion: nil)
+    
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 128

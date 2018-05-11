@@ -1,5 +1,5 @@
 //
-//  ParticularQuizTableViewCell.swift
+//  QuizQuestionTableViewCell.swift
 //  QuizApp
 //
 //  Created by Apple on 11/05/18.
@@ -8,15 +8,17 @@
 
 import UIKit
 
-class ParticularQuizTableViewCell: UITableViewCell {
-    
-    @IBOutlet var imgUser: UIImageView!
-    @IBOutlet var lblUserName: UILabel!
-    @IBOutlet var lblCompletionTime: UILabel!
-    @IBOutlet var lblLevel: UILabel!
-   
-    
+class QuizQuestionTableViewCell: UITableViewCell {
 
+    @IBOutlet var lblQuestionNo: UILabel!
+    @IBOutlet var lblQuestion: UILabel!
+    @IBOutlet var btnOptionA: UIButton!
+    @IBOutlet var btnOptionB: UIButton!
+    @IBOutlet var btnOptionC: UIButton!
+    @IBOutlet var btnOptionD: UIButton!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,5 +29,5 @@ class ParticularQuizTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

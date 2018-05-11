@@ -39,7 +39,7 @@ class LeaderBoardViewController: UIViewController {
         controllerArray.append(globalQuizViewController)
         
        
-        var parameters: [CAPSPageMenuOption] = [
+        let parameters: [CAPSPageMenuOption] = [
             .menuItemSeparatorWidth(0.0),
             .useMenuLikeSegmentedControl(true),
             .menuItemSeparatorPercentageHeight(0.1)
@@ -49,7 +49,7 @@ class LeaderBoardViewController: UIViewController {
         
         pageMenu =  CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0, y: 80, width: self.view.frame.width, height: self.view.frame.height-110), pageMenuOptions: parameters)
         
-        
+        pageMenu?.currentPageIndex = 0
         
         self.view.addSubview(pageMenu!.view)
         
