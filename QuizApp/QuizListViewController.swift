@@ -41,7 +41,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         cell.imgQuiz.image = UIImage(named: imgquiz[indexPath.row])
         cell.lblQuiz.text = quizlist[indexPath.row]
         
-        cell.btn
+        cell.btnJoinQuiz.addTarget(self, action: #selector(JoinQuiz), for: .touchUpInside)
         
         return cell
         
@@ -52,6 +52,14 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         return CGSize(width: 185, height: 185)
     }
     
+    @objc func JoinQuiz()
+    {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let quizQuestionViewController = storyboard.instantiateViewController(withIdentifier: "quizQuestionViewController") as! QuizQuestionViewController
+        
+        self.present(quizQuestionViewController, animated: true, completion: nil)
+    }
     
     @IBAction func btnMenu(_ sender: UIButton) {
         
