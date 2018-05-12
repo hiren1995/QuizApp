@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		188A805420A6DB7E00475AE0 /* QuizCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A805320A6DB7E00475AE0 /* QuizCompletedViewController.swift */; };
 		18C2F3FD20A56B2C00B627BF /* AllQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2F3FC20A56B2C00B627BF /* AllQuizTableViewCell.swift */; };
 		18C2F3FF20A57D9900B627BF /* GlobalQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2F3FE20A57D9900B627BF /* GlobalQuizTableViewCell.swift */; };
 		18C2F40120A59D4E00B627BF /* ParticularQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2F40020A59D4E00B627BF /* ParticularQuizViewController.swift */; };
@@ -65,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		188A805320A6DB7E00475AE0 /* QuizCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCompletedViewController.swift; sourceTree = "<group>"; };
 		18C2F3FC20A56B2C00B627BF /* AllQuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuizTableViewCell.swift; sourceTree = "<group>"; };
 		18C2F3FE20A57D9900B627BF /* GlobalQuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalQuizTableViewCell.swift; sourceTree = "<group>"; };
 		18C2F40020A59D4E00B627BF /* ParticularQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticularQuizViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				18C2F40420A5BA2500B627BF /* QuizQuestionViewController.swift */,
 				18C2F40620A5C5DC00B627BF /* QuizQuestionTableViewCell.swift */,
 				18C2F40720A5C5DC00B627BF /* QuizQuestionTableViewCell.xib */,
+				188A805320A6DB7E00475AE0 /* QuizCompletedViewController.swift */,
 				18F6CB1820A2BD610087955D /* Assets.xcassets */,
 				18F6CB1A20A2BD610087955D /* LaunchScreen.storyboard */,
 				18F6CB1D20A2BD610087955D /* Info.plist */,
@@ -505,6 +508,7 @@
 				18F6CB4E20A2F7260087955D /* SignUpViewController.swift in Sources */,
 				18F8399C20A4255D00E8523E /* MenuTableViewCell.swift in Sources */,
 				18F6CB5020A30E370087955D /* VerifyOTPViewController.swift in Sources */,
+				188A805420A6DB7E00475AE0 /* QuizCompletedViewController.swift in Sources */,
 				18C2F3FF20A57D9900B627BF /* GlobalQuizTableViewCell.swift in Sources */,
 				18F6CB5420A317CD0087955D /* SlideViewController.swift in Sources */,
 				18C2F40120A59D4E00B627BF /* ParticularQuizViewController.swift in Sources */,

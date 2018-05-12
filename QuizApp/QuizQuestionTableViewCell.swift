@@ -16,8 +16,10 @@ class QuizQuestionTableViewCell: UITableViewCell {
     @IBOutlet var btnOptionB: UIButton!
     @IBOutlet var btnOptionC: UIButton!
     @IBOutlet var btnOptionD: UIButton!
-    
-    
+    @IBOutlet var imgOptionA: UIImageView!
+    @IBOutlet var imgOptionB: UIImageView!
+    @IBOutlet var imgOptionC: UIImageView!
+    @IBOutlet var imgOptionD: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
