@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		188A805420A6DB7E00475AE0 /* QuizCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A805320A6DB7E00475AE0 /* QuizCompletedViewController.swift */; };
+		188A805C20A7060600475AE0 /* ConstantValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A805B20A7060600475AE0 /* ConstantValues.swift */; };
 		18C2F3FD20A56B2C00B627BF /* AllQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2F3FC20A56B2C00B627BF /* AllQuizTableViewCell.swift */; };
 		18C2F3FF20A57D9900B627BF /* GlobalQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2F3FE20A57D9900B627BF /* GlobalQuizTableViewCell.swift */; };
 		18C2F40120A59D4E00B627BF /* ParticularQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2F40020A59D4E00B627BF /* ParticularQuizViewController.swift */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		188A805320A6DB7E00475AE0 /* QuizCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCompletedViewController.swift; sourceTree = "<group>"; };
+		188A805B20A7060600475AE0 /* ConstantValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantValues.swift; sourceTree = "<group>"; };
 		18C2F3FC20A56B2C00B627BF /* AllQuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuizTableViewCell.swift; sourceTree = "<group>"; };
 		18C2F3FE20A57D9900B627BF /* GlobalQuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalQuizTableViewCell.swift; sourceTree = "<group>"; };
 		18C2F40020A59D4E00B627BF /* ParticularQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticularQuizViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				18F6CB4B20A2CC330087955D /* CustomClass.swift */,
+				188A805B20A7060600475AE0 /* ConstantValues.swift */,
 			);
 			path = "Custom Files";
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				18C2F40820A5C5DC00B627BF /* QuizQuestionTableViewCell.swift in Sources */,
 				18FE49CD20A46DDA00502F2A /* GlobalQuizViewController.swift in Sources */,
 				18F839A020A449B700E8523E /* LeaderBoardViewController.swift in Sources */,
+				188A805C20A7060600475AE0 /* ConstantValues.swift in Sources */,
 				18F6CB4C20A2CC330087955D /* CustomClass.swift in Sources */,
 				18F6CB5220A317B10087955D /* MenuViewController.swift in Sources */,
 				18FE49CB20A46DC400502F2A /* AllQuizViewController.swift in Sources */,
