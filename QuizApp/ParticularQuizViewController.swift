@@ -8,8 +8,6 @@
 
 import UIKit
 
-var backFromParticularQuiz = 0
-
 class ParticularQuizViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     @IBOutlet var ParticularQuizTableView: UITableView!
@@ -49,7 +47,7 @@ class ParticularQuizViewController: UIViewController,UITableViewDataSource,UITab
     
     @IBAction func btnBack(_ sender: UIButton) {
         
-        backFromParticularQuiz = 1
+        enteredFromMenuIndex = 1
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         

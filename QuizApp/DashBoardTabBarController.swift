@@ -8,16 +8,31 @@
 
 import UIKit
 
+var enteredFromMenuIndex = 0
+
 class DashBoardTabBarController: UITabBarController {
 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if(backFromParticularQuiz == 1)
+        
+        print(enteredFromMenuIndex)
+        
+        if(enteredFromMenuIndex == 0)
+        {
+            self.selectedIndex = 0
+        }
+        else if(enteredFromMenuIndex == 1)
         {
             self.selectedIndex = 1
         }
+        else if(enteredFromMenuIndex == 2)
+        {
+            self.selectedIndex = 2
+        }
+        
         
         // Do any additional setup after loading the view.
     }

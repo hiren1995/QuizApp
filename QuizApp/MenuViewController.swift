@@ -39,6 +39,26 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return cell
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        if(indexPath.row != 3)
+        {
+            print(indexPath.row)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            enteredFromMenuIndex = indexPath.row
+            
+            let slideViewController = storyboard.instantiateViewController(withIdentifier: "slideViewController") as! SlideViewController
+            
+            self.present(slideViewController, animated: false, completion: nil)
+        }
+        
+        
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     
         return 70
