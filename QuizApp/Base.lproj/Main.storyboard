@@ -779,7 +779,7 @@ UXVpeiAQTmFtZQ
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="quizListCollectionViewCell" id="4zZ-1o-fzK" customClass="QuizListCollectionViewCell" customModule="QuizApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="185" height="185"/>
+                                        <rect key="frame" x="-30" y="0.0" width="185" height="185"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="185" height="185"/>
@@ -1087,6 +1087,9 @@ UXVpeiAQTmFtZQ
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2T-kH-QTI">
                                 <rect key="frame" x="137" y="59" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="btnAddPic:" destination="zFf-2N-7qF" eventType="touchUpInside" id="xph-fv-t2R"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zgN-gs-OFc">
                                 <rect key="frame" x="207" y="129" width="30" height="30"/>
@@ -1220,6 +1223,7 @@ UXVpeiAQTmFtZQ
                         <viewLayoutGuide key="safeArea" id="n0u-dW-egV"/>
                     </view>
                     <connections>
+                        <outlet property="imgProfilePic" destination="rqL-wg-ZHE" id="0st-p4-bPm"/>
                         <outlet property="txtContactNumber" destination="Sre-CH-T87" id="z1O-ak-N8L"/>
                         <outlet property="txtEmail" destination="as4-p5-uhh" id="0jT-2S-Hx7"/>
                         <outlet property="txtFirstName" destination="MSF-sO-2Hb" id="mM1-g1-mFn"/>

@@ -690,7 +690,7 @@
 			baseConfigurationReference = B8D4D72A7E2FC26697DC098A /* Pods-QuizApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3NWJFVU6RP;
 				INFOPLIST_FILE = QuizApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -700,6 +700,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.QuizApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8af7cbb3-c154-494a-b6f1-a7e7c8961ef7";
+				PROVISIONING_PROFILE_SPECIFIER = QuizApp_Development1;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -710,7 +712,7 @@
 			baseConfigurationReference = 81A4F8EC3745E5F604AC0A1D /* Pods-QuizApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3NWJFVU6RP;
 				INFOPLIST_FILE = QuizApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -720,6 +722,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.QuizApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8af7cbb3-c154-494a-b6f1-a7e7c8961ef7";
+				PROVISIONING_PROFILE_SPECIFIER = QuizApp_Development1;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

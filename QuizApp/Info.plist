@@ -22,6 +22,12 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>NSCameraUsageDescription</key>
+	<string>$(PRODUCT_NAME) wants to use your Camera for Capturing images</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$(PRODUCT_NAME) wants to use your Photo Library for accessing images</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>$(PRODUCT_NAME) wants to use your Current Location</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIAppFonts</key>
