@@ -25,20 +25,29 @@ class QuizCompletedViewController: UIViewController {
         
         Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { (timer) in
             
-            scoredPoints = 0
-            totalPoints = 5
-            
-            enteredFromMenuIndex = 0
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            let slideViewController = storyboard.instantiateViewController(withIdentifier: "slideViewController") as! SlideViewController
-            
-            self.present(slideViewController, animated: true, completion: nil)
+            self.backToDashboard()
             
         }
     }
-
+    @IBAction func btnBack(_ sender: UIButton) {
+        
+        backToDashboard()
+    }
+    
+    func backToDashboard()
+    {
+        scoredPoints = 0
+        totalPoints = 5
+        
+        enteredFromMenuIndex = 0
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let slideViewController = storyboard.instantiateViewController(withIdentifier: "slideViewController") as! SlideViewController
+        
+        self.present(slideViewController, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
