@@ -55,6 +55,25 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             
             self.present(slideViewController, animated: false, completion: nil)
         }
+        else
+        {
+            let alert = UIAlertController(title: "User Already Registered", message: "Please Login as you are already registered from this mobile number", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                
+                userdefault.removeObject(forKey: userId)
+                userdefault.removeObject(forKey: userToken)
+                userdefault.removeObject(forKey: userData)
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let signInViewController = storyboard.instantiateViewController(withIdentifier: "signInViewController") as! SignInViewController
+                
+                self.present(signInViewController, animated: true, completion: nil)
+                
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
         
         
     }

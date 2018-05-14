@@ -7,15 +7,30 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
+import CoreLocation
+
+var tempLatitude:Double?
+var tempLongitude:Double?
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate{
 
     var window: UIWindow?
 
+    var storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    var locationManager = CLLocationManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        getLatLong()
+        
+        
+        
+        
         return true
     }
 
@@ -41,6 +56,126 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func Authenticate()
+    {
+        
+         let Login = UserDefaults.standard.bool(forKey: isLogin)
+         
+         if Login{
+         
+            let initialView = storyboard.instantiateViewController(withIdentifier: "slideViewController") as! SlideViewController
+            self.window?.rootViewController = initialView
+         }
+        
+    }
+    
+    func getLatLong()
+    {
+        
+        
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+        
+        
+        let x = locationManager.location
+        print(x?.coordinate.latitude)
+        print(x?.coordinate.longitude)
+        
+        tempLatitude = x?.coordinate.latitude
+        tempLongitude = x?.coordinate.longitude
+        
+        Authenticate()
+        
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let mylocation = locations.last
+        
+        
+        //mylocation!.coordinate.latitude, mylocation!.coordinate.longitude
+        
+        tempLatitude = mylocation!.coordinate.latitude.magnitude
+        tempLongitude = mylocation!.coordinate.longitude.magnitude
+        
+        print(tempLatitude)
+        print(tempLongitude)
+        
+        locationManager.stopUpdatingLocation()
+        
+        //Authenticate()
+        
+    }
+    
+    
+    
+    /*
+    func Authenticate()
+    {
+        
+        let Login = UserDefaults.standard.bool(forKey: isLogin)
+        
+        if Login{
+            
+            //if let fcmToken = UserDefaults.standard.value(forKey: DeviceToken)
+            //{
+                //for version 1 the fcm token is nil so it would crash when we need to get fcm token from userdefault so this code helps in saving app from crashing..!
+                
+                //print(fcmToken)
+                
+                //let loginParameters:Parameters = ["email": udefault.value(forKey: EmailAddress)! , "password" : udefault.value(forKey: Password)! , "device_token" : "" , "device_type" : 2]
+               let SigninParameters:Parameters = userdefault.value(forKey: LoginParameters) as! Parameters
+                print(SigninParameters)
+                
+                Alamofire.request(signinAPI, method: .post, parameters: SigninParameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+                    if(response.result.value != nil)
+                    {
+                        
+                        print(JSON(response.result.value))
+                        
+                        let tempDict = JSON(response.result.value!)
+                        
+                        //print(tempDict["data"]["user_id"])
+                        
+                        if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 1)
+                        {
+                            userdefault.set(response.result.value, forKey: userData)
+                            
+                        }
+                        else if(tempDict["status"] == "error")
+                        {
+                            self.window?.rootViewController?.showAlert(title: "Alert", message: "Invalid Email or Password")
+                            let initialView = self.storyboard.instantiateViewController(withIdentifier: "signInViewController") as! SignInViewController
+                            self.window?.rootViewController = initialView
+                        }
+                        
+                    }
+                    else
+                    {
+                        self.window?.rootViewController?.showAlert(title: "Alert", message: "Please Check Your Internet Connection")
+                        
+                    }
+                })
+           // }
+           //else
+           // {
+           //     print("nil")
+           //     let initialView = self.storyboard.instantiateViewController(withIdentifier: "signIn") as! SignIn
+           //     self.window?.rootViewController = initialView
+           // }
+            
+            
+            
+        }
+        else
+        {
+            let initialView = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+            self.window?.rootViewController = initialView
+        }
+ 
+ 
+    }
+    */
 }
 

@@ -27,7 +27,13 @@
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>$(PRODUCT_NAME) wants to use your Photo Library for accessing images</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>$(PRODUCT_NAME) wants to use your Current Location</string>
+	<string>$(PRODUCT_NAME) wants to use your Photo Library for your Location</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>$(PRODUCT_NAME) wants to use your Photo Library for your Location</string>
+	<key>NSLocationUsageDescription</key>
+	<string>$(PRODUCT_NAME) wants to use your Photo Library for your Location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>$(PRODUCT_NAME) wants to use your Photo Library for your Location</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIAppFonts</key>

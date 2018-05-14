@@ -15,6 +15,14 @@ var userdefault = UserDefaults.standard
 var UserId = "UserId"
 var UserToken = "UserToken"
 var isLogin = "isLogin"
+var contactNoToVerify = "contactNoToVerify"
+var userId = "userId"
+var userToken = "userToken"
+var userData = "userData"
+var LoginMobileNo = "LoginMobileNo"
+var LoginPassword = "LoginPassword"
+
+var LoginParameters = "LoginParameters"
 
 var baseUrl = "https://bulale.in/quiz/index.php/api/"
 var signupAPI = "\(baseUrl)/user/user_register"

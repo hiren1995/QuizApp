@@ -13,7 +13,7 @@ import MBProgressHUD
 import CropViewController
 import CoreLocation
 
-class SignUpViewController: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CropViewControllerDelegate,CLLocationManagerDelegate {
+class SignUpViewController: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CropViewControllerDelegate {
 
     @IBOutlet var imgProfilePic: UIImageView!
     @IBOutlet var txtFirstName: UITextField!
@@ -24,38 +24,15 @@ class SignUpViewController: UIViewController,UITextFieldDelegate,UIImagePickerCo
     
     var imagePicker = UIImagePickerController()
     
-    let locationManager = CLLocationManager()
-    
-    var latitude = CLLocationDegrees()
-    var longitude = CLLocationDegrees()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         addDoneButtonTextField()
         
-        self.locationManager.requestAlwaysAuthorization()
         
-        // For use in foreground
-        self.locationManager.requestWhenInUseAuthorization()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-        }
         
         
         // Do any additional setup after loading the view.
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
-        
-        latitude = locValue.latitude
-        longitude = locValue.longitude
     }
     
     @IBAction func btnNext(_ sender: UIButton) {
@@ -100,7 +77,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate,UIImagePickerCo
                 
                 let spinnerActivity = MBProgressHUD.showAdded(to: self.view, animated: true)
                 
-                let updateParameters:Parameters = ["user_name": txtFirstName.text! + txtLastName.text! , "user_contact_no" : txtContactNumber.text! , "user_email" : txtEmail.text! , "user_device_type" : 2 , "user_device_id" : "123", "user_device_token" : "abcd1234" , "user_lat" : latitude , "user_long" : longitude , "user_signin": 1 ,"user_password" : txtPassword.text!]
+                let updateParameters:Parameters = ["user_name": txtFirstName.text! + txtLastName.text! , "user_contact_no" : txtContactNumber.text! , "user_email" : txtEmail.text! , "user_device_type" : 2 , "user_device_id" : "123", "user_device_token" : "abcd1234" , "user_lat" : tempLatitude , "user_long" : tempLongitude , "user_signin": 1 ,"user_password" : txtPassword.text!]
                 
                 
                 Alamofire.upload(multipartFormData: { (multipartFormData) in
@@ -130,6 +107,8 @@ class SignUpViewController: UIViewController,UITextFieldDelegate,UIImagePickerCo
                             
                             if(tempDict["status"].stringValue == "success" && tempDict["status_code"].intValue == 1)
                             {
+                                userdefault.set(self.txtContactNumber.text!, forKey: contactNoToVerify)
+                                
                                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                                 
                                 let verifyOTPViewController = storyboard.instantiateViewController(withIdentifier: "verifyOTPViewController") as! VerifyOTPViewController
@@ -165,7 +144,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate,UIImagePickerCo
                     case .failure(let error):
                         print("Error in upload: \(error.localizedDescription)")
                         spinnerActivity.hide(animated: true)
-                        self.showAlert(title: "Alert", message: "Error in Uploading")
+                        self.showAlert(title: "Alert", message: "Error in Registering")
                         
                     }
                     

@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import MBProgressHUD
 
 class SignInViewController: UIViewController,UITextFieldDelegate {
 
@@ -47,11 +50,81 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
             }
             else
             {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 
-                let slideViewController = storyboard.instantiateViewController(withIdentifier: "slideViewController") as! SlideViewController
+                let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
                 
-                self.present(slideViewController, animated: true, completion: nil)
+                let SigninParameters:Parameters = ["user_name":"","user_contact_no": txtMobileNumber.text!,"user_email" :  "" , "user_password" : txtPassword.text!,"user_profile_photo":"","user_device_type":2,"user_device_token":"123456","user_lat":tempLatitude,"user_long":tempLongitude,"user_signin":1]
+                
+                print(SigninParameters)
+                
+                Alamofire.request(signinAPI, method: .post, parameters: SigninParameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+                    if(response.result.value != nil)
+                    {
+                        Spinner.hide(animated: true)
+                        
+                        print(JSON(response.result.value))
+                        
+                        let tempDict = JSON(response.result.value!)
+                        
+                        if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 1)
+                        {
+                            userdefault.set(true, forKey: isLogin)
+                            
+                            userdefault.set(tempDict["login_user"][0]["user_id"].intValue, forKey: userId)
+                            userdefault.set(tempDict["login_user"][0]["user_token"].intValue, forKey: userToken)
+                            
+                            userdefault.set(response.result.value, forKey: userData)
+                            
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            
+                            let slideViewController = storyboard.instantiateViewController(withIdentifier: "slideViewController") as! SlideViewController
+                            
+                            self.present(slideViewController, animated: true, completion: nil)
+ 
+                            
+                            
+                        }
+                        else if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 2)
+                        {
+                            let alert = UIAlertController(title: "OTP Sent Successfully", message: "Please Verify Mobile Number as you are already registered from this mobile number", preferredStyle: .alert)
+                            
+                            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                                
+                                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                
+                                let verifyOTPViewController = storyboard.instantiateViewController(withIdentifier: "verifyOTPViewController") as! VerifyOTPViewController
+                                
+                                self.present(verifyOTPViewController, animated: true, completion: nil)
+                                
+                            }))
+                            
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                            
+                        else if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 3)
+                        {
+                            self.showAlert(title: "Alert", message: tempDict["message"].stringValue)
+                        }
+                        else
+                        {
+                            self.showAlert(title: "Alert", message: "Invalid Credentials")
+                        }
+                        
+                    }
+                    else
+                    {
+                        Spinner.hide(animated: true)
+                        self.showAlert(title: "Alert", message: "Please Check Your Internet Connection")
+                    }
+                })
+                
+                
+                
+                //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                
+                //let slideViewController = storyboard.instantiateViewController(withIdentifier: "slideViewController") as! SlideViewController
+                
+                //self.present(slideViewController, animated: true, completion: nil)
             }
             
         }

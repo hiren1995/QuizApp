@@ -779,7 +779,7 @@ UXVpeiAQTmFtZQ
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="quizListCollectionViewCell" id="4zZ-1o-fzK" customClass="QuizListCollectionViewCell" customModule="QuizApp" customModuleProvider="target">
-                                        <rect key="frame" x="-30" y="0.0" width="185" height="185"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="185" height="185"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="185" height="185"/>
@@ -1259,7 +1259,7 @@ UXVpeiAQTmFtZQ
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pLq-kN-eeR">
                                 <rect key="frame" x="111" y="370" width="152" height="2"/>
@@ -1285,11 +1285,17 @@ UXVpeiAQTmFtZQ
                                         <color key="value" red="0.9137254901960784" green="0.92941176470588238" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnVerify:" destination="KOb-5B-Dz2" eventType="touchUpInside" id="SkG-ku-A88"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98431372549019602" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Wnv-c8-RTj"/>
                     </view>
+                    <connections>
+                        <outlet property="txtOTP" destination="T4v-FU-9uG" id="heI-g6-vPy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5y-uu-q6P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
