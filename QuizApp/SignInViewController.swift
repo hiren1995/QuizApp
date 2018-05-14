@@ -53,7 +53,7 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
                 
                 let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
                 
-                let SigninParameters:Parameters = ["user_name":"","user_contact_no": txtMobileNumber.text!,"user_email" :  "" , "user_password" : txtPassword.text!,"user_profile_photo":"","user_device_type":2,"user_device_token":"123456","user_lat":tempLatitude,"user_long":tempLongitude,"user_signin":1]
+                let SigninParameters:Parameters = ["user_name":"","user_contact_no": txtMobileNumber.text!,"user_email" :  "" , "user_password" : txtPassword.text!,"user_profile_photo":"","user_device_type":2,"user_device_token":"123456","user_lat":tempLatitude!,"user_long":tempLongitude!,"user_signin":1]
                 
                 print(SigninParameters)
                 
@@ -70,8 +70,8 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
                         {
                             userdefault.set(true, forKey: isLogin)
                             
-                            userdefault.set(tempDict["login_user"][0]["user_id"].intValue, forKey: userId)
-                            userdefault.set(tempDict["login_user"][0]["user_token"].intValue, forKey: userToken)
+                            userdefault.set(tempDict["login_user"][0]["user_id"].stringValue, forKey: userId)
+                            userdefault.set(tempDict["login_user"][0]["user_token"].stringValue, forKey: userToken)
                             
                             userdefault.set(response.result.value, forKey: userData)
                             
@@ -86,6 +86,9 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
                         }
                         else if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 2)
                         {
+                            
+                            userdefault.set(self.txtMobileNumber.text!, forKey: contactNoToVerify)
+                            
                             let alert = UIAlertController(title: "OTP Sent Successfully", message: "Please Verify Mobile Number as you are already registered from this mobile number", preferredStyle: .alert)
                             
                             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert) in

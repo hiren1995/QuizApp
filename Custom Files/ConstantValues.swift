@@ -12,8 +12,6 @@ import UIKit
 
 var userdefault = UserDefaults.standard
 
-var UserId = "UserId"
-var UserToken = "UserToken"
 var isLogin = "isLogin"
 var contactNoToVerify = "contactNoToVerify"
 var userId = "userId"

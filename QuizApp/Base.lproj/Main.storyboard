@@ -250,6 +250,8 @@
                     </view>
                     <connections>
                         <outlet property="MenuTableView" destination="LCY-aE-OJl" id="5l4-j3-dhZ"/>
+                        <outlet property="imgProfilePic" destination="nJY-8q-9KS" id="Z6M-HQ-DlV"/>
+                        <outlet property="lblUserName" destination="8NX-TG-6Lv" id="VtU-PT-q5m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="79y-Dt-DFc" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,6 +8,9 @@
 
 import UIKit
 import SlideMenuControllerSwift
+import Alamofire
+import SwiftyJSON
+import MBProgressHUD
 
 class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     
@@ -22,6 +25,8 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
 
         QuizListCollectionView.delegate = self
         QuizListCollectionView.dataSource = self
+        
+        loadQuizList()
         
         // Do any additional setup after loading the view.
     }
@@ -67,6 +72,46 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         let slidemenu = self.slideMenuController()
         
         slidemenu?.openLeft()
+        
+    }
+    
+    func loadQuizList()
+    {
+        let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        let QuizListParameters:Parameters = ["user_id":userdefault.value(forKey: userId) as! String,"user_token": userdefault.value(forKey: userToken) as! String]
+        
+        print(QuizListParameters)
+        
+        Alamofire.request(quizListAPI, method: .post, parameters: QuizListParameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+            if(response.result.value != nil)
+            {
+                Spinner.hide(animated: true)
+                
+                print(JSON(response.result.value))
+                
+                let tempDict = JSON(response.result.value!)
+                
+                if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 1)
+                {
+                   
+                    
+                    
+                }
+               
+                else
+                {
+                    self.showAlert(title: "Alert", message: "Invalid User")
+                }
+                
+            }
+            else
+            {
+                Spinner.hide(animated: true)
+                self.showAlert(title: "Alert", message: "Please Check Your Internet Connection")
+            }
+        })
+        
         
     }
     

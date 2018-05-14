@@ -58,8 +58,8 @@ class VerifyOTPViewController: UIViewController {
                         
                         userdefault.set(true, forKey: isLogin)
                         
-                        userdefault.set(tempDict["user_data"][0]["user_id"].intValue, forKey: userId)
-                        userdefault.set(tempDict["user_data"][0]["user_token"].intValue, forKey: userToken)
+                        userdefault.set(tempDict["user_data"][0]["user_id"].stringValue, forKey: userId)
+                        userdefault.set(tempDict["user_data"][0]["user_token"].stringValue, forKey: userToken)
                        
                         userdefault.set(response.result.value, forKey: userData)
                         

@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Kingfisher
+import Alamofire
+import SwiftyJSON
 
 class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
 
     @IBOutlet var MenuTableView: UITableView!
+    @IBOutlet var imgProfilePic: UIImageView!
+    @IBOutlet var lblUserName: UILabel!
     
     var list = ["Quiz List","LeaderBoard","About Us","Logout"]
     var imglist = ["ic_quiz_list","ic_leader","ic_settings","logout"]
@@ -21,6 +26,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
         MenuTableView.delegate = self
         MenuTableView.dataSource = self
+        
+        loadData()
         
         // Do any additional setup after loading the view.
     }
@@ -57,10 +64,11 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
         else
         {
-            let alert = UIAlertController(title: "User Already Registered", message: "Please Login as you are already registered from this mobile number", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Logout", message: "Are you sure you want to Logout", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert) in
                 
+                userdefault.set(false, forKey: isLogin)
                 userdefault.removeObject(forKey: userId)
                 userdefault.removeObject(forKey: userToken)
                 userdefault.removeObject(forKey: userData)
@@ -72,6 +80,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 
             }))
             
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            
             self.present(alert, animated: true, completion: nil)
         }
         
@@ -82,6 +92,33 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
         return 70
     }
+    
+    
+    func loadData()
+    {
+        let userdata = JSON(userdefault.value(forKey: userData))
+        
+        let imgurl = userdata["login_user"][0]["user_profile_photo"].stringValue
+        
+        lblUserName.text = userdata["login_user"][0]["user_name"].stringValue
+        
+        KingfisherManager.shared.downloader.downloadImage(with: NSURL(string: imgurl)! as URL, retrieveImageTask: RetrieveImageTask.empty, options: [], progressBlock: nil, completionHandler: { (image,error, imageURL, imageData) in
+            
+            
+            if(error == nil)
+            {
+                self.imgProfilePic.image = image
+                
+            }
+            else
+            {
+                self.showAlert(title: "Alert", message: "Something Went Wrong while downloading Profile Image")
+            }
+            
+        })
+        
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
