@@ -14,13 +14,20 @@ import UserNotifications
 import Firebase
 import FirebaseInstanceID
 import FirebaseMessaging
+import GoogleSignIn
 
 var tempLatitude:Double?
 var tempLongitude:Double?
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate, UNUserNotificationCenterDelegate,MessagingDelegate{
+var GoogleUserName  = String()
+var GoogleUserContact = String()
+var GoogleEmail = String()
+var GoogleProfilePic = String()
 
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate, UNUserNotificationCenterDelegate,MessagingDelegate,GIDSignInDelegate{
+   
     var window: UIWindow?
 
     var storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -66,6 +73,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
         FirebaseApp.configure()
         
         //getLatLong()
+        
+        
+        // Google Signin
+        
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
         
         return true
     }
@@ -204,15 +217,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    /*
-     //code for facebook login
+    
+    
+     // code for facebook login and google login to handle urls
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         
-        return SDKApplicationDelegate.shared.application(app, open: url, options: options)
+        //return SDKApplicationDelegate.shared.application(app, open: url, options: options)
+        
+        return GIDSignIn.sharedInstance().handle(url,sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,annotation: [:])
+        
+        
+        
     }
-    */
- 
- 
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
+    }
+    
     func Authenticate()
     {
         

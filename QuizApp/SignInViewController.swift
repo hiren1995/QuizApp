@@ -11,23 +11,39 @@ import Alamofire
 import SwiftyJSON
 import MBProgressHUD
 
-class SignInViewController: UIViewController,UITextFieldDelegate {
+import Firebase
+import FirebaseInstanceID
+import FirebaseMessaging
+import GoogleSignIn
 
+class SignInViewController: UIViewController,UITextFieldDelegate,GIDSignInUIDelegate,GIDSignInDelegate{
+    
+   
     @IBOutlet var ViewSigninGoogle: UIView!
     @IBOutlet var ViewSigninFB: UIView!
     @IBOutlet var txtMobileNumber: UITextField!
     @IBOutlet var txtPassword: UITextField!
+   
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         ViewSigninFB.addBorderShadow(shadowOpacity: 0.3, shadowRadius: 3.0, shadowColor: UIColor.black)
+        
         ViewSigninGoogle.addBorderShadow(shadowOpacity: 0.3, shadowRadius: 3.0, shadowColor: UIColor.black)
         
         addDoneButtonTextField()
         
         txtPassword.delegate = self
+        
+        configureGoogleSignin()
+
+        
+        // Google Signin
+        
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
         
         // Do any additional setup after loading the view.
     }
@@ -51,77 +67,11 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
             else
             {
                 
-                let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
+                
                 
                 let SigninParameters:Parameters = ["user_name":"","user_contact_no": txtMobileNumber.text!,"user_email" :  "" , "user_password" : txtPassword.text!,"user_profile_photo":"","user_device_type":2,"user_device_id":userdefault.value(forKey: DeviceId)!,"user_device_token":userdefault.value(forKey: DeviceToken)!,"user_lat":tempLatitude!,"user_long":tempLongitude!,"user_signin":1]
                 
-                print(SigninParameters)
-                
-                Alamofire.request(signinAPI, method: .post, parameters: SigninParameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
-                    if(response.result.value != nil)
-                    {
-                        Spinner.hide(animated: true)
-                        
-                        print(JSON(response.result.value))
-                        
-                        let tempDict = JSON(response.result.value!)
-                        
-                        if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 1)
-                        {
-                            userdefault.set(true, forKey: isLogin)
-                            
-                            userdefault.set(tempDict["login_user"][0]["user_id"].stringValue, forKey: userId)
-                            userdefault.set(tempDict["login_user"][0]["user_token"].stringValue, forKey: userToken)
-                            
-                            userdefault.set(response.result.value, forKey: userData)
-                            
-                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                            
-                            let slideViewController = storyboard.instantiateViewController(withIdentifier: "slideViewController") as! SlideViewController
-                            
-                            self.present(slideViewController, animated: true, completion: nil)
- 
-                            
-                            
-                        }
-                        else if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 2)
-                        {
-                            
-                            userdefault.set(self.txtMobileNumber.text!, forKey: contactNoToVerify)
-                            
-                            let alert = UIAlertController(title: "OTP Sent Successfully", message: "Please Verify Mobile Number as you are already registered from this mobile number", preferredStyle: .alert)
-                            
-                            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert) in
-                                
-                                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                                
-                                let verifyOTPViewController = storyboard.instantiateViewController(withIdentifier: "verifyOTPViewController") as! VerifyOTPViewController
-                                
-                                self.present(verifyOTPViewController, animated: true, completion: nil)
-                                
-                            }))
-                            
-                            self.present(alert, animated: true, completion: nil)
-                        }
-                            
-                        else if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 3)
-                        {
-                            self.showAlert(title: "Alert", message: tempDict["message"].stringValue)
-                        }
-                        else
-                        {
-                            self.showAlert(title: "Alert", message: "Invalid Credentials")
-                        }
-                        
-                    }
-                    else
-                    {
-                        Spinner.hide(animated: true)
-                        self.showAlert(title: "Alert", message: "Please Check Your Internet Connection")
-                    }
-                })
-                
-                
+                Signin(SignInParameters : SigninParameters)
                 
                 //let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 
@@ -172,6 +122,141 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
         self.view.endEditing(true)
         
     }
+    
+    func configureGoogleSignin()
+    {
+        GIDSignIn.sharedInstance().uiDelegate = self
+        //GIDSignIn.sharedInstance().signIn()
+    }
+    
+    @IBAction func btnGoogleSignin(_ sender: UIButton) {
+        
+        GIDSignIn.sharedInstance().signIn()
+        
+    }
+    
+    func Signin(SignInParameters : Parameters)
+    {
+        let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        
+        print(SignInParameters)
+        
+        Alamofire.request(signinAPI, method: .post, parameters: SignInParameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+            if(response.result.value != nil)
+            {
+                Spinner.hide(animated: true)
+                
+                print(JSON(response.result.value))
+                
+                let tempDict = JSON(response.result.value!)
+                
+                if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 1)
+                {
+                    userdefault.set(true, forKey: isLogin)
+                    
+                    userdefault.set(tempDict["login_user"][0]["user_id"].stringValue, forKey: userId)
+                    userdefault.set(tempDict["login_user"][0]["user_token"].stringValue, forKey: userToken)
+                    
+                    userdefault.set(response.result.value, forKey: userData)
+                    
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    
+                    let slideViewController = storyboard.instantiateViewController(withIdentifier: "slideViewController") as! SlideViewController
+                    
+                    self.present(slideViewController, animated: true, completion: nil)
+                    
+                    
+                    
+                }
+                else if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 2)
+                {
+                    
+                    userdefault.set(self.txtMobileNumber.text!, forKey: contactNoToVerify)
+                    
+                    let alert = UIAlertController(title: "OTP Sent Successfully", message: "Please Verify Mobile Number as you are already registered from this mobile number", preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                        
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        
+                        let verifyOTPViewController = storyboard.instantiateViewController(withIdentifier: "verifyOTPViewController") as! VerifyOTPViewController
+                        
+                        self.present(verifyOTPViewController, animated: true, completion: nil)
+                        
+                    }))
+                    
+                    self.present(alert, animated: true, completion: nil)
+                }
+                    
+                else if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 3)
+                {
+                    self.showAlert(title: "Alert", message: tempDict["message"].stringValue)
+                }
+                else
+                {
+                    self.showAlert(title: "Alert", message: "Invalid Credentials")
+                }
+                
+            }
+            else
+            {
+                Spinner.hide(animated: true)
+                self.showAlert(title: "Alert", message: "Please Check Your Internet Connection")
+            }
+        })
+        
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
+        if let error = error {
+            // ...
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+        
+        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+            if let error = error {
+                // ...
+                return
+            }
+            else
+            {
+                
+                print(authResult?.user.displayName)
+                
+                if(authResult?.user.displayName != nil)
+                {
+                    GoogleUserName = (authResult?.user.displayName)!
+                }
+                if(authResult?.user.email != nil)
+                {
+                    GoogleEmail = (authResult?.user.email)!
+                }
+                if(authResult?.user.phoneNumber != nil)
+                {
+                    GoogleUserContact = (authResult?.user.phoneNumber)!
+                }
+                if(authResult?.user.photoURL != nil)
+                {
+                    GoogleProfilePic = (authResult?.user.photoURL?.relativeString)!
+                }
+                
+                let FBSigninParameters:Parameters = ["user_name":GoogleUserName,"user_contact_no": GoogleUserContact,"user_email" :  GoogleEmail , "user_password" : "","user_profile_photo":GoogleProfilePic,"user_device_type":2,"user_device_id":userdefault.value(forKey: DeviceId)!,"user_device_token":userdefault.value(forKey: DeviceToken)!,"user_lat":tempLatitude!,"user_long":tempLongitude!,"user_signin":3]
+                
+                print(FBSigninParameters)
+                
+                self.Signin(SignInParameters : FBSigninParameters)
+               
+            }
+        }
+        
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

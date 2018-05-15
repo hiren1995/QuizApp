@@ -16,7 +16,7 @@ target 'QuizApp' do
   
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
-
+  pod 'Firebase/Auth'
 
   pod 'GoogleSignIn'
   

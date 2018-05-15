@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1829239020AAD1DF009DB087 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1829238F20AAD1DF009DB087 /* StoreKit.framework */; };
+		1829239220AAD1F3009DB087 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1829239120AAD1F2009DB087 /* AddressBook.framework */; };
+		1829239420AAD204009DB087 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1829239320AAD204009DB087 /* SystemConfiguration.framework */; };
+		1829239720AAD270009DB087 /* QuizApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1829239620AAD270009DB087 /* QuizApp.m */; };
 		188A805420A6DB7E00475AE0 /* QuizCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A805320A6DB7E00475AE0 /* QuizCompletedViewController.swift */; };
 		188A805C20A7060600475AE0 /* ConstantValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A805B20A7060600475AE0 /* ConstantValues.swift */; };
 		18BE0EFF20AAC0B300D4728F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BE0EFE20AAC0B100D4728F /* GoogleService-Info.plist */; };
@@ -68,6 +72,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1829238F20AAD1DF009DB087 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1829239120AAD1F2009DB087 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		1829239320AAD204009DB087 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1829239520AAD26F009DB087 /* QuizApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuizApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		1829239620AAD270009DB087 /* QuizApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizApp.m; sourceTree = "<group>"; };
 		188A805320A6DB7E00475AE0 /* QuizCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCompletedViewController.swift; sourceTree = "<group>"; };
 		188A805B20A7060600475AE0 /* ConstantValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantValues.swift; sourceTree = "<group>"; };
 		18BE0EFD20AAB40700D4728F /* QuizApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuizApp.entitlements; sourceTree = "<group>"; };
@@ -125,6 +134,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1829239420AAD204009DB087 /* SystemConfiguration.framework in Frameworks */,
+				1829239220AAD1F3009DB087 /* AddressBook.framework in Frameworks */,
+				1829239020AAD1DF009DB087 /* StoreKit.framework in Frameworks */,
 				EE3A7ED89260C76255604B34 /* Pods_QuizApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +215,8 @@
 				18F6CB1A20A2BD610087955D /* LaunchScreen.storyboard */,
 				18F6CB1D20A2BD610087955D /* Info.plist */,
 				18BE0EFE20AAC0B100D4728F /* GoogleService-Info.plist */,
+				1829239620AAD270009DB087 /* QuizApp.m */,
+				1829239520AAD26F009DB087 /* QuizApp-Bridging-Header.h */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -261,6 +275,9 @@
 		CEC2AA8F4AC3DB12A3DE7AC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1829239320AAD204009DB087 /* SystemConfiguration.framework */,
+				1829239120AAD1F2009DB087 /* AddressBook.framework */,
+				1829238F20AAD1DF009DB087 /* StoreKit.framework */,
 				B33EB92FFD200EFCBAF679F6 /* Pods_QuizApp.framework */,
 				562A01BEC936F148E341A3D5 /* Pods_QuizAppTests.framework */,
 				C722863061402245F102F6ED /* Pods_QuizAppUITests.framework */,
@@ -341,6 +358,7 @@
 				TargetAttributes = {
 					18F6CB0D20A2BD5F0087955D = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -536,6 +554,7 @@
 				18F8399920A420E300E8523E /* Raleway_Medium.ttf in Sources */,
 				18F8399A20A420E300E8523E /* Raleway_Regular.ttf in Sources */,
 				18C2F40820A5C5DC00B627BF /* QuizQuestionTableViewCell.swift in Sources */,
+				1829239720AAD270009DB087 /* QuizApp.m in Sources */,
 				18FE49CD20A46DDA00502F2A /* GlobalQuizViewController.swift in Sources */,
 				18F839A020A449B700E8523E /* LeaderBoardViewController.swift in Sources */,
 				188A805C20A7060600475AE0 /* ConstantValues.swift in Sources */,
@@ -730,16 +749,22 @@
 			baseConfigurationReference = B8D4D72A7E2FC26697DC098A /* Pods-QuizApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = QuizApp/QuizApp.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = S6BT78C69G;
 				INFOPLIST_FILE = QuizApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adweb.QuizApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a5e7f3e2-711b-4648-a039-03bf4f0233f1";
 				PROVISIONING_PROFILE_SPECIFIER = QuizApp_adweb_Development1;
+				SWIFT_OBJC_BRIDGING_HEADER = "QuizApp/QuizApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -750,16 +775,21 @@
 			baseConfigurationReference = 81A4F8EC3745E5F604AC0A1D /* Pods-QuizApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = QuizApp/QuizApp.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = S6BT78C69G;
 				INFOPLIST_FILE = QuizApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adweb.QuizApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a5e7f3e2-711b-4648-a039-03bf4f0233f1";
 				PROVISIONING_PROFILE_SPECIFIER = QuizApp_adweb_Development1;
+				SWIFT_OBJC_BRIDGING_HEADER = "QuizApp/QuizApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -774,7 +804,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NWJFVU6RP;
 				INFOPLIST_FILE = QuizAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.QuizAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -792,7 +826,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NWJFVU6RP;
 				INFOPLIST_FILE = QuizAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.QuizAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -809,7 +847,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NWJFVU6RP;
 				INFOPLIST_FILE = QuizAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.QuizAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -826,7 +868,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NWJFVU6RP;
 				INFOPLIST_FILE = QuizAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.QuizAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
