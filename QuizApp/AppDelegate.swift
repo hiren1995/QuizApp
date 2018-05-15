@@ -10,12 +10,16 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 import CoreLocation
+import UserNotifications
+import Firebase
+import FirebaseInstanceID
+import FirebaseMessaging
 
 var tempLatitude:Double?
 var tempLongitude:Double?
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate, UNUserNotificationCenterDelegate,MessagingDelegate{
 
     var window: UIWindow?
 
@@ -26,13 +30,157 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate{
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        getLatLong()
+        
+        //SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)  //this is for facebook login
+        
+        //-------------------------------- Making app register for Remotw Notification --------------------------------------
+        
+        if #available(iOS 10.0, *) {
+            
+            // For iOS 10 display notification (sent via APNS)
+            UNUserNotificationCenter.current().delegate = self
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in })
+            
+            
+            // For iOS 10 data message (sent via FCM
+            Messaging.messaging().delegate = self
+            
+            
+        } else {
+            
+            let settings: UIUserNotificationSettings =
+                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
+            
+        }
+        
+        application.registerForRemoteNotifications()
+        
+        //-------------------------------------------------------------------------------------------------------------------
         
         
         
+        FirebaseApp.configure()
+        
+        //getLatLong()
         
         return true
     }
+    
+    //--------------------------------------- Push Notification module Start ---------------------------------------------------------------------------------------------------
+    
+    
+    //To get Device Token or Firebase Token
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)
+    {
+        // FCM Token
+        if let refreshedToken = InstanceID.instanceID().token(){
+            print("InstanceID token: \(refreshedToken)")
+            
+            let device_id = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+            print("The device Token is = \(device_id)")
+            
+            userdefault.set(refreshedToken, forKey: DeviceToken)
+            userdefault.set(device_id, forKey: DeviceId)
+            
+            connectToFcm()
+        }
+        //connectToFcm()
+        
+    }
+    
+    func connectToFcm() {
+        Messaging.messaging().connect{ (error) in
+            if (error != nil) {
+                print("Unable to connect with FCM. \(error)")
+                
+            } else {
+                print("Connected to FCM.")
+                //self.Authenicate()
+               
+            }
+        }
+    }
+    func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String)
+    {
+        print("Firebase registration token: \(fcmToken)")
+        
+        userdefault.set(fcmToken, forKey: DeviceToken)
+        self.getLatLong()
+        
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any])
+    {
+        print(JSON(userInfo))
+        
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        // Print full message.
+        print(JSON(userInfo))
+        
+    }
+    
+    
+    //Called if unable to register for APNS.
+    private func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print(error)
+    }
+    
+    // The callback to handle data message received via FCM for devices running iOS 10 or above.
+    func application(received remoteMessage: MessagingRemoteMessage) {
+        print(remoteMessage.appData)
+    }
+    
+    
+    // This method will be called when app received push notifications in foreground
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
+    {
+        //completionHandler([UNNotificationPresentationOptions.alert,UNNotificationPresentationOptions.sound,UNNotificationPresentationOptions.badge])
+        
+        /*
+         let userInfo = notification.request.content.userInfo
+         print(userInfo)
+         let aps = userInfo["gcm.notification.data"] as? String
+         // print(aps)
+         
+         let data = aps?.data(using: .utf8)
+         
+         var jsonDictionary : NSDictionary = [:]
+         do {
+         jsonDictionary = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions()) as! NSDictionary
+         } catch {
+         print(error)
+         }
+         print("Notification Data is:\(jsonDictionary)")
+         
+         /*
+         let strType = jsonDictionary["notification_from"] as? String
+         if strType == "receive_message"{
+         
+         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MessageNotification"), object: jsonDictionary)
+         }
+         else{
+         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Notification"), object: jsonDictionary)
+         }
+         */
+         
+         */
+        
+    }
+    
+    func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
+        print("Received data message: \(remoteMessage.appData)")
+    }
+    
+    //--------------------------------------- Push Notification module End ---------------------------------------------------------------------------------------------------
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -56,6 +204,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate{
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    /*
+     //code for facebook login
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        return SDKApplicationDelegate.shared.application(app, open: url, options: options)
+    }
+    */
+ 
+ 
     func Authenticate()
     {
         

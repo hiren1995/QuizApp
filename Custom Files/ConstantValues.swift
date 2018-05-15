@@ -19,6 +19,8 @@ var userToken = "userToken"
 var userData = "userData"
 var LoginMobileNo = "LoginMobileNo"
 var LoginPassword = "LoginPassword"
+var DeviceToken = "DeviceToken"
+var DeviceId = "DeviceToken"
 
 var LoginParameters = "LoginParameters"
 

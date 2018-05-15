@@ -14,6 +14,12 @@ target 'QuizApp' do
   pod 'CropViewController'
   pod 'PageMenu'
   
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+
+
+  pod 'GoogleSignIn'
+  
 
   target 'QuizAppTests' do
     inherit! :search_paths
