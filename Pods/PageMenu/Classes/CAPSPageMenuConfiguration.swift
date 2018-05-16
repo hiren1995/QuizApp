@@ -16,8 +16,8 @@ public class CAPSPageMenuConfiguration {
     open var scrollAnimationDurationOnMenuItemTap : Int = 500 // Millisecons
     //open var selectionIndicatorColor : UIColor = UIColor.white
     //open var selectedMenuItemLabelColor : UIColor = UIColor.white
-    open var selectionIndicatorColor : UIColor = UIColor(red: 80/255, green: 124/255, blue: 255/255, alpha: 1.0)
-    open var selectedMenuItemLabelColor : UIColor = UIColor(red: 80/255, green: 124/255, blue: 255/255, alpha: 1.0)
+    open var selectionIndicatorColor : UIColor = UIColor(red: 299/255, green: 25/255, blue: 55/255, alpha: 1.0)
+    open var selectedMenuItemLabelColor : UIColor = UIColor(red: 299/255, green: 25/255, blue: 55/255, alpha: 1.0)
     open var unselectedMenuItemLabelColor : UIColor = UIColor.lightGray
     //open var scrollMenuBackgroundColor : UIColor = UIColor.black
     open var scrollMenuBackgroundColor : UIColor = UIColor.white

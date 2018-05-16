@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+
+
 @IBDesignable extension UIButton {
     
     @IBInspectable var borderWidth: CGFloat {
@@ -73,6 +75,18 @@ import UIKit
     }
 }
 
+
+
+extension UIApplication {
+    class var setStatusBarBackgroundColor: UIColor? {
+        get {
+            return (shared.value(forKey: "statusBar") as? UIView)?.backgroundColor
+        } set {
+            (shared.value(forKey: "statusBar") as? UIView)?.backgroundColor = newValue
+            
+        }
+    }
+}
 
 
 extension UIView

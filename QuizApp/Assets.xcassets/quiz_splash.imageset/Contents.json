@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "chemistry.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "quiz_splash.jpg",
       "scale" : "2x"
     },
     {

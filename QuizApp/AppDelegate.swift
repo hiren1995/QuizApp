@@ -37,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+         UIApplication.setStatusBarBackgroundColor = UIColor(red: 229/255, green: 25/255, blue: 55/255, alpha: 1.0)
+        
         
         //SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)  //this is for facebook login
         
@@ -99,6 +101,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
             userdefault.set(refreshedToken, forKey: DeviceToken)
             userdefault.set(device_id, forKey: DeviceId)
             
+            self.getLatLong()
+            self.Authenticate()
+            
             connectToFcm()
         }
         //connectToFcm()
@@ -112,7 +117,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
                 
             } else {
                 print("Connected to FCM.")
+                self.getLatLong()
                 self.Authenticate()
+                
                
             }
         }
