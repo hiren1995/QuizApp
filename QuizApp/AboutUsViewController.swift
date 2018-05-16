@@ -8,12 +8,19 @@
 
 import UIKit
 import SlideMenuControllerSwift
+import Alamofire
+import SwiftyJSON
+import MBProgressHUD
 
 class AboutUsViewController: UIViewController {
 
+    @IBOutlet var textAboutUs: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loadData()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +31,43 @@ class AboutUsViewController: UIViewController {
         
         slidemenu?.openLeft()
         
+    }
+    
+    func loadData()
+    {
+        let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        let parameters : Parameters = [:]
+        
+        
+        Alamofire.request(aboutUsDetailsAPI, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+            if(response.result.value != nil)
+            {
+                Spinner.hide(animated: true)
+                
+                print(JSON(response.result.value))
+                
+                let tempDict = JSON(response.result.value!)
+                
+                
+                if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 1)
+                {
+                    self.textAboutUs.text = tempDict["about_us_details"][0]["about_us_description"].stringValue
+                    
+                }
+        
+                else
+                {
+                    self.showAlert(title: "Alert", message: "Something went wrong")
+                }
+ 
+            }
+            else
+            {
+                Spinner.hide(animated: true)
+                self.showAlert(title: "Alert", message: "Please Check Your Internet Connection")
+            }
+        })
     }
     
     override func didReceiveMemoryWarning() {

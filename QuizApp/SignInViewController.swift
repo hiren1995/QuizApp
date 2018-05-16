@@ -17,7 +17,7 @@ import FirebaseMessaging
 import GoogleSignIn
 
 class SignInViewController: UIViewController,UITextFieldDelegate,GIDSignInUIDelegate,GIDSignInDelegate{
-    
+   
    
     @IBOutlet var ViewSigninGoogle: UIView!
     @IBOutlet var ViewSigninFB: UIView!
@@ -207,43 +207,33 @@ class SignInViewController: UIViewController,UITextFieldDelegate,GIDSignInUIDele
         })
         
     }
+
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
-        if let error = error {
-            // ...
-            return
-        }
         
-        guard let authentication = user.authentication else { return }
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                       accessToken: authentication.accessToken)
+                print(user.profile.name)
+                print(user.profile.email)
+                print(user.profile.imageURL(withDimension: UInt(64)).relativeString)
         
-        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
-            if let error = error {
-                // ...
-                return
-            }
-            else
-            {
                 
-                print(authResult?.user.displayName)
-                
-                if(authResult?.user.displayName != nil)
+                if(user.profile.name != nil)
                 {
-                    GoogleUserName = (authResult?.user.displayName)!
+                    GoogleUserName = (user.profile.name)!
                 }
-                if(authResult?.user.email != nil)
+                if(user.profile.email != nil)
                 {
-                    GoogleEmail = (authResult?.user.email)!
+                    GoogleEmail = (user.profile.email)!
                 }
-                if(authResult?.user.phoneNumber != nil)
+                /*
+                if(user.profile. != nil)
                 {
-                    GoogleUserContact = (authResult?.user.phoneNumber)!
+                    GoogleUserContact = (user.phoneNumber)!
                 }
-                if(authResult?.user.photoURL != nil)
+                */
+                if user.profile.hasImage
                 {
-                    GoogleProfilePic = (authResult?.user.photoURL?.relativeString)!
+                    GoogleProfilePic = user.profile.imageURL(withDimension: UInt(64)).relativeString
                 }
                 
                 let FBSigninParameters:Parameters = ["user_name":GoogleUserName,"user_contact_no": GoogleUserContact,"user_email" :  GoogleEmail , "user_password" : "","user_profile_photo":GoogleProfilePic,"user_device_type":2,"user_device_id":userdefault.value(forKey: DeviceId)!,"user_device_token":userdefault.value(forKey: DeviceToken)!,"user_lat":tempLatitude!,"user_long":tempLongitude!,"user_signin":3]
@@ -251,13 +241,10 @@ class SignInViewController: UIViewController,UITextFieldDelegate,GIDSignInUIDele
                 print(FBSigninParameters)
                 
                 self.Signin(SignInParameters : FBSigninParameters)
-               
-            }
-        }
         
     }
-    
-    
+ 
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

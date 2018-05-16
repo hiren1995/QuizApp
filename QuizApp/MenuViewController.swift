@@ -85,7 +85,6 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             self.present(alert, animated: true, completion: nil)
         }
         
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

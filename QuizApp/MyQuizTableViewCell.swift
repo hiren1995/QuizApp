@@ -1,15 +1,16 @@
 //
-//  AllQuizTableViewCell.swift
+//  MyQuizTableViewCell.swift
 //  QuizApp
 //
-//  Created by Apple on 11/05/18.
+//  Created by Apple on 16/05/18.
 //  Copyright © 2018 Apple. All rights reserved.
 //
 
 import UIKit
 
-class AllQuizTableViewCell: UITableViewCell {
+class MyQuizTableViewCell: UITableViewCell {
 
+    
     @IBOutlet var imgQuiz: UIImageView!
     @IBOutlet var lblQuizName: UILabel!
     @IBOutlet var lblQuizStatus: UILabel!

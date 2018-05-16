@@ -11,6 +11,7 @@ import SlideMenuControllerSwift
 import Alamofire
 import SwiftyJSON
 import MBProgressHUD
+import Kingfisher
 
 class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     
@@ -19,6 +20,9 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     var quizlist = ["Maths Quiz","Chemistry Quiz","Geography Quiz","Maths Quiz","Chemistry Quiz","Geography Quiz","Maths Quiz","Chemistry Quiz","Geography Quiz"]
     
     var imgquiz = ["maths","chemistry","geography","maths","chemistry","geography","maths","chemistry","geography"]
+    
+    
+    var QuizList = JSON()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +37,9 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     
-        return quizlist.count
+        //return quizlist.count
+        
+        return QuizList["quiz_list"].count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -41,12 +47,36 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         
         let cell = QuizListCollectionView.dequeueReusableCell(withReuseIdentifier: "quizListCollectionViewCell", for: indexPath) as! QuizListCollectionViewCell
         
+        
         cell.ViewQuiz.addBorderShadow(shadowOpacity: 0.3, shadowRadius: 2.0, shadowColor: UIColor.darkGray)
         
+        /*
         cell.imgQuiz.image = UIImage(named: imgquiz[indexPath.row])
         cell.lblQuiz.text = quizlist[indexPath.row]
         
         cell.btnJoinQuiz.addTarget(self, action: #selector(JoinQuiz), for: .touchUpInside)
+        */
+        
+       
+        //cell.imgQuiz.image = UIImage(named: imgquiz[indexPath.row])
+        cell.lblQuiz.text = QuizList["quiz_list"][indexPath.row]["quiz_name"].stringValue
+        
+        cell.btnJoinQuiz.addTarget(self, action: #selector(JoinQuiz), for: .touchUpInside)
+        
+        KingfisherManager.shared.downloader.downloadImage(with: NSURL(string: QuizList["quiz_list"][indexPath.row]["level_logo"].stringValue)! as URL, retrieveImageTask: RetrieveImageTask.empty, options: [], progressBlock: nil, completionHandler: { (image,error, imageURL, imageData) in
+            
+            
+            if(error == nil)
+            {
+                cell.imgQuiz.image = image
+                
+            }
+            else
+            {
+                self.showAlert(title: "Alert", message: "Something Went Wrong while downloading Profile Image")
+            }
+            
+        })
         
         return cell
         
@@ -90,12 +120,12 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
                 
                 print(JSON(response.result.value))
                 
-                let tempDict = JSON(response.result.value!)
+                self.QuizList = JSON(response.result.value!)
                 
-                if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 1)
+                if(self.QuizList["status"] == "success" && self.QuizList["status_code"].intValue == 1)
                 {
                    
-                    
+                    self.QuizListCollectionView.reloadData()
                     
                 }
                

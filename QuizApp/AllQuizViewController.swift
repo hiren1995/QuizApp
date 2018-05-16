@@ -23,6 +23,8 @@ class AllQuizViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
         AllQuizTableView.delegate = self
         AllQuizTableView.dataSource = self
+        //AllQuizTableView.allowsSelection = false
+        
         
         // Do any additional setup after loading the view.
     }
@@ -40,11 +42,19 @@ class AllQuizViewController: UIViewController,UITableViewDelegate,UITableViewDat
         cell.imgQuiz.image = UIImage(named: quizimg[indexPath.row])
         cell.lblQuizName.text = quizlist[indexPath.row]
         cell.lblQuizStatus.text = status[indexPath.row]
-        cell.lblQuizTime.text = time[indexPath.row]
+        //cell.lblQuizTime.text = time[indexPath.row]
         
+        //cell.btnViewLeaderboard.addTarget(self, action: #selector(viewLeaderBoard), for: .touchUpInside)
         
         return cell
     }
+    
+    /*
+    @objc func viewLeaderBoard()
+    {
+        
+    }
+    */
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
@@ -56,7 +66,8 @@ class AllQuizViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 128
+        return 146
+        
         
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

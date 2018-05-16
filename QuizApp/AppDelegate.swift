@@ -112,7 +112,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
                 
             } else {
                 print("Connected to FCM.")
-                //self.Authenicate()
+                self.Authenticate()
                
             }
         }

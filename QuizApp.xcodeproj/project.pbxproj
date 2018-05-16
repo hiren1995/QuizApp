@@ -21,6 +21,8 @@
 		18C2F40520A5BA2500B627BF /* QuizQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2F40420A5BA2500B627BF /* QuizQuestionViewController.swift */; };
 		18C2F40820A5C5DC00B627BF /* QuizQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2F40620A5C5DC00B627BF /* QuizQuestionTableViewCell.swift */; };
 		18C2F40920A5C5DC00B627BF /* QuizQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2F40720A5C5DC00B627BF /* QuizQuestionTableViewCell.xib */; };
+		18E04D0E20AC10CB00A0A880 /* MyQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E04D0D20AC10CA00A0A880 /* MyQuizViewController.swift */; };
+		18E04D1020AC10F600A0A880 /* MyQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E04D0F20AC10F600A0A880 /* MyQuizTableViewCell.swift */; };
 		18F6CB1220A2BD5F0087955D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CB1120A2BD5F0087955D /* AppDelegate.swift */; };
 		18F6CB1720A2BD5F0087955D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F6CB1520A2BD5F0087955D /* Main.storyboard */; };
 		18F6CB1920A2BD610087955D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F6CB1820A2BD610087955D /* Assets.xcassets */; };
@@ -88,6 +90,8 @@
 		18C2F40420A5BA2500B627BF /* QuizQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionViewController.swift; sourceTree = "<group>"; };
 		18C2F40620A5C5DC00B627BF /* QuizQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		18C2F40720A5C5DC00B627BF /* QuizQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizQuestionTableViewCell.xib; sourceTree = "<group>"; };
+		18E04D0D20AC10CA00A0A880 /* MyQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuizViewController.swift; sourceTree = "<group>"; };
+		18E04D0F20AC10F600A0A880 /* MyQuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuizTableViewCell.swift; sourceTree = "<group>"; };
 		18F6CB0E20A2BD5F0087955D /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F6CB1120A2BD5F0087955D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18F6CB1620A2BD5F0087955D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -206,6 +210,8 @@
 				18C2F40220A59D8000B627BF /* ParticularQuizTableViewCell.swift */,
 				18FE49CC20A46DDA00502F2A /* GlobalQuizViewController.swift */,
 				18C2F3FE20A57D9900B627BF /* GlobalQuizTableViewCell.swift */,
+				18E04D0D20AC10CA00A0A880 /* MyQuizViewController.swift */,
+				18E04D0F20AC10F600A0A880 /* MyQuizTableViewCell.swift */,
 				18F839A120A449D700E8523E /* AboutUsViewController.swift */,
 				18C2F40420A5BA2500B627BF /* QuizQuestionViewController.swift */,
 				18C2F40620A5C5DC00B627BF /* QuizQuestionTableViewCell.swift */,
@@ -564,6 +570,7 @@
 				18F8399620A4134400E8523E /* DashBoardTabBarController.swift in Sources */,
 				18C2F3FD20A56B2C00B627BF /* AllQuizTableViewCell.swift in Sources */,
 				18F839A220A449D700E8523E /* AboutUsViewController.swift in Sources */,
+				18E04D0E20AC10CB00A0A880 /* MyQuizViewController.swift in Sources */,
 				18F839A420A4546500E8523E /* QuizListCollectionViewCell.swift in Sources */,
 				18C2F40520A5BA2500B627BF /* QuizQuestionViewController.swift in Sources */,
 				18F8399E20A4499100E8523E /* QuizListViewController.swift in Sources */,
@@ -575,6 +582,7 @@
 				18C2F3FF20A57D9900B627BF /* GlobalQuizTableViewCell.swift in Sources */,
 				18F6CB5420A317CD0087955D /* SlideViewController.swift in Sources */,
 				18C2F40120A59D4E00B627BF /* ParticularQuizViewController.swift in Sources */,
+				18E04D1020AC10F600A0A880 /* MyQuizTableViewCell.swift in Sources */,
 				18F6CB4A20A2C8CB0087955D /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
