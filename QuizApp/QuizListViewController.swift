@@ -61,7 +61,8 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         //cell.imgQuiz.image = UIImage(named: imgquiz[indexPath.row])
         cell.lblQuiz.text = QuizList["quiz_list"][indexPath.row]["quiz_name"].stringValue
         
-        cell.btnJoinQuiz.addTarget(self, action: #selector(JoinQuiz), for: .touchUpInside)
+        cell.btnJoinQuiz.tag = indexPath.row
+        cell.btnJoinQuiz.addTarget(self, action: #selector(JoinQuiz(sender:)), for: .touchUpInside)
         
         KingfisherManager.shared.downloader.downloadImage(with: NSURL(string: QuizList["quiz_list"][indexPath.row]["level_logo"].stringValue)! as URL, retrieveImageTask: RetrieveImageTask.empty, options: [], progressBlock: nil, completionHandler: { (image,error, imageURL, imageData) in
             
@@ -87,13 +88,62 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         return CGSize(width: 185, height: 185)
     }
     
-    @objc func JoinQuiz()
+    @objc func JoinQuiz(sender : UIButton)
     {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        print(sender.tag)
         
-        let quizQuestionViewController = storyboard.instantiateViewController(withIdentifier: "quizQuestionViewController") as! QuizQuestionViewController
         
-        self.present(quizQuestionViewController, animated: true, completion: nil)
+        let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        let JoinQuiztParameters:Parameters = ["user_id":userdefault.value(forKey: userId) as! String,"user_token": userdefault.value(forKey: userToken) as! String,"quiz_id" : QuizList["quiz_list"][sender.tag]["quiz_id"].stringValue]
+        
+        print(JoinQuiztParameters)
+        
+        Alamofire.request(quizJoinAPI, method: .post, parameters: JoinQuiztParameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+            if(response.result.value != nil)
+            {
+                Spinner.hide(animated: true)
+                
+                print(JSON(response.result.value))
+                
+                let tempDict = JSON(response.result.value!)
+                
+                if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 1)
+                {
+                    
+                    //self.QuizListCollectionView.reloadData()
+                    
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    
+                    let quizQuestionViewController = storyboard.instantiateViewController(withIdentifier: "quizQuestionViewController") as! QuizQuestionViewController
+                    
+                    quizQuestionViewController.Quiz_id = self.QuizList["quiz_list"][sender.tag]["quiz_id"].intValue
+                    quizQuestionViewController.Result_id = tempDict["result_id"].intValue
+                    
+                    self.present(quizQuestionViewController, animated: true, completion: nil)
+                    
+                }
+                    
+                else
+                {
+                    self.showAlert(title: "Alert", message: "Something went wrong")
+                }
+                
+            }
+            else
+            {
+                Spinner.hide(animated: true)
+                self.showAlert(title: "Alert", message: "Please Check Your Internet Connection")
+            }
+        })
+        
+        
+        
+        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //let quizQuestionViewController = storyboard.instantiateViewController(withIdentifier: "quizQuestionViewController") as! QuizQuestionViewController
+        
+        //self.present(quizQuestionViewController, animated: true, completion: nil)
     }
     
     @IBAction func btnMenu(_ sender: UIButton) {

@@ -7,16 +7,22 @@
 //
 
 import UIKit
+import Alamofire
+import MBProgressHUD
+import SwiftyJSON
+import Kingfisher
 
 class QuizCompletedViewController: UIViewController {
 
     @IBOutlet var lblScore: UILabel!
+    @IBOutlet var imgUserPic: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loadData()
         
-        lblScore.text = "\(scoredPoints)/\(totalPoints)"
+        
         
         // Do any additional setup after loading the view.
     }
@@ -46,6 +52,31 @@ class QuizCompletedViewController: UIViewController {
         let slideViewController = storyboard.instantiateViewController(withIdentifier: "slideViewController") as! SlideViewController
         
         self.present(slideViewController, animated: true, completion: nil)
+    }
+    
+    func loadData()
+    {
+        lblScore.text = "\(scoredPoints)/\(totalPoints)"
+        
+        let userdata = JSON(userdefault.value(forKey: userData))
+        
+        let imgurl = userdata["login_user"][0]["user_profile_photo"].stringValue
+        
+        KingfisherManager.shared.downloader.downloadImage(with: NSURL(string: imgurl)! as URL, retrieveImageTask: RetrieveImageTask.empty, options: [], progressBlock: nil, completionHandler: { (image,error, imageURL, imageData) in
+            
+            
+            if(error == nil)
+            {
+                self.imgUserPic.image = image
+                
+            }
+            else
+            {
+                self.showAlert(title: "Alert", message: "Something Went Wrong while downloading Profile Image")
+            }
+            
+        })
+        
     }
     
     override func didReceiveMemoryWarning() {

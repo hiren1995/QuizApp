@@ -1074,6 +1074,7 @@ UXVpeiAQTmFtZQ
                         <viewLayoutGuide key="safeArea" id="hVf-a9-omx"/>
                     </view>
                     <connections>
+                        <outlet property="imgUserPic" destination="bsF-cR-ZZy" id="jkF-e8-AgL"/>
                         <outlet property="lblScore" destination="csw-4s-zQq" id="XR6-hm-xr9"/>
                     </connections>
                 </viewController>

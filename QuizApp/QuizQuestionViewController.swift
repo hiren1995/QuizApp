@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import MBProgressHUD
+import Alamofire
+import SwiftyJSON
 
 var totalPoints = 5
 var scoredPoints = 0
@@ -22,7 +25,7 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
         0 : ["Ahmedabad","Vadodara","Gandhinagar","Surat"],
         1 : ["Mumbai","Goa","Delhi","Punjab"],
         2 : ["United States","Canada","Australia","Poland"],
-        3: ["Udaipur","Jaipur","Jodhpur","Jaisalmer"],
+        3 : ["Udaipur","Jaipur","Jodhpur","Jaisalmer"],
         4 : ["Charles Babbage","Albert Einstein","Issac Newton","James Thomson"]
     ]
     
@@ -32,6 +35,9 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
     var questionIndex = 0
     
     
+    var Quiz_id = Int()
+    var Result_id = Int()
+    var QuestionList = JSON()
     
     //Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     
@@ -54,6 +60,7 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
         QuizQuestionTableView.delegate = self
         QuizQuestionTableView.dataSource = self
         
+        loadData()
         
         // Do any additional setup after loading the view.
     }
@@ -69,7 +76,16 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
         
         cell.lblQuestionNo.text = "Question " + "\(questionIndex+1)"
         
-        cell.lblQuestion.text = Questions[questionIndex]
+        //cell.lblQuestion.text = Questions[questionIndex]
+        
+        
+        cell.lblQuestion.text = self.QuestionList["quiz_list"][questionIndex]["question_title"].stringValue
+        
+        cell.btnOptionA.setTitle(self.QuestionList["quiz_list"][questionIndex]["question_option1"].stringValue, for: .normal)
+        cell.btnOptionB.setTitle(self.QuestionList["quiz_list"][questionIndex]["question_option2"].stringValue, for: .normal)
+        cell.btnOptionC.setTitle(self.QuestionList["quiz_list"][questionIndex]["question_option3"].stringValue, for: .normal)
+        cell.btnOptionD.setTitle(self.QuestionList["quiz_list"][questionIndex]["question_option4"].stringValue, for: .normal)
+        
         
         cell.isHighlighted = false
         
@@ -83,10 +99,10 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
         btnOptionC = cell.btnOptionC
         btnOptionD = cell.btnOptionD
        
-        cell.btnOptionA.setTitle(options[questionIndex]?[0], for: .normal)
-        cell.btnOptionB.setTitle(options[questionIndex]?[1], for: .normal)
-        cell.btnOptionC.setTitle(options[questionIndex]?[2], for: .normal)
-        cell.btnOptionD.setTitle(options[questionIndex]?[3], for: .normal)
+        //cell.btnOptionA.setTitle(options[questionIndex]?[0], for: .normal)
+        //cell.btnOptionB.setTitle(options[questionIndex]?[1], for: .normal)
+        //cell.btnOptionC.setTitle(options[questionIndex]?[2], for: .normal)
+        //cell.btnOptionD.setTitle(options[questionIndex]?[3], for: .normal)
         
         
         cell.btnOptionA.addTarget(self, action: #selector(OptionASelected), for: .touchUpInside)
@@ -129,7 +145,7 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
         imgOptionA.backgroundColor = UIColor(red: 41/255, green: 218/255, blue: 37/255, alpha: 1.0)
         btnOptionA.setTitleColor(UIColor.white, for: .normal)
         
-        selectedAnswer = "A"
+        selectedAnswer = "a"
     }
     
     @objc func OptionBSelected()
@@ -158,7 +174,7 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
         imgOptionB.backgroundColor = UIColor(red: 41/255, green: 218/255, blue: 37/255, alpha: 1.0)
         btnOptionB.setTitleColor(UIColor.white, for: .normal)
         
-        selectedAnswer = "B"
+        selectedAnswer = "b"
     }
     
     @objc func OptionCSelected()
@@ -187,7 +203,7 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
         imgOptionC.backgroundColor = UIColor(red: 41/255, green: 218/255, blue: 37/255, alpha: 1.0)
         btnOptionC.setTitleColor(UIColor.white, for: .normal)
         
-        selectedAnswer = "C"
+        selectedAnswer = "c"
     }
     
     @objc func OptionDSelected()
@@ -216,17 +232,21 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
         imgOptionD.backgroundColor = UIColor(red: 41/255, green: 218/255, blue: 37/255, alpha: 1.0)
         btnOptionD.setTitleColor(UIColor.white, for: .normal)
         
-        selectedAnswer = "D"
+        selectedAnswer = "d"
     }
     
     @IBAction func btnNextQuestion(_ sender: UIButton) {
         
-        if(selectedAnswer == answerset[questionIndex])
+        //if(selectedAnswer == answerset[questionIndex])
+        
+        if(selectedAnswer == self.QuestionList["quiz_list"][questionIndex]["answer"].stringValue)
         {
             scoredPoints += 1
         }
         
-        if(questionIndex < Questions.count-1)
+        //if(questionIndex < Questions.count-1)
+        
+        if(questionIndex < self.QuestionList["quiz_list"].count-1)
         {
             
             print(questionIndex)
@@ -236,12 +256,111 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
         }
         else
         {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
             
-            let quizCompletedViewController = storyboard.instantiateViewController(withIdentifier: "quizCompletedViewController") as! QuizCompletedViewController
+            var isWinner = 1
             
-            self.present(quizCompletedViewController, animated: true, completion: nil)
+            if(scoredPoints == self.QuestionList["quiz_list"].count)
+            {
+                isWinner = 2
+            }
+            
+            let EndQuizParameters:Parameters = ["user_id":userdefault.value(forKey: userId) as! String,"user_token": userdefault.value(forKey: userToken) as! String,"quiz_id" : Quiz_id , "quiz_user_end_time" : "2018-05-14 18:58:12","quiz_user_end_min": "120" ,"right_ans_count":scoredPoints,"result_id":Result_id,"user_all_ans":"" ,"is_winner":isWinner]
+            
+            print(EndQuizParameters)
+            
+            Alamofire.request(quizEndAPI, method: .post, parameters: EndQuizParameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+                if(response.result.value != nil)
+                {
+                    Spinner.hide(animated: true)
+                    
+                    print(JSON(response.result.value))
+                    
+                    let tempDict = JSON(response.result.value!)
+                    
+                    if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 1)
+                    {
+                        
+                        //self.QuizListCollectionView.reloadData()
+                        
+                        let alert = UIAlertController(title: "Congratulatios", message: tempDict["message"].stringValue, preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                            
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            
+                            let quizCompletedViewController = storyboard.instantiateViewController(withIdentifier: "quizCompletedViewController") as! QuizCompletedViewController
+                            
+                            self.present(quizCompletedViewController, animated: true, completion: nil)
+                            
+                        }))
+                        
+                        self.present(alert, animated: true, completion: nil)
+                       
+                    }
+                        
+                    else
+                    {
+                        self.showAlert(title: "Alert", message: "Something went wrong")
+                    }
+                    
+                }
+                else
+                {
+                    Spinner.hide(animated: true)
+                    self.showAlert(title: "Alert", message: "Please Check Your Internet Connection")
+                }
+            })
+            
+            
+            
+            //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            //let quizCompletedViewController = storyboard.instantiateViewController(withIdentifier: "quizCompletedViewController") as! QuizCompletedViewController
+            
+            //self.present(quizCompletedViewController, animated: true, completion: nil)
         }
+        
+    }
+    
+    func loadData()
+    {
+        let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        let getQuestionsParameters:Parameters = ["user_id":userdefault.value(forKey: userId) as! String,"user_token": userdefault.value(forKey: userToken) as! String,"quiz_id" : Quiz_id]
+        
+        print(getQuestionsParameters)
+        
+        Alamofire.request(questionListAPI, method: .post, parameters: getQuestionsParameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+            if(response.result.value != nil)
+            {
+                Spinner.hide(animated: true)
+                
+                print(JSON(response.result.value))
+                
+                self.QuestionList = JSON(response.result.value!)
+                
+                if(self.QuestionList ["status"] == "success" && self.QuestionList ["status_code"].intValue == 1)
+                {
+                    
+                    self.QuizQuestionTableView.reloadData()
+                    totalPoints = self.QuestionList["quiz_list"].count
+                }
+                    
+                else
+                {
+                    self.showAlert(title: "Alert", message: "Something went wrong")
+                }
+                
+            }
+            else
+            {
+                Spinner.hide(animated: true)
+                self.showAlert(title: "Alert", message: "Please Check Your Internet Connection")
+            }
+        })
+        
+        
         
     }
     
