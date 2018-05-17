@@ -30,9 +30,13 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         QuizListCollectionView.delegate = self
         QuizListCollectionView.dataSource = self
         
-        loadQuizList()
+        //loadQuizList()
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadQuizList()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

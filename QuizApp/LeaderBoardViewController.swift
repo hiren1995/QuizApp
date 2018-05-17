@@ -10,6 +10,8 @@ import UIKit
 import SlideMenuControllerSwift
 import PageMenu
 
+var PageIndex = 0
+
 class LeaderBoardViewController: UIViewController {
 
     var pageMenu : CAPSPageMenu?
@@ -17,18 +19,25 @@ class LeaderBoardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadTabBarStrip()
+        //loadTabBarStrip()
         
 
         // Do any additional setup after loading the view.
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadTabBarStrip()
+    }
+    
     func loadTabBarStrip()
     {
         var controllerArray : [UIViewController] = []
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
+        let myQuizViewController : UIViewController = storyboard.instantiateViewController(withIdentifier: "myQuizViewController") as! MyQuizViewController
+        myQuizViewController.title = "MY QUIZ"
+        controllerArray.append(myQuizViewController)
         
         let allQuizViewController : UIViewController = storyboard.instantiateViewController(withIdentifier: "allQuizViewController") as! AllQuizViewController
         allQuizViewController.title = "ALL QUIZ"
@@ -51,9 +60,26 @@ class LeaderBoardViewController: UIViewController {
         
         pageMenu?.currentPageIndex = 0
         
-        self.view.addSubview(pageMenu!.view)
+        print(PageIndex)
+        
+        if(PageIndex == 0)
+        {
+            pageMenu?.currentPageIndex = 0
+            self.view.addSubview(pageMenu!.view)
+        }
+        else if(PageIndex == 1)
+        {
+            pageMenu?.currentPageIndex = 1
+            self.view.addSubview(pageMenu!.view)
+        }
+        else if(PageIndex == 2)
+        {
+            pageMenu?.currentPageIndex = 2
+            self.view.addSubview(pageMenu!.view)
+        }
         
         
+        //self.view.addSubview(pageMenu!.view)
         
     }
     

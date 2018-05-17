@@ -73,6 +73,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 userdefault.removeObject(forKey: userToken)
                 userdefault.removeObject(forKey: userData)
                 
+                GIDSignIn.sharedInstance().signOut()
+                
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let signInViewController = storyboard.instantiateViewController(withIdentifier: "signInViewController") as! SignInViewController
                 

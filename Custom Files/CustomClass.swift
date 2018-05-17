@@ -144,3 +144,21 @@ func isValidEmail(testStr:String) -> Bool {
     return emailTest.evaluate(with: testStr)
 }
 
+func getTimeFromDate(datestr : String) -> String
+{
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+    
+    print(datestr)
+    let date = dateFormatter.date(from: datestr)
+    
+    print(date)
+    
+    let timeFormatter = DateFormatter()
+    timeFormatter.dateFormat = "HH:mm"
+    let timestr = timeFormatter.string(from: date!)
+    
+    return timestr
+    
+}
+

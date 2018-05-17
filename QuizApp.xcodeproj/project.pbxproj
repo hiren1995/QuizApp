@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180664D320AD4E340078B8B8 /* MyQuizLeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180664D220AD4E340078B8B8 /* MyQuizLeaderboardViewController.swift */; };
+		180664D520AD5B5E0078B8B8 /* MyQuizleaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180664D420AD5B5E0078B8B8 /* MyQuizleaderboardTableViewCell.swift */; };
 		1829239020AAD1DF009DB087 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1829238F20AAD1DF009DB087 /* StoreKit.framework */; };
 		1829239220AAD1F3009DB087 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1829239120AAD1F2009DB087 /* AddressBook.framework */; };
 		1829239420AAD204009DB087 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1829239320AAD204009DB087 /* SystemConfiguration.framework */; };
@@ -74,6 +76,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180664D220AD4E340078B8B8 /* MyQuizLeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuizLeaderboardViewController.swift; sourceTree = "<group>"; };
+		180664D420AD5B5E0078B8B8 /* MyQuizleaderboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuizleaderboardTableViewCell.swift; sourceTree = "<group>"; };
 		1829238F20AAD1DF009DB087 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1829239120AAD1F2009DB087 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		1829239320AAD204009DB087 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -212,6 +216,8 @@
 				18C2F3FE20A57D9900B627BF /* GlobalQuizTableViewCell.swift */,
 				18E04D0D20AC10CA00A0A880 /* MyQuizViewController.swift */,
 				18E04D0F20AC10F600A0A880 /* MyQuizTableViewCell.swift */,
+				180664D220AD4E340078B8B8 /* MyQuizLeaderboardViewController.swift */,
+				180664D420AD5B5E0078B8B8 /* MyQuizleaderboardTableViewCell.swift */,
 				18F839A120A449D700E8523E /* AboutUsViewController.swift */,
 				18C2F40420A5BA2500B627BF /* QuizQuestionViewController.swift */,
 				18C2F40620A5C5DC00B627BF /* QuizQuestionTableViewCell.swift */,
@@ -560,6 +566,7 @@
 				18F8399920A420E300E8523E /* Raleway_Medium.ttf in Sources */,
 				18F8399A20A420E300E8523E /* Raleway_Regular.ttf in Sources */,
 				18C2F40820A5C5DC00B627BF /* QuizQuestionTableViewCell.swift in Sources */,
+				180664D520AD5B5E0078B8B8 /* MyQuizleaderboardTableViewCell.swift in Sources */,
 				1829239720AAD270009DB087 /* QuizApp.m in Sources */,
 				18FE49CD20A46DDA00502F2A /* GlobalQuizViewController.swift in Sources */,
 				18F839A020A449B700E8523E /* LeaderBoardViewController.swift in Sources */,
@@ -579,6 +586,7 @@
 				18F8399C20A4255D00E8523E /* MenuTableViewCell.swift in Sources */,
 				18F6CB5020A30E370087955D /* VerifyOTPViewController.swift in Sources */,
 				188A805420A6DB7E00475AE0 /* QuizCompletedViewController.swift in Sources */,
+				180664D320AD4E340078B8B8 /* MyQuizLeaderboardViewController.swift in Sources */,
 				18C2F3FF20A57D9900B627BF /* GlobalQuizTableViewCell.swift in Sources */,
 				18F6CB5420A317CD0087955D /* SlideViewController.swift in Sources */,
 				18C2F40120A59D4E00B627BF /* ParticularQuizViewController.swift in Sources */,

@@ -39,7 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
         
          UIApplication.setStatusBarBackgroundColor = UIColor(red: 229/255, green: 25/255, blue: 55/255, alpha: 1.0)
         
-        
         //SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)  //this is for facebook login
         
         //-------------------------------- Making app register for Remotw Notification --------------------------------------
