@@ -14,6 +14,8 @@ import SwiftyJSON
 var totalPoints = 5
 var scoredPoints = 0
 
+var totalTimeOut = 0
+
 
 class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -363,6 +365,22 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
         {
             isWinner = 2
             flagCongrates = 1
+            
+            print(WinnerTimeOut)
+            
+            let EndTime = Date()
+            
+            totalTimeOut = Int(EndTime.timeIntervalSince1970) + (WinnerTimeOut * 60)
+            
+            print("diff \(totalTimeOut - Int(EndTime.timeIntervalSince1970))")
+        }
+        else
+        {
+            let EndTime = Date()
+            
+            print(LooserTimeOut)
+            totalTimeOut = Int(EndTime.timeIntervalSince1970) + (LooserTimeOut * 60)
+            print("diff \(totalTimeOut - Int(EndTime.timeIntervalSince1970))")
         }
         
         //let EndQuizParameters:Parameters = ["user_id":userdefault.value(forKey: userId) as! String,"user_token": userdefault.value(forKey: userToken) as! String,"quiz_id" : Quiz_id , "quiz_user_end_time" : "2018-05-14 18:58:12","quiz_user_end_min": "120" ,"right_ans_count":scoredPoints,"result_id":Result_id,"user_all_ans":"" ,"is_winner":isWinner]

@@ -218,8 +218,6 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
                     
                     //self.QuizListCollectionView.reloadData()
                     
-                    
-                    
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     
                     let quizQuestionViewController = storyboard.instantiateViewController(withIdentifier: "quizQuestionViewController") as! QuizQuestionViewController
@@ -268,7 +266,62 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     {
         currentTime = Date()
         print(currentTime.timeIntervalSince1970)
+        print(totalTimeOut)
         
+        if(Int(currentTime.timeIntervalSince1970) >= totalTimeOut)
+        {
+            totalTimeOut = 0
+            
+            let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
+            
+            let QuizListParameters:Parameters = ["user_id":userdefault.value(forKey: userId) as! String,"user_token": userdefault.value(forKey: userToken) as! String]
+            
+            print(QuizListParameters)
+            
+            Alamofire.request(quizListAPI, method: .post, parameters: QuizListParameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+                if(response.result.value != nil)
+                {
+                    Spinner.hide(animated: true)
+                    
+                    print(JSON(response.result.value))
+                    
+                    self.QuizList = JSON(response.result.value!)
+                    
+                    if(self.QuizList["status"] == "success" && self.QuizList["status_code"].intValue == 1)
+                    {
+                        
+                        WinnerTimeOut = self.QuizList["quiz_winner_timeout"].intValue
+                        LooserTimeOut = self.QuizList["quiz_looser_timeout"].intValue
+                        
+                        self.QuizListCollectionView.reloadData()
+                        //self.startTimer()
+                        
+                    }
+                        
+                    else if(self.QuizList["status"] == "failure" && self.QuizList["status_code"].intValue == 0 && self.QuizList["message"].stringValue == "No Quiz Found.")
+                    {
+                        self.showAlert(title: "No Quiz Found", message: "No Quiz is Currently available Please try again after some time.")
+                    }
+                    else
+                    {
+                        self.showAlert(title: "Alert", message: "Invalid User")
+                    }
+                    
+                }
+                else
+                {
+                    Spinner.hide(animated: true)
+                    self.showAlert(title: "Alert", message: "Please Check Your Internet Connection")
+                }
+            })
+        }
+        else
+        {
+            self.showAlert(title: "Winner Timeout", message: "You can play next quiz after \(totalTimeOut - Int(currentTime.timeIntervalSince1970))  seconds")
+        }
+        
+        
+        /*
         let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
         
         let QuizListParameters:Parameters = ["user_id":userdefault.value(forKey: userId) as! String,"user_token": userdefault.value(forKey: userToken) as! String]
@@ -286,7 +339,10 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
                 
                 if(self.QuizList["status"] == "success" && self.QuizList["status_code"].intValue == 1)
                 {
-                   
+                    
+                    WinnerTimeOut = self.QuizList["quiz_winner_timeout"].intValue
+                    LooserTimeOut = self.QuizList["quiz_looser_timeout"].intValue
+                    
                     self.QuizListCollectionView.reloadData()
                     //self.startTimer()
                     
@@ -309,7 +365,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
             }
         })
         
-        
+        */
     }
     
     @IBAction func btnRefresh(_ sender: UIButton) {
