@@ -307,6 +307,9 @@
                                         <rect key="frame" x="337" y="15" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="reload"/>
+                                        <connections>
+                                            <action selector="btnRefresh:" destination="DYi-iX-Mht" eventType="touchUpInside" id="t5e-ex-lPr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8980392157" green="0.098039215690000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -330,7 +333,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="146" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="hF8-aU-Zaf">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="610"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="620"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98431372549019602" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -390,7 +393,7 @@
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WiJ-ab-YFJ">
                                                             <rect key="frame" x="0.0" y="100" width="363" height="1"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" red="0.54901960780000003" green="0.54901960780000003" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTm-hn-FW4">
                                                             <rect key="frame" x="268" y="44" width="95" height="29"/>
@@ -399,14 +402,13 @@
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpb-TA-mNX">
-                                                            <rect key="frame" x="8" y="105" width="347" height="30"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="View Leaderboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFB-c9-Crr">
+                                                            <rect key="frame" x="8" y="100" width="347" height="36"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                                             <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="15"/>
-                                                            <state key="normal" title="View Leaderboard">
-                                                                <color key="titleColor" red="0.8980392157" green="0.098039215690000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
-                                                        </button>
+                                                            <color key="textColor" red="0.8980392157" green="0.098039215690000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
@@ -425,7 +427,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="btnViewLeaderboard" destination="Gpb-TA-mNX" id="RYU-1h-WMY"/>
                                             <outlet property="imgQuiz" destination="lrf-EQ-DM9" id="Lvk-NS-P5a"/>
                                             <outlet property="lblQuizEndTime" destination="33d-ab-gyl" id="DEP-m8-TCf"/>
                                             <outlet property="lblQuizName" destination="N3h-c5-Qx7" id="V0c-3H-d1T"/>
@@ -586,6 +587,7 @@ UXVpeiAQTmFtZQ
                     </view>
                     <connections>
                         <outlet property="ParticularQuizTableView" destination="i9U-OG-P3Q" id="xs1-X1-IOE"/>
+                        <outlet property="lblQuizName" destination="F0I-O1-MO0" id="Jke-KA-2gt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u1Z-eh-lZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -601,7 +603,7 @@ UXVpeiAQTmFtZQ
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="128" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="dIE-CD-aVU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="610"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="620"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -714,7 +716,7 @@ UXVpeiAQTmFtZQ
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OJa-LN-tBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2241" y="1731"/>
+            <point key="canvasLocation" x="2240.8000000000002" y="1730.2848575712146"/>
         </scene>
         <!--ABOUT US-->
         <scene sceneID="AdV-RY-kuv">
@@ -747,6 +749,9 @@ UXVpeiAQTmFtZQ
                                         <rect key="frame" x="337" y="15" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="reload"/>
+                                        <connections>
+                                            <action selector="btnRefresh:" destination="tzA-gH-fAS" eventType="touchUpInside" id="oNu-lb-vPg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8980392157" green="0.098039215690000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -804,6 +809,9 @@ UXVpeiAQTmFtZQ
                                         <rect key="frame" x="337" y="15" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="reload"/>
+                                        <connections>
+                                            <action selector="btnRefresh:" destination="SX6-bI-jBu" eventType="touchUpInside" id="mIO-hW-78l"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8980392157" green="0.098039215690000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1080,6 +1088,8 @@ UXVpeiAQTmFtZQ
                     </view>
                     <connections>
                         <outlet property="imgUserPic" destination="bsF-cR-ZZy" id="jkF-e8-AgL"/>
+                        <outlet property="lblQuizCompletedTime" destination="Iqy-kI-rJx" id="BB5-rE-fmt"/>
+                        <outlet property="lblQuizName" destination="8aC-Dx-L11" id="rE6-bz-0Js"/>
                         <outlet property="lblScore" destination="csw-4s-zQq" id="XR6-hm-xr9"/>
                     </connections>
                 </viewController>
@@ -1357,7 +1367,7 @@ UXVpeiAQTmFtZQ
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="146" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="J1Q-wh-JyV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="610"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="620"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -1410,7 +1420,7 @@ UXVpeiAQTmFtZQ
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vX1-uX-sd8">
                                                             <rect key="frame" x="0.0" y="100" width="363" height="1"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" red="0.54901960780000003" green="0.54901960780000003" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQV-aS-eHl">
                                                             <rect key="frame" x="273" y="44" width="90" height="29"/>
@@ -1419,14 +1429,13 @@ UXVpeiAQTmFtZQ
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VN-El-riS">
-                                                            <rect key="frame" x="8" y="105" width="347" height="30"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="View Leaderboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYc-n3-GmQ">
+                                                            <rect key="frame" x="8" y="100" width="347" height="36"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                                             <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="15"/>
-                                                            <state key="normal" title="View Leaderboard">
-                                                                <color key="titleColor" red="0.8980392157" green="0.098039215690000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
-                                                        </button>
+                                                            <color key="textColor" red="0.8980392157" green="0.098039215690000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1445,7 +1454,6 @@ UXVpeiAQTmFtZQ
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="btnViewLeaderboard" destination="8VN-El-riS" id="nIQ-km-0Eg"/>
                                             <outlet property="imgQuiz" destination="mfZ-IO-dDW" id="1cU-Oe-mQm"/>
                                             <outlet property="lblQuizEndTime" destination="wyS-vy-zho" id="wG5-O0-IeO"/>
                                             <outlet property="lblQuizName" destination="R6b-Dm-c7O" id="Nab-BP-qru"/>
@@ -1464,7 +1472,7 @@ UXVpeiAQTmFtZQ
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5DL-HN-pLX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2241" y="2409"/>
+            <point key="canvasLocation" x="2240.8000000000002" y="2408.5457271364321"/>
         </scene>
         <!--My Quiz Leaderboard View Controller-->
         <scene sceneID="ox9-OG-607">
@@ -1619,7 +1627,7 @@ UXVpeiAQTmFtZQ
                     </view>
                     <connections>
                         <outlet property="MyQuizLeaderboardTableView" destination="Otj-AE-yfe" id="EOU-3T-8SK"/>
-                        <outlet property="lblQuizName" destination="Hrf-x5-ewO" id="QVP-rd-EZ5"/>
+                        <outlet property="lblQuizName" destination="Hrf-x5-ewO" id="hbz-rY-HlH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrN-fv-Hj5" userLabel="First Responder" sceneMemberID="firstResponder"/>

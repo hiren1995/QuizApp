@@ -19,7 +19,7 @@ class AllQuizTableViewCell: UITableViewCell {
     @IBOutlet var lblQuizStartTime: UILabel!
     @IBOutlet var lblQuizEndTime: UILabel!
     
-    @IBOutlet var btnViewLeaderboard: UIButton!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

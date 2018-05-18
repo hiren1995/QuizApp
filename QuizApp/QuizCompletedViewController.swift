@@ -16,6 +16,11 @@ class QuizCompletedViewController: UIViewController {
 
     @IBOutlet var lblScore: UILabel!
     @IBOutlet var imgUserPic: UIImageView!
+    @IBOutlet var lblQuizName: UILabel!
+    @IBOutlet var lblQuizCompletedTime: UILabel!
+    
+    var QuizTime = Int()
+    var QuizName = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +62,9 @@ class QuizCompletedViewController: UIViewController {
     func loadData()
     {
         lblScore.text = "\(scoredPoints)/\(totalPoints)"
+        
+        lblQuizName.text = QuizName
+        lblQuizCompletedTime.text = "Quiz completed in \(QuizTime) Seconds"
         
         let userdata = JSON(userdefault.value(forKey: userData))
         

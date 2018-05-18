@@ -86,6 +86,7 @@ class MyQuizViewController: UIViewController,UITableViewDelegate,UITableViewData
         let myQuizLeaderboardViewController = storyboard.instantiateViewController(withIdentifier: "myQuizLeaderboardViewController") as! MyQuizLeaderboardViewController
         
         myQuizLeaderboardViewController.QuizId = myQuizList["quiz_list"][indexPath.row]["quiz_id"].intValue
+        myQuizLeaderboardViewController.QuizName = myQuizList["quiz_list"][indexPath.row]["quiz_name"].stringValue
         
         self.present(myQuizLeaderboardViewController, animated: true, completion: nil)
         

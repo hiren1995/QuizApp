@@ -14,10 +14,12 @@ import Kingfisher
 
 class MyQuizLeaderboardViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    @IBOutlet var lblQuizName: UILabel!
+   
     @IBOutlet var MyQuizLeaderboardTableView: UITableView!
+    @IBOutlet var lblQuizName: UILabel!
     
     var QuizId = Int()
+    var QuizName = String()
     
     var MyQuizLeaderBoard = JSON()
     
@@ -38,7 +40,12 @@ class MyQuizLeaderboardViewController: UIViewController,UITableViewDelegate,UITa
         
         //return 10
         
-        return MyQuizLeaderBoard["quiz_result"].count + 1
+        if(MyQuizLeaderBoard["quiz_result"].count != 0)
+        {
+            return MyQuizLeaderBoard["quiz_result"].count + 1
+        }
+        
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -123,7 +130,7 @@ class MyQuizLeaderboardViewController: UIViewController,UITableViewDelegate,UITa
                     }
                     else
                     {
-                        self.showAlert(title: "Alert", message: "Something Went Wrong while downloading Profile Image")
+                        //self.showAlert(title: "Alert", message: "Something Went Wrong while downloading Profile Image")
                     }
                     
                 })
@@ -149,6 +156,8 @@ class MyQuizLeaderboardViewController: UIViewController,UITableViewDelegate,UITa
     
     func loadData()
     {
+        lblQuizName.text = QuizName
+        
         let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
         
         let myQuizListParameters:Parameters = ["user_id":userdefault.value(forKey: userId) as! String,"user_token": userdefault.value(forKey: userToken) as! String,"quiz_id" : QuizId]
@@ -168,6 +177,11 @@ class MyQuizLeaderboardViewController: UIViewController,UITableViewDelegate,UITa
                 {
                     
                    self.MyQuizLeaderboardTableView.reloadData()
+                }
+                else if(self.MyQuizLeaderBoard["status"] == "failure" && self.MyQuizLeaderBoard["status_code"].intValue == 0 && self.MyQuizLeaderBoard["message"].stringValue == "No winners yet.")
+                {
+                    
+                    self.showAlert(title: "Alert", message: "No winners yet.")
                 }
                     
                 else

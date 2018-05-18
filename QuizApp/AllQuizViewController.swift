@@ -61,7 +61,7 @@ class AllQuizViewController: UIViewController,UITableViewDelegate,UITableViewDat
         cell.lblQuizStatus.text = status[indexPath.row]
         //cell.lblQuizTime.text = time[indexPath.row]
         
-        //cell.btnViewLeaderboard.addTarget(self, action: #selector(viewLeaderBoard), for: .touchUpInside)
+        
         */
         
         if(AllQuizList != JSON.null && AllQuizList["quiz_list"].count != 0)
@@ -82,11 +82,17 @@ class AllQuizViewController: UIViewController,UITableViewDelegate,UITableViewDat
                     cell.lblQuizStatus.text = "(Attempted)"
                     cell.lblQuizStatus.textColor = UIColor.green
                 }
+                else
+                {
+                    cell.lblQuizStatus.text = "(Elapsed)"
+                    cell.lblQuizStatus.textColor = UIColor.red
+                }
                 
             }
             else
             {
                 cell.lblQuizStatus.text = "(Elapsed)"
+                cell.lblQuizStatus.textColor = UIColor.red
             }
            
             
@@ -110,18 +116,13 @@ class AllQuizViewController: UIViewController,UITableViewDelegate,UITableViewDat
         return cell
     }
     
-    /*
-    @objc func viewLeaderBoard()
-    {
-        
-    }
-    */
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let particularQuizViewController = storyboard.instantiateViewController(withIdentifier: "particularQuizViewController") as! ParticularQuizViewController
         particularQuizViewController.QuizId = AllQuizList["quiz_list"][indexPath.row]["quiz_id"].intValue
+        particularQuizViewController.QuizName = AllQuizList["quiz_list"][indexPath.row]["quiz_name"].stringValue
         self.present(particularQuizViewController, animated: true, completion: nil)
     
     }
@@ -161,7 +162,7 @@ class AllQuizViewController: UIViewController,UITableViewDelegate,UITableViewDat
                     
                 else
                 {
-                    self.showAlert(title: "Alert", message: "No data available currently or Something went wrong while getting Data")
+                    self.showAlert(title: "Alert", message: "No Quiz available currently or Something went wrong while getting Quiz")
                 }
                 
             }

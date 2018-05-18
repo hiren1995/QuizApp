@@ -226,6 +226,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
                     
                     quizQuestionViewController.QuizTimeOut = self.QuizList["quiz_time_out"].intValue * 60
                     quizQuestionViewController.Quiz_id = self.QuizList["quiz_list"][sender.tag]["quiz_id"].intValue
+                    quizQuestionViewController.QuizName = self.QuizList["quiz_list"][sender.tag]["quiz_name"].stringValue
                     quizQuestionViewController.Result_id = tempDict["result_id"].intValue
                     
                     self.present(quizQuestionViewController, animated: true, completion: nil)
@@ -311,6 +312,10 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         
     }
     
+    @IBAction func btnRefresh(_ sender: UIButton) {
+        
+        loadQuizList()
+    }
     
     
     //Count Down Timer code

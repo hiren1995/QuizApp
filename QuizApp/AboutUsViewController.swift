@@ -73,6 +73,10 @@ class AboutUsViewController: UIViewController {
             }
         })
     }
+    @IBAction func btnRefresh(_ sender: UIButton) {
+        
+        loadData()
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

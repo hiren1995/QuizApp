@@ -15,6 +15,7 @@ import Kingfisher
 class ParticularQuizViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     @IBOutlet var ParticularQuizTableView: UITableView!
+    @IBOutlet var lblQuizName: UILabel!
     
     var username = ["User 1","User2","User 3","User 1","User2","User 3","User 1","User2","User 3"]
     var completedTime = ["10","20","30","10","20","30","10","20","30"]
@@ -22,6 +23,7 @@ class ParticularQuizViewController: UIViewController,UITableViewDataSource,UITab
     var userlevel = ["1","5","10","1","5","10","1","5","10"]
     
     var QuizId = Int()
+    var QuizName = String()
     
     var winnerList = JSON()
     
@@ -96,6 +98,8 @@ class ParticularQuizViewController: UIViewController,UITableViewDataSource,UITab
     
     func loadData()
     {
+        lblQuizName.text = QuizName
+        
         let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
         
         let QuizWinnerListParameters:Parameters = ["user_id":userdefault.value(forKey: userId) as! String,"user_token": userdefault.value(forKey: userToken) as! String,"quiz_id" : QuizId]

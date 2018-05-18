@@ -38,8 +38,10 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
     
     var Quiz_id = Int()
     var Result_id = Int()
+    var QuizName = String()
     var QuestionList = JSON()
     @IBOutlet var lblQuizName: UILabel!
+    
     
     
     var currentTime = Date()
@@ -301,6 +303,7 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
                 
                 if(self.QuestionList ["status"] == "success" && self.QuestionList ["status_code"].intValue == 1)
                 {
+                    self.lblQuizName.text = self.QuizName
                     
                     self.QuizQuestionTableView.reloadData()
                     totalPoints = self.QuestionList["quiz_list"].count
@@ -373,6 +376,9 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                         
                         let quizCompletedViewController = storyboard.instantiateViewController(withIdentifier: "quizCompletedViewController") as! QuizCompletedViewController
+                        
+                        quizCompletedViewController.QuizName = self.QuizName
+                        quizCompletedViewController.QuizTime = self.QuizMinutes
                         
                         self.present(quizCompletedViewController, animated: true, completion: nil)
                         
