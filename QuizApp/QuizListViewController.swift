@@ -34,6 +34,8 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     var countdownTimer: Timer!
     
+    //var timeer = Timer[]
+    
     var totalTime = Int()
     
     var Joinbtn = UIButton()
@@ -153,6 +155,9 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
                 totalTime = Int(startTimeMillis! - currentTimeMillis)
                 
                 startTimer()
+                
+                //countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+                
             }
             else if(Double(startTimeMillis!) < Double(currentTimeMillis) && Double(EndTimeMillis!) > Double(currentTimeMillis))
             {
@@ -301,6 +306,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
                     else if(self.QuizList["status"] == "failure" && self.QuizList["status_code"].intValue == 0 && self.QuizList["message"].stringValue == "No Quiz Found.")
                     {
                         self.showAlert(title: "No Quiz Found", message: "No Quiz is Currently available Please try again after some time.")
+                        self.QuizListCollectionView.reloadData()
                     }
                     else
                     {
@@ -317,7 +323,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         }
         else
         {
-            self.showAlert(title: "Winner Timeout", message: "You can play next quiz after \(totalTimeOut - Int(currentTime.timeIntervalSince1970))  seconds")
+            self.showAlert(title: "Winner or Looser Timeout", message: "You can play next quiz after \(totalTimeOut - Int(currentTime.timeIntervalSince1970))  seconds")
         }
         
         
@@ -369,6 +375,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     }
     
     @IBAction func btnRefresh(_ sender: UIButton) {
+        
         
         loadQuizList()
     }
