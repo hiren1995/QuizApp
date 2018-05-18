@@ -12,6 +12,8 @@ import MBProgressHUD
 import SwiftyJSON
 import Kingfisher
 
+var flagCongrates = 0
+
 class QuizCompletedViewController: UIViewController {
 
     @IBOutlet var lblScore: UILabel!
@@ -21,6 +23,8 @@ class QuizCompletedViewController: UIViewController {
     
     var QuizTime = Int()
     var QuizName = String()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

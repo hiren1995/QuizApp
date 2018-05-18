@@ -277,14 +277,25 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
             }
             else
             {
-                self.showAlert(title: "Select One", message: "Please Select atleast one Option")
+                self.showAlert(title: "Select One Option", message: "Please Select atleast one Option")
             }
             
             
         }
         else
         {
-            EndQuiz()
+            if(selectedAnswer != "")
+            {
+                selectedAnswer = ""
+                EndQuiz()
+            }
+            else
+            {
+                self.showAlert(title: "Select One Option", message: "Please Select atleast one Option")
+            }
+            
+            
+            //EndQuiz()
             
             //let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
@@ -351,6 +362,7 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
         if(scoredPoints == self.QuestionList["quiz_list"].count)
         {
             isWinner = 2
+            flagCongrates = 1
         }
         
         //let EndQuizParameters:Parameters = ["user_id":userdefault.value(forKey: userId) as! String,"user_token": userdefault.value(forKey: userToken) as! String,"quiz_id" : Quiz_id , "quiz_user_end_time" : "2018-05-14 18:58:12","quiz_user_end_min": "120" ,"right_ans_count":scoredPoints,"result_id":Result_id,"user_all_ans":"" ,"is_winner":isWinner]
@@ -380,7 +392,22 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
                     
                     //self.QuizListCollectionView.reloadData()
                     
-                    let alert = UIAlertController(title: "Congratulatios", message: tempDict["message"].stringValue, preferredStyle: .alert)
+                    var displayStr = String()
+                    
+                    if(flagCongrates == 1)
+                    {
+                        displayStr = "Congratulatios"
+                        flagCongrates = 0
+                    }
+                    
+                    else
+                    {
+                        displayStr = self.QuizName
+                    }
+                    
+                    //let alert = UIAlertController(title: "Congratulatios", message: tempDict["message"].stringValue, preferredStyle: .alert)
+                    
+                    let alert = UIAlertController(title: displayStr, message: tempDict["message"].stringValue, preferredStyle: .alert)
                     
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert) in
                         
