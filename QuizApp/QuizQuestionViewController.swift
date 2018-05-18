@@ -267,8 +267,19 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
         {
             
             print(questionIndex)
-            questionIndex += 1
-            QuizQuestionTableView.reloadData()
+            
+            if(selectedAnswer != "")
+            {
+                selectedAnswer = ""
+                questionIndex += 1
+                
+                QuizQuestionTableView.reloadData()
+            }
+            else
+            {
+                self.showAlert(title: "Select One", message: "Please Select atleast one Option")
+            }
+            
             
         }
         else
