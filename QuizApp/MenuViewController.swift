@@ -68,6 +68,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert) in
                 
+                enteredFromMenuIndex = 0
                 userdefault.set(false, forKey: isLogin)
                 userdefault.removeObject(forKey: userId)
                 userdefault.removeObject(forKey: userToken)
