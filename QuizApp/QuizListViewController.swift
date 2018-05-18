@@ -152,8 +152,6 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
                 
                 Joinbtn = cell.btnJoinQuiz
                 
-                totalTime = Int(startTimeMillis! - currentTimeMillis)
-                
                 startTimer()
                 
                 //countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
@@ -390,7 +388,26 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     @objc func updateTime() {
         
+        /*
+        let indexPathsArray = QuizListCollectionView.indexPathsForVisibleItems
+        for indexPath in indexPathsArray {
+            let cell = QuizListCollectionView.cellForItem(at: indexPath) as! QuizListCollectionViewCell
+            
+            cell.btnJoinQuiz.setTitle(timeFormatted(totalTime), for: .normal)
+            
+            if totalTime != 0 {
+                totalTime -= 1
+                
+            } else {
+                
+                loadQuizList()
+                endTimer()
+            }
+        }
+        */
+        
         //tempTimer.text = "\(timeFormatted(totalTime))"
+        
         
         Joinbtn.setTitle(timeFormatted(totalTime), for: .normal)
         
@@ -402,6 +419,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
             loadQuizList()
             endTimer()
         }
+         
     }
     
     func endTimer() {
