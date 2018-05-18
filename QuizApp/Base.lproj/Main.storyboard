@@ -847,7 +847,7 @@ UXVpeiAQTmFtZQ
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzb-5a-E3a">
-                                                            <rect key="frame" x="50" y="125" width="70" height="30"/>
+                                                            <rect key="frame" x="30" y="125" width="111" height="30"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="17"/>
                                                             <state key="normal" title="Join">
@@ -981,6 +981,7 @@ UXVpeiAQTmFtZQ
                     </view>
                     <connections>
                         <outlet property="QuizQuestionTableView" destination="t3V-TA-TSa" id="0Uf-Ue-BS7"/>
+                        <outlet property="QuizTimer" destination="8ea-Ol-gem" id="h0U-oN-4Tn"/>
                         <outlet property="lblQuizName" destination="pya-9h-9BO" id="Ckt-wW-T0g"/>
                     </connections>
                 </viewController>

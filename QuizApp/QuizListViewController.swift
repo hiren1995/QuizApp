@@ -12,6 +12,11 @@ import Alamofire
 import SwiftyJSON
 import MBProgressHUD
 import Kingfisher
+import Foundation
+
+var QuizTimeOut = Int()
+var WinnerTimeOut = Int()
+var LooserTimeOut = Int()
 
 class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     
@@ -24,15 +29,58 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     var QuizList = JSON()
     
+    
+    var currentTime = Date()
+    
+    var countdownTimer: Timer!
+    
+    var totalTime = Int()
+    
+    var Joinbtn = UIButton()
+    
+    private var AppForegroundNotification: NSObjectProtocol?
+    private var AppBackgroundNotification: NSObjectProtocol?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         QuizListCollectionView.delegate = self
         QuizListCollectionView.dataSource = self
         
+        
+        totalTime = 0
+        
+        AppForegroundNotification = NotificationCenter.default.addObserver(forName: .UIApplicationWillEnterForeground, object: nil, queue: .main) {
+            [unowned self] notification in
+            
+            self.ResumeApp()
+        }
+        
+        AppBackgroundNotification = NotificationCenter.default.addObserver(forName: .UIApplicationDidEnterBackground, object: nil, queue: .main) {
+            [unowned self] notification in
+            
+            self.PauseApp()
+        }
+        
+        
         //loadQuizList()
         
         // Do any additional setup after loading the view.
+    }
+    
+    deinit {
+        // make sure to remove the observer when this view controller is dismissed/deallocated
+        
+        if let appforegroundnotification = AppForegroundNotification {
+            NotificationCenter.default.removeObserver(appforegroundnotification)
+        }
+        if let appbackgroundnotification = AppBackgroundNotification{
+            
+            NotificationCenter.default.removeObserver(appbackgroundnotification)
+        }
+        
+        //stopAutoRefreshTimer()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -68,6 +116,58 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         cell.btnJoinQuiz.tag = indexPath.row
         cell.btnJoinQuiz.addTarget(self, action: #selector(JoinQuiz(sender:)), for: .touchUpInside)
         
+        
+        
+        //Joinbtn = cell.btnJoinQuiz
+        
+        if(QuizList["quiz_list"][indexPath.row]["is_quiz_completed"].exists())
+        {
+            if(QuizList["quiz_list"][indexPath.row]["is_quiz_completed"].intValue == 2)
+            {
+                cell.btnJoinQuiz.setTitle("Attempted", for: .normal)
+                cell.btnJoinQuiz.setTitleColor(UIColor(red: 41/255, green: 218/255, blue: 37/255, alpha: 1.0), for: .normal)
+                cell.btnJoinQuiz.isUserInteractionEnabled = false
+            }
+        }
+        else
+        {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            
+            let startTime = dateFormatter.date(from: QuizList["quiz_list"][indexPath.row]["quiz_start_time"].stringValue)
+            let startTimeMillis = startTime?.timeIntervalSince1970
+            
+            let EndTime = dateFormatter.date(from: QuizList["quiz_list"][indexPath.row]["quiz_end_time"].stringValue)
+            let EndTimeMillis = EndTime?.timeIntervalSince1970
+            
+            let currentTimeMillis = currentTime.timeIntervalSince1970
+            
+            if(Double(startTimeMillis!) > Double (currentTimeMillis))
+            {
+                cell.btnJoinQuiz.isUserInteractionEnabled = false
+                
+                cell.btnJoinQuiz.setTitleColor(UIColor.gray, for: .normal)
+                
+                Joinbtn = cell.btnJoinQuiz
+                
+                totalTime = Int(startTimeMillis! - currentTimeMillis)
+                
+                startTimer()
+            }
+            else if(Double(startTimeMillis!) < Double(currentTimeMillis) && Double(EndTimeMillis!) > Double(currentTimeMillis))
+            {
+                cell.btnJoinQuiz.setTitle("Join", for: .normal)
+                cell.btnJoinQuiz.setTitleColor(UIColor(red: 80/255, green: 124/255, blue: 255/255, alpha: 1.0), for: .normal)
+                cell.btnJoinQuiz.isUserInteractionEnabled = true
+            }
+            else
+            {
+                cell.btnJoinQuiz.setTitle("Enlapsed", for: .normal)
+                cell.btnJoinQuiz.isUserInteractionEnabled = false
+            }
+        }
+        
+        
         KingfisherManager.shared.downloader.downloadImage(with: NSURL(string: QuizList["quiz_list"][indexPath.row]["level_logo"].stringValue)! as URL, retrieveImageTask: RetrieveImageTask.empty, options: [], progressBlock: nil, completionHandler: { (image,error, imageURL, imageData) in
             
             
@@ -97,6 +197,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         print(sender.tag)
         
         
+        
         let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
         
         let JoinQuiztParameters:Parameters = ["user_id":userdefault.value(forKey: userId) as! String,"user_token": userdefault.value(forKey: userToken) as! String,"quiz_id" : QuizList["quiz_list"][sender.tag]["quiz_id"].stringValue]
@@ -117,10 +218,13 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
                     
                     //self.QuizListCollectionView.reloadData()
                     
+                    
+                    
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     
                     let quizQuestionViewController = storyboard.instantiateViewController(withIdentifier: "quizQuestionViewController") as! QuizQuestionViewController
                     
+                    quizQuestionViewController.QuizTimeOut = self.QuizList["quiz_time_out"].intValue * 60
                     quizQuestionViewController.Quiz_id = self.QuizList["quiz_list"][sender.tag]["quiz_id"].intValue
                     quizQuestionViewController.Result_id = tempDict["result_id"].intValue
                     
@@ -161,6 +265,9 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     func loadQuizList()
     {
+        currentTime = Date()
+        print(currentTime.timeIntervalSince1970)
+        
         let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
         
         let QuizListParameters:Parameters = ["user_id":userdefault.value(forKey: userId) as! String,"user_token": userdefault.value(forKey: userToken) as! String]
@@ -180,9 +287,14 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
                 {
                    
                     self.QuizListCollectionView.reloadData()
+                    //self.startTimer()
                     
                 }
-               
+                    
+                else if(self.QuizList["status"] == "failure" && self.QuizList["status_code"].intValue == 0 && self.QuizList["message"].stringValue == "No Quiz Found.")
+                {
+                    self.showAlert(title: "No Quiz Found", message: "No Quiz is Currently available Please try again after some time.")
+                }
                 else
                 {
                     self.showAlert(title: "Alert", message: "Invalid User")
@@ -198,6 +310,80 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         
         
     }
+    
+    
+    
+    //Count Down Timer code
+    
+    func startTimer() {
+        
+        countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTime() {
+        
+        //tempTimer.text = "\(timeFormatted(totalTime))"
+        
+        Joinbtn.setTitle(timeFormatted(totalTime), for: .normal)
+        
+        if totalTime != 0 {
+            totalTime -= 1
+            
+        } else {
+            
+            loadQuizList()
+            endTimer()
+        }
+    }
+    
+    func endTimer() {
+        
+        countdownTimer.invalidate()
+    }
+    
+    func timeFormatted(_ totalSeconds: Int) -> String {
+        
+        
+        let seconds: Int = totalSeconds % 60
+        let minutes: Int = (totalSeconds / 60) % 60
+        let hours: Int = totalSeconds / 3600
+        return String(format: "%02d:%02d:%02d", hours,minutes, seconds)
+        
+        
+        /*
+         let seconds: Int = ((totalSeconds%(1000*60*60))%(1000*60))/1000
+         let minutes: Int = (totalSeconds % (1000*60*60))/(1000*60)
+         let hours: Int = totalSeconds / (1000*60*60)
+         return String(format: "%02d:%02d:%02d", hours,minutes, seconds)
+         */
+        
+        //return String(format: "%02d",totalSeconds)
+    }
+
+    @objc func ResumeApp()
+    {
+        print("Application running again from background")
+        
+        currentTime = Date()
+        print(currentTime.timeIntervalSince1970)
+        
+        //self.loadFastLog(From_Date : self.from_date , To_Date : self.to_date)
+        
+        loadQuizList()
+        
+    }
+    
+    @objc func PauseApp()
+    {
+        print("Application is kept in background")
+        
+        endTimer()
+    }
+    
+    
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

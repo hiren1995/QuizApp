@@ -31,9 +31,10 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
     
     var answerset = ["C","C","B","B","A"]
     
+    
+    
     var selectedAnswer = String()
     var questionIndex = 0
-    
     
     var Quiz_id = Int()
     var Result_id = Int()
@@ -41,9 +42,21 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
     @IBOutlet var lblQuizName: UILabel!
     
     
+    var currentTime = Date()
+    
+    var countdownTimer: Timer!
+    
+    var totalTime = Int()
+    
+    var QuizTimeOut = Int()
+    
+    var QuizMinutes = 0
+    
+    
     //Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     
     @IBOutlet var QuizQuestionTableView: UITableView!
+    @IBOutlet var QuizTimer: UILabel!
     
     var imgOptionA = UIImageView()
     var imgOptionB = UIImageView()
@@ -258,63 +271,7 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
         }
         else
         {
-            let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
-            
-            var isWinner = 1
-            
-            if(scoredPoints == self.QuestionList["quiz_list"].count)
-            {
-                isWinner = 2
-            }
-            
-            let EndQuizParameters:Parameters = ["user_id":userdefault.value(forKey: userId) as! String,"user_token": userdefault.value(forKey: userToken) as! String,"quiz_id" : Quiz_id , "quiz_user_end_time" : "2018-05-14 18:58:12","quiz_user_end_min": "120" ,"right_ans_count":scoredPoints,"result_id":Result_id,"user_all_ans":"" ,"is_winner":isWinner]
-            
-            print(EndQuizParameters)
-            
-            Alamofire.request(quizEndAPI, method: .post, parameters: EndQuizParameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
-                if(response.result.value != nil)
-                {
-                    Spinner.hide(animated: true)
-                    
-                    print(JSON(response.result.value))
-                    
-                    let tempDict = JSON(response.result.value!)
-                    
-                    if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 1)
-                    {
-                        
-                        //self.QuizListCollectionView.reloadData()
-                        
-                        let alert = UIAlertController(title: "Congratulatios", message: tempDict["message"].stringValue, preferredStyle: .alert)
-                        
-                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert) in
-                            
-                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                            
-                            let quizCompletedViewController = storyboard.instantiateViewController(withIdentifier: "quizCompletedViewController") as! QuizCompletedViewController
-                            
-                            self.present(quizCompletedViewController, animated: true, completion: nil)
-                            
-                        }))
-                        
-                        self.present(alert, animated: true, completion: nil)
-                       
-                    }
-                        
-                    else
-                    {
-                        self.showAlert(title: "Alert", message: "Something went wrong")
-                    }
-                    
-                }
-                else
-                {
-                    Spinner.hide(animated: true)
-                    self.showAlert(title: "Alert", message: "Please Check Your Internet Connection")
-                }
-            })
-            
-            
+            EndQuiz()
             
             //let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
@@ -347,6 +304,9 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
                     
                     self.QuizQuestionTableView.reloadData()
                     totalPoints = self.QuestionList["quiz_list"].count
+                    
+                    self.startTimer()
+                    
                 }
                     
                 else
@@ -364,6 +324,129 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
         
         
         
+    }
+    
+    
+    func EndQuiz()
+    {
+        
+        let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        var isWinner = 1
+        
+        if(scoredPoints == self.QuestionList["quiz_list"].count)
+        {
+            isWinner = 2
+        }
+        
+        //let EndQuizParameters:Parameters = ["user_id":userdefault.value(forKey: userId) as! String,"user_token": userdefault.value(forKey: userToken) as! String,"quiz_id" : Quiz_id , "quiz_user_end_time" : "2018-05-14 18:58:12","quiz_user_end_min": "120" ,"right_ans_count":scoredPoints,"result_id":Result_id,"user_all_ans":"" ,"is_winner":isWinner]
+        
+        let quizEndTime = Date()
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let quizEndTimeStr = dateformatter.string(from: quizEndTime)
+        
+        print(quizEndTimeStr)
+        
+        let EndQuizParameters:Parameters = ["user_id":userdefault.value(forKey: userId) as! String,"user_token": userdefault.value(forKey: userToken) as! String,"quiz_id" : Quiz_id , "quiz_user_end_time" : quizEndTimeStr ,"quiz_user_end_min": QuizMinutes ,"right_ans_count":scoredPoints,"result_id":Result_id,"user_all_ans":"" ,"is_winner":isWinner]
+        
+        print(EndQuizParameters)
+        
+        Alamofire.request(quizEndAPI, method: .post, parameters: EndQuizParameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+            if(response.result.value != nil)
+            {
+                Spinner.hide(animated: true)
+                
+                print(JSON(response.result.value))
+                
+                let tempDict = JSON(response.result.value!)
+                
+                if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 1)
+                {
+                    
+                    //self.QuizListCollectionView.reloadData()
+                    
+                    let alert = UIAlertController(title: "Congratulatios", message: tempDict["message"].stringValue, preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                        
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        
+                        let quizCompletedViewController = storyboard.instantiateViewController(withIdentifier: "quizCompletedViewController") as! QuizCompletedViewController
+                        
+                        self.present(quizCompletedViewController, animated: true, completion: nil)
+                        
+                    }))
+                    
+                    self.present(alert, animated: true, completion: nil)
+                    
+                }
+                    
+                else
+                {
+                    self.showAlert(title: "Alert", message: "Something went wrong")
+                }
+                
+            }
+            else
+            {
+                Spinner.hide(animated: true)
+                self.showAlert(title: "Alert", message: "Please Check Your Internet Connection")
+            }
+        })
+        
+    }
+    
+    
+    
+    //Count Down Timer code
+    
+    func startTimer() {
+        
+        countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTime() {
+        
+        //QuizTimer.text = "\(timeFormatted(totalTime))"
+        
+        //Joinbtn.setTitle(timeFormatted(totalTime), for: .normal)
+        
+        QuizTimer.text = "\(timeFormatted(QuizTimeOut))"
+        
+        if QuizTimeOut != 0 {
+            QuizTimeOut -= 1
+            QuizMinutes += 1
+            
+        } else {
+            
+            endTimer()
+        }
+    }
+    
+    func endTimer() {
+        
+        countdownTimer.invalidate()
+        EndQuiz()
+    }
+    
+    func timeFormatted(_ totalSeconds: Int) -> String {
+        
+        
+        let seconds: Int = totalSeconds % 60
+        let minutes: Int = (totalSeconds / 60) % 60
+        let hours: Int = totalSeconds / 3600
+        return String(format: "%02d:%02d:%02d", hours,minutes, seconds)
+        
+        
+        /*
+         let seconds: Int = ((totalSeconds%(1000*60*60))%(1000*60))/1000
+         let minutes: Int = (totalSeconds % (1000*60*60))/(1000*60)
+         let hours: Int = totalSeconds / (1000*60*60)
+         return String(format: "%02d:%02d:%02d", hours,minutes, seconds)
+         */
+        
+        //return String(format: "%02d",totalSeconds)
     }
     
     override func didReceiveMemoryWarning() {

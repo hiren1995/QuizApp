@@ -13,12 +13,15 @@ target 'QuizApp' do
   pod 'Kingfisher'
   pod 'CropViewController'
   pod 'PageMenu'
+  pod 'MarqueeLabel/Swift'
   
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'Firebase/Auth'
 
   pod 'GoogleSignIn'
+  
+  
   
 
   target 'QuizAppTests' do

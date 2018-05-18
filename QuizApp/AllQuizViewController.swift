@@ -161,7 +161,7 @@ class AllQuizViewController: UIViewController,UITableViewDelegate,UITableViewDat
                     
                 else
                 {
-                    self.showAlert(title: "Alert", message: "Something went wrong")
+                    self.showAlert(title: "Alert", message: "No data available currently or Something went wrong while getting Data")
                 }
                 
             }
