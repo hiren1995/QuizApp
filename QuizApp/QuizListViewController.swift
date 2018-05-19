@@ -53,17 +53,17 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         
         totalTime = 0
         
-        AppForegroundNotification = NotificationCenter.default.addObserver(forName: .UIApplicationWillEnterForeground, object: nil, queue: .main) {
-            [unowned self] notification in
+        //AppForegroundNotification = NotificationCenter.default.addObserver(forName: .UIApplicationWillEnterForeground, object: nil, queue: .main) {
+        //    [unowned self] notification in
             
-            self.ResumeApp()
-        }
+        //    self.ResumeApp()
+        //}
         
-        AppBackgroundNotification = NotificationCenter.default.addObserver(forName: .UIApplicationDidEnterBackground, object: nil, queue: .main) {
-            [unowned self] notification in
+       // AppBackgroundNotification = NotificationCenter.default.addObserver(forName: .UIApplicationDidEnterBackground, object: nil, queue: .main) {
+       //     [unowned self] notification in
             
-            self.PauseApp()
-        }
+       //     self.PauseApp()
+       // }
         
         
         //loadQuizList()
@@ -82,7 +82,6 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
             NotificationCenter.default.removeObserver(appbackgroundnotification)
         }
         
-        //endTimer()
         
         //stopAutoRefreshTimer()
     }
@@ -144,7 +143,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         
         currentTime = Date()
         
-        let currentTimeMillis = currentTime.timeIntervalSince1970
+        
         
         
         
@@ -177,13 +176,48 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
             //let EndTime = dateFormatter.date(from: QuizList["quiz_list"][indexPath.row]["quiz_end_time"].stringValue)
             //let EndTimeMillis = EndTime?.timeIntervalSince1970
             
-            //currentTime = Date()
+            currentTime = Date()
             
-            //let currentTimeMillis = currentTime.timeIntervalSince1970
+            let currentTimeMillis = currentTime.timeIntervalSince1970
             
             if(Double(startTimeMillis!) > Double (currentTimeMillis))
             {
-                //endTimer()
+                
+                /*
+                if countdownTimer.isValid
+                {
+                    countdownTimer.invalidate()
+                    
+                    startTimer()
+                    
+                    cell.lblTimer.isHidden = false
+                    
+                    cell.btnJoinQuiz.isUserInteractionEnabled = false
+                    
+                    cell.btnJoinQuiz.setTitleColor(UIColor.gray, for: .normal)
+                    
+                    Joinbtn = cell.btnJoinQuiz
+                    
+                    totalTime = Int(startTimeMillis! - currentTimeMillis)
+                    
+                    countDownTotalTimeArray.append(totalTime)
+                }
+                else
+                {
+                    cell.lblTimer.isHidden = false
+                    
+                    cell.btnJoinQuiz.isUserInteractionEnabled = false
+                    
+                    cell.btnJoinQuiz.setTitleColor(UIColor.gray, for: .normal)
+                    
+                    Joinbtn = cell.btnJoinQuiz
+                    
+                    totalTime = Int(startTimeMillis! - currentTimeMillis)
+                    
+                    countDownTotalTimeArray.append(totalTime)
+                }
+ 
+                */
                 
                 cell.lblTimer.isHidden = false
                 
@@ -196,6 +230,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
                 totalTime = Int(startTimeMillis! - currentTimeMillis)
                 
                 countDownTotalTimeArray.append(totalTime)
+                
                 
                 //startTimer()
                 
