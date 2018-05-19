@@ -14,6 +14,7 @@ class QuizListCollectionViewCell: UICollectionViewCell {
     @IBOutlet var imgQuiz: UIImageView!
     @IBOutlet var lblQuiz: UILabel!
     @IBOutlet var btnJoinQuiz: UIButton!
+    @IBOutlet var lblTimer: UILabel!
     
     
 }

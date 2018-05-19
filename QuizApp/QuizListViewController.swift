@@ -82,11 +82,21 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
             NotificationCenter.default.removeObserver(appbackgroundnotification)
         }
         
+        //endTimer()
+        
         //stopAutoRefreshTimer()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         loadQuizList()
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        
+        //endTimer()
+
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -121,6 +131,25 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         
         
         
+        
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let startTime = dateFormatter.date(from: QuizList["quiz_list"][indexPath.row]["quiz_start_time"].stringValue)
+        let startTimeMillis = startTime?.timeIntervalSince1970
+        
+        let EndTime = dateFormatter.date(from: QuizList["quiz_list"][indexPath.row]["quiz_end_time"].stringValue)
+        let EndTimeMillis = EndTime?.timeIntervalSince1970
+        
+        currentTime = Date()
+        
+        let currentTimeMillis = currentTime.timeIntervalSince1970
+        
+        
+        
+        
+        
         //Joinbtn = cell.btnJoinQuiz
         
         if(QuizList["quiz_list"][indexPath.row]["is_quiz_completed"].exists())
@@ -130,23 +159,34 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
                 cell.btnJoinQuiz.setTitle("Attempted", for: .normal)
                 cell.btnJoinQuiz.setTitleColor(UIColor(red: 41/255, green: 218/255, blue: 37/255, alpha: 1.0), for: .normal)
                 cell.btnJoinQuiz.isUserInteractionEnabled = false
+                cell.lblTimer.isHidden = true
+                
+                totalTime = -1
+                
+                countDownTotalTimeArray.append(totalTime)
             }
         }
         else
         {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            //let dateFormatter = DateFormatter()
+            //dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
             
-            let startTime = dateFormatter.date(from: QuizList["quiz_list"][indexPath.row]["quiz_start_time"].stringValue)
-            let startTimeMillis = startTime?.timeIntervalSince1970
+            //let startTime = dateFormatter.date(from: QuizList["quiz_list"][indexPath.row]["quiz_start_time"].stringValue)
+            //let startTimeMillis = startTime?.timeIntervalSince1970
             
-            let EndTime = dateFormatter.date(from: QuizList["quiz_list"][indexPath.row]["quiz_end_time"].stringValue)
-            let EndTimeMillis = EndTime?.timeIntervalSince1970
+            //let EndTime = dateFormatter.date(from: QuizList["quiz_list"][indexPath.row]["quiz_end_time"].stringValue)
+            //let EndTimeMillis = EndTime?.timeIntervalSince1970
             
-            let currentTimeMillis = currentTime.timeIntervalSince1970
+            //currentTime = Date()
+            
+            //let currentTimeMillis = currentTime.timeIntervalSince1970
             
             if(Double(startTimeMillis!) > Double (currentTimeMillis))
             {
+                //endTimer()
+                
+                cell.lblTimer.isHidden = false
+                
                 cell.btnJoinQuiz.isUserInteractionEnabled = false
                 
                 cell.btnJoinQuiz.setTitleColor(UIColor.gray, for: .normal)
@@ -157,17 +197,29 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
                 
                 countDownTotalTimeArray.append(totalTime)
                 
+                //startTimer()
+                
             }
             else if(Double(startTimeMillis!) < Double(currentTimeMillis) && Double(EndTimeMillis!) > Double(currentTimeMillis))
             {
+                cell.lblTimer.isHidden = true
                 cell.btnJoinQuiz.setTitle("Join", for: .normal)
                 cell.btnJoinQuiz.setTitleColor(UIColor(red: 80/255, green: 124/255, blue: 255/255, alpha: 1.0), for: .normal)
                 cell.btnJoinQuiz.isUserInteractionEnabled = true
+                
+                totalTime = -1
+                
+                countDownTotalTimeArray.append(totalTime)
             }
             else
             {
+                cell.lblTimer.isHidden = true
                 cell.btnJoinQuiz.setTitle("Enlapsed", for: .normal)
                 cell.btnJoinQuiz.isUserInteractionEnabled = false
+                
+                totalTime = -1
+                
+                countDownTotalTimeArray.append(totalTime)
             }
         }
         
@@ -186,6 +238,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
             }
             
         })
+        
         
         return cell
         
@@ -268,6 +321,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     func loadQuizList()
     {
+        
         currentTime = Date()
         print(currentTime.timeIntervalSince1970)
         print(totalTimeOut)
@@ -376,6 +430,10 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     @IBAction func btnRefresh(_ sender: UIButton) {
         
+        
+        loadQuizList()
+        
+        /*
         if countdownTimer.isValid
         {
             endTimer()
@@ -385,7 +443,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         {
             loadQuizList()
         }
-        
+        */
     }
     
     
@@ -398,29 +456,39 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     @objc func updateTime() {
         
-        
         let indexPathsArray = QuizListCollectionView.indexPathsForVisibleItems
-        for indexPath in indexPathsArray {
+        
+        for indexPath in indexPathsArray
+        {
             let cell = QuizListCollectionView.cellForItem(at: indexPath) as! QuizListCollectionViewCell
             
-            cell.btnJoinQuiz.setTitle(timeFormatted(countDownTotalTimeArray[indexPath.row]), for: .normal)
+            //cell.btnJoinQuiz.setTitle(timeFormatted(countDownTotalTimeArray[indexPath.row]), for: .normal)
+            
+            
+            cell.lblTimer.text = timeFormatted(countDownTotalTimeArray[indexPath.row])
             
             if countDownTotalTimeArray[indexPath.row] != 0 {
                 
                 countDownTotalTimeArray[indexPath.row] -= 1
                 
             }
-            else {
-                
-                loadQuizList()
+            else if countDownTotalTimeArray[indexPath.row] != -1
+            {
+                cell.lblTimer.isHidden = true
+                cell.btnJoinQuiz.setTitle("Join", for: .normal)
+                cell.btnJoinQuiz.setTitleColor(UIColor(red: 80/255, green: 124/255, blue: 255/255, alpha: 1.0), for: .normal)
+                cell.btnJoinQuiz.isUserInteractionEnabled = true
+            }
+            else
+            {
                 endTimer()
             }
         }
  
         
         //tempTimer.text = "\(timeFormatted(totalTime))"
-        
         /*
+        
         Joinbtn.setTitle(timeFormatted(totalTime), for: .normal)
         
         if totalTime != 0 {
