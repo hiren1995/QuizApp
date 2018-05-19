@@ -34,8 +34,8 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     var countdownTimer: Timer!
     
-    //var timeer = Timer[]
-    
+    var countDownTotalTimeArray = [Int]()
+   
     var totalTime = Int()
     
     var Joinbtn = UIButton()
@@ -113,6 +113,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         
        
         //cell.imgQuiz.image = UIImage(named: imgquiz[indexPath.row])
+        
         cell.lblQuiz.text = QuizList["quiz_list"][indexPath.row]["quiz_name"].stringValue
         
         cell.btnJoinQuiz.tag = indexPath.row
@@ -152,9 +153,9 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
                 
                 Joinbtn = cell.btnJoinQuiz
                 
-                startTimer()
+                totalTime = Int(startTimeMillis! - currentTimeMillis)
                 
-                //countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+                countDownTotalTimeArray.append(totalTime)
                 
             }
             else if(Double(startTimeMillis!) < Double(currentTimeMillis) && Double(EndTimeMillis!) > Double(currentTimeMillis))
@@ -297,7 +298,8 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
                         LooserTimeOut = self.QuizList["quiz_looser_timeout"].intValue
                         
                         self.QuizListCollectionView.reloadData()
-                        //self.startTimer()
+                        
+                        self.startTimer()
                         
                     }
                         
@@ -374,8 +376,16 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     @IBAction func btnRefresh(_ sender: UIButton) {
         
+        if countdownTimer.isValid
+        {
+            endTimer()
+            loadQuizList()
+        }
+        else
+        {
+            loadQuizList()
+        }
         
-        loadQuizList()
     }
     
     
@@ -388,27 +398,29 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     @objc func updateTime() {
         
-        /*
+        
         let indexPathsArray = QuizListCollectionView.indexPathsForVisibleItems
         for indexPath in indexPathsArray {
             let cell = QuizListCollectionView.cellForItem(at: indexPath) as! QuizListCollectionViewCell
             
-            cell.btnJoinQuiz.setTitle(timeFormatted(totalTime), for: .normal)
+            cell.btnJoinQuiz.setTitle(timeFormatted(countDownTotalTimeArray[indexPath.row]), for: .normal)
             
-            if totalTime != 0 {
-                totalTime -= 1
+            if countDownTotalTimeArray[indexPath.row] != 0 {
                 
-            } else {
+                countDownTotalTimeArray[indexPath.row] -= 1
+                
+            }
+            else {
                 
                 loadQuizList()
                 endTimer()
             }
         }
-        */
+ 
         
         //tempTimer.text = "\(timeFormatted(totalTime))"
         
-        
+        /*
         Joinbtn.setTitle(timeFormatted(totalTime), for: .normal)
         
         if totalTime != 0 {
@@ -419,7 +431,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
             loadQuizList()
             endTimer()
         }
-         
+        */
     }
     
     func endTimer() {
@@ -466,10 +478,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         endTimer()
     }
     
-    
-    
-    
-    
+   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

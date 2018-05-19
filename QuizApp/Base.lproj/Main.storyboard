@@ -1356,7 +1356,7 @@ UXVpeiAQTmFtZQ
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5y-uu-q6P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="687" y="-639"/>
+            <point key="canvasLocation" x="685.60000000000002" y="-639.13043478260875"/>
         </scene>
         <!--My Quiz View Controller-->
         <scene sceneID="9s6-In-pv5">

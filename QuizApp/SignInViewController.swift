@@ -212,11 +212,12 @@ class SignInViewController: UIViewController,UITextFieldDelegate,GIDSignInUIDele
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
         
-                print(user.profile.name)
-                print(user.profile.email)
-                print(user.profile.imageURL(withDimension: UInt(64)).relativeString)
+                //print(user.profile.name)
+                //print(user.profile.email)
+                //print(user.profile.imageURL(withDimension: UInt(64)).relativeString)
         
-                
+            if(user != nil)
+            {
                 if(user.profile.name != nil)
                 {
                     GoogleUserName = (user.profile.name)!
@@ -226,11 +227,11 @@ class SignInViewController: UIViewController,UITextFieldDelegate,GIDSignInUIDele
                     GoogleEmail = (user.profile.email)!
                 }
                 /*
-                if(user.profile. != nil)
-                {
-                    GoogleUserContact = (user.phoneNumber)!
-                }
-                */
+                 if(user.profile. != nil)
+                 {
+                 GoogleUserContact = (user.phoneNumber)!
+                 }
+                 */
                 if user.profile.hasImage
                 {
                     GoogleProfilePic = user.profile.imageURL(withDimension: UInt(64)).relativeString
@@ -241,6 +242,9 @@ class SignInViewController: UIViewController,UITextFieldDelegate,GIDSignInUIDele
                 print(FBSigninParameters)
                 
                 self.Signin(SignInParameters : FBSigninParameters)
+            }
+                
+        
         
     }
  
