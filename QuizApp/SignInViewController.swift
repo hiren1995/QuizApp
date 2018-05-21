@@ -16,6 +16,13 @@ import FirebaseInstanceID
 import FirebaseMessaging
 import GoogleSignIn
 
+import FacebookCore
+import FacebookLogin
+import FBSDKCoreKit
+import FBSDKLoginKit
+
+let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+
 class SignInViewController: UIViewController,UITextFieldDelegate,GIDSignInUIDelegate,GIDSignInDelegate{
    
    
@@ -237,18 +244,62 @@ class SignInViewController: UIViewController,UITextFieldDelegate,GIDSignInUIDele
                     GoogleProfilePic = user.profile.imageURL(withDimension: UInt(64)).relativeString
                 }
                 
-                let FBSigninParameters:Parameters = ["user_name":GoogleUserName,"user_contact_no": GoogleUserContact,"user_email" :  GoogleEmail , "user_password" : "","user_profile_photo":GoogleProfilePic,"user_device_type":2,"user_device_id":userdefault.value(forKey: DeviceId)!,"user_device_token":userdefault.value(forKey: DeviceToken)!,"user_lat":tempLatitude!,"user_long":tempLongitude!,"user_signin":3]
+                let GoogleSigninParameters:Parameters = ["user_name":GoogleUserName,"user_contact_no": GoogleUserContact,"user_email" :  GoogleEmail , "user_password" : "","user_profile_photo":GoogleProfilePic,"user_device_type":2,"user_device_id":userdefault.value(forKey: DeviceId)!,"user_device_token":userdefault.value(forKey: DeviceToken)!,"user_lat":tempLatitude!,"user_long":tempLongitude!,"user_signin":3]
                 
-                print(FBSigninParameters)
+                print(GoogleSigninParameters)
                 
-                self.Signin(SignInParameters : FBSigninParameters)
+                self.Signin(SignInParameters : GoogleSigninParameters)
             }
                 
         
         
     }
  
-   
+    @IBAction func btnFBLogin(_ sender: UIButton) {
+        
+       
+        fbLoginManager.logIn(withReadPermissions: ["email","public_profile","user_friends"], from: self) { (result, error) -> Void in
+            if (error == nil){
+                let fbloginresult : FBSDKLoginManagerLoginResult = result!
+                
+                print(result)
+                
+                // if user cancel the login
+                if (result?.isCancelled)!{
+                    
+                    return
+                }
+                if(fbloginresult.grantedPermissions.contains("email")){
+                    if((FBSDKAccessToken.current()) != nil){
+                        
+                        FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
+                            if (error == nil){
+                                //everything works print the user data
+                                //print(FBSDKAccessToken.current().tokenString)
+                                
+                                let FBinfo = JSON(result)
+                                print(FBinfo)
+                                
+                                if(FBinfo != JSON.null)
+                                {
+                                    let FBSigninParameters:Parameters = ["user_name":FBinfo["name"].stringValue ,"user_contact_no": "","user_email" :  FBinfo["email"].stringValue , "user_password" : "","user_profile_photo": FBinfo["picture"]["data"]["url"].stringValue,"user_device_type":2,"user_device_id":userdefault.value(forKey: DeviceId)!,"user_device_token":userdefault.value(forKey: DeviceToken)!,"user_lat":tempLatitude!,"user_long":tempLongitude!,"user_signin":3]
+                                    
+                                    print(FBSigninParameters)
+                                    
+                                    self.Signin(SignInParameters : FBSigninParameters)
+                                }
+                               
+                            }
+                        })
+                        
+                    }
+                }
+            }
+        }
+        
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

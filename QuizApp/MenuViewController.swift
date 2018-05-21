@@ -75,6 +75,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 userdefault.removeObject(forKey: userData)
                 
                 GIDSignIn.sharedInstance().signOut()
+                fbLoginManager.logOut()
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let signInViewController = storyboard.instantiateViewController(withIdentifier: "signInViewController") as! SignInViewController

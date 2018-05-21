@@ -16,6 +16,11 @@ import FirebaseInstanceID
 import FirebaseMessaging
 import GoogleSignIn
 
+import FacebookCore
+import FacebookLogin
+import FBSDKCoreKit
+import FBSDKLoginKit
+
 var tempLatitude:Double?
 var tempLongitude:Double?
 
@@ -39,7 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
         
          UIApplication.setStatusBarBackgroundColor = UIColor(red: 229/255, green: 25/255, blue: 55/255, alpha: 1.0)
         
-        //SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)  //this is for facebook login
+        
+        SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)  //this is for facebook login
         
         //-------------------------------- Making app register for Remotw Notification --------------------------------------
         
@@ -230,10 +236,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
         
         //return SDKApplicationDelegate.shared.application(app, open: url, options: options)
         
-        return GIDSignIn.sharedInstance().handle(url,sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,annotation: [:])
+        //return GIDSignIn.sharedInstance().handle(url,sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,annotation: [:])
         
         
+        let FBhandled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
         
+        let Googlehandled = GIDSignIn.sharedInstance().handle(url,sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,annotation: [:])
+        
+        if FBhandled
+        {
+            return FBhandled
+        }
+        else if Googlehandled
+        {
+            return Googlehandled
+        }
+        else
+        {
+            return false
+        }
+ 
     }
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         

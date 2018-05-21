@@ -19,11 +19,9 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.953681148626-p0glk7s61omg53e6jgdb1733e46rmgg9</string>
+				<string>fb823595921362285</string>
 			</array>
 		</dict>
 		<dict>
@@ -31,12 +29,23 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.adweb.QuizApp</string>
+				<string>com.googleusercontent.apps.953681148626-p0glk7s61omg53e6jgdb1733e46rmgg9</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>823595921362285</string>
+	<key>FacebookDisplayName</key>
+	<string>Quiz app</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>

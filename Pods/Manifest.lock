@@ -1,6 +1,24 @@
 PODS:
   - Alamofire (4.7.2)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
   - CropViewController (2.3.6)
+  - FacebookCore (0.3.0):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.27)
+  - FacebookLogin (0.3.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.3)
+    - FBSDKCoreKit (~> 4.27)
+    - FBSDKLoginKit (~> 4.27)
+  - FBSDKCoreKit (4.33.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.33.0):
+    - FBSDKCoreKit
   - Firebase/Auth (4.13.0):
     - Firebase/Core
     - FirebaseAuth (= 4.6.1)
@@ -54,6 +72,7 @@ PODS:
   - GTMSessionFetcher/Full (1.1.15):
     - GTMSessionFetcher/Core (= 1.1.15)
   - Kingfisher (4.7.0)
+  - MarqueeLabel/Swift (3.1.4)
   - MBProgressHUD (1.1.0)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -68,11 +87,15 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - CropViewController
+  - FacebookCore
+  - FacebookLogin
+  - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Messaging
   - GoogleSignIn
   - Kingfisher
+  - MarqueeLabel/Swift
   - MBProgressHUD
   - PageMenu
   - SlideMenuControllerSwift
@@ -81,7 +104,12 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - Bolts
     - CropViewController
+    - FacebookCore
+    - FacebookLogin
+    - FBSDKCoreKit
+    - FBSDKLoginKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -93,6 +121,7 @@ SPEC REPOS:
     - GTMOAuth2
     - GTMSessionFetcher
     - Kingfisher
+    - MarqueeLabel
     - MBProgressHUD
     - nanopb
     - PageMenu
@@ -102,7 +131,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   CropViewController: e6d4bd512d15a1709e9ddf71fe7d98ffd05dda0f
+  FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
+  FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
+  FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
+  FBSDKLoginKit: 88cb456349cfb3b554427ce4f8b43729d85dfb40
   Firebase: 5ec5e863d269d82d66b4bf56856726f8fb8f0fb3
   FirebaseAnalytics: 7ef69e76a5142f643aeb47c780e1cdce4e23632e
   FirebaseAuth: bf22cacf22c60ab454bf2636f556d8892b10b53f
@@ -114,6 +148,7 @@ SPEC CHECKSUMS:
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  MarqueeLabel: bf768455fe88d427f71476ebb23f9092b660f40b
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
@@ -121,6 +156,6 @@ SPEC CHECKSUMS:
   SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: dd87d2850c06a6277e0fb6c445272b4fa4792657
+PODFILE CHECKSUM: 20027f6e9e3ee907200001699c846ec80db16399
 
 COCOAPODS: 1.5.0

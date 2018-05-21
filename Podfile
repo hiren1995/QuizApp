@@ -21,7 +21,10 @@ target 'QuizApp' do
 
   pod 'GoogleSignIn'
   
+  pod 'FBSDKLoginKit'
   
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
   
 
   target 'QuizAppTests' do
