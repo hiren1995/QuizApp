@@ -109,6 +109,61 @@ class VerifyOTPViewController: UIViewController {
         
     }
     
+    @IBAction func btnBack(_ sender: UIButton) {
+        
+        let alert = UIAlertController(title: "Quit", message: "Are you sure you want to Quit the Registration", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+            
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let signInViewController = storyboard.instantiateViewController(withIdentifier: "signInViewController") as! SignInViewController
+            
+            self.present(signInViewController, animated: true, completion: nil)
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func btnResendOTP(_ sender: UIButton) {
+        
+        let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        let ResendOTPParameters:Parameters = ["user_contact_no": userdefault.value(forKey: contactNoToVerify) as! String]
+        
+        print(ResendOTPParameters)
+        
+        Alamofire.request(resendOTPAPI, method: .post, parameters: ResendOTPParameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+            if(response.result.value != nil)
+            {
+                Spinner.hide(animated: true)
+                
+                print(JSON(response.result.value))
+                
+                let tempDict = JSON(response.result.value!)
+                
+                if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 1)
+                {
+                    self.showAlert(title: "Alert", message: "OTP has been sent Successfully")
+                   
+                    
+                }
+                else if(tempDict["status"] == "failure")
+                {
+                    self.showAlert(title: "Alert", message: "Failed to send OTP Please try again.")
+                }
+                
+            }
+            else
+            {
+                Spinner.hide(animated: true)
+                self.showAlert(title: "Alert", message: "Please Check Your Internet Connection")
+            }
+        })
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
