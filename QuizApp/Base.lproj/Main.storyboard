@@ -908,6 +908,13 @@ UXVpeiAQTmFtZQ
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You can play next Quiz after 21 May 2018 after 9:36 am" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ua-H1-T2B">
+                                <rect key="frame" x="16" y="310" width="343" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Raleway" family="Raleway" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98431372549019602" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ecI-Xi-mAl"/>
@@ -917,6 +924,7 @@ UXVpeiAQTmFtZQ
                     </tabBarItem>
                     <connections>
                         <outlet property="QuizListCollectionView" destination="m5C-tj-IKI" id="rHg-Cm-SVB"/>
+                        <outlet property="lblDisplay" destination="5Ua-H1-T2B" id="K2Q-dQ-AjE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P06-MW-rSz" userLabel="First Responder" sceneMemberID="firstResponder"/>

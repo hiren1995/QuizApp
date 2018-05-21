@@ -29,6 +29,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     var QuizList = JSON()
     
+    @IBOutlet var lblDisplay: UILabel!
     
     var currentTime = Date()
     
@@ -50,6 +51,7 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         QuizListCollectionView.delegate = self
         QuizListCollectionView.dataSource = self
         
+        lblDisplay.isHidden = true
         
         totalTime = 0
         countDownTotalTimeArray = []
@@ -329,6 +331,8 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         {
             totalTimeOut = 0
             
+            lblDisplay.isHidden = true
+            
             let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
             
             let QuizListParameters:Parameters = ["user_id":userdefault.value(forKey: userId) as! String,"user_token": userdefault.value(forKey: userToken) as! String]
@@ -378,7 +382,20 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         }
         else
         {
-            self.showAlert(title: "Winner or Looser Timeout", message: "You can play next quiz after \(totalTimeOut - Int(currentTime.timeIntervalSince1970))  seconds")
+            lblDisplay.isHidden = false
+            
+            let dateformatterLong = DateFormatter()
+            
+            dateformatterLong.dateStyle = .long
+            dateformatterLong.timeStyle = .medium
+            
+            let x = Date(timeIntervalSince1970: TimeInterval(totalTimeOut))
+            
+            let datestr = dateformatterLong.string(from: x)
+            
+            lblDisplay.text = "You can Play next Quiz after \(datestr)"
+            
+            //self.showAlert(title: "Winner or Looser Timeout", message: "You can play next quiz after \(totalTimeOut - Int(currentTime.timeIntervalSince1970))  seconds")
         }
         
         
