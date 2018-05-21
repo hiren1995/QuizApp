@@ -563,8 +563,6 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         currentTime = Date()
         print(currentTime.timeIntervalSince1970)
         
-        totalTimeOut = 0
-        
         viewDidAppear(true)
         
     }
