@@ -11,12 +11,14 @@ import Alamofire
 import MBProgressHUD
 import SwiftyJSON
 import Kingfisher
+import MarqueeLabel
 
 class MyQuizLeaderboardViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
    
     @IBOutlet var MyQuizLeaderboardTableView: UITableView!
-    @IBOutlet var lblQuizName: UILabel!
+    //@IBOutlet var lblQuizName: UILabel!
+    @IBOutlet var lblQuizName: MarqueeLabel!
     
     var QuizId = Int()
     var QuizName = String()

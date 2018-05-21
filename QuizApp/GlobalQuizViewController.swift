@@ -67,10 +67,10 @@ class GlobalQuizViewController: UIViewController,UITableViewDelegate,UITableView
         cell.lblUserName.text = GlobalLeaders["quiz_result"][indexPath.row]["user_name"].stringValue
         cell.lblCompletionTime.text = GlobalLeaders["quiz_result"][indexPath.row]["time_taken_to_finish"].stringValue + " seconds"
         
-        cell.lblQuizName.text = GlobalLeaders["quiz_result"][indexPath.row]["quiz_name"].stringValue
+        cell.lblQuizName.text = "Quiz Name : " + GlobalLeaders["quiz_result"][indexPath.row]["quiz_name"].stringValue
         cell.lblLevel.text = String(indexPath.row + 1)
         
-        if(GlobalLeaders["quiz_result"][indexPath.row]["user_profile_photo"].stringValue != "")
+        if(GlobalLeaders["quiz_result"][indexPath.row]["user_profile_photo"].stringValue != "" || GlobalLeaders["quiz_result"][indexPath.row]["user_profile_photo"] != JSON.null)
         {
             KingfisherManager.shared.downloader.downloadImage(with: NSURL(string: GlobalLeaders["quiz_result"][indexPath.row]["user_profile_photo"].stringValue)! as URL, retrieveImageTask: RetrieveImageTask.empty, options: [], progressBlock: nil, completionHandler: { (image,error, imageURL, imageData) in
                 

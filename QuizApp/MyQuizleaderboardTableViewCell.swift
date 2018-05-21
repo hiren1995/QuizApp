@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MarqueeLabel
 
 class MyQuizleaderboardTableViewCell: UITableViewCell {
 
@@ -15,9 +16,10 @@ class MyQuizleaderboardTableViewCell: UITableViewCell {
     @IBOutlet var lblUserName: UILabel!
     @IBOutlet var lblCompletionTime: UILabel!
     @IBOutlet var lblLevel: UILabel!
-    @IBOutlet var lblWonLoose: UILabel!
+    //@IBOutlet var lblWonLoose: UILabel!
     @IBOutlet var imgTrophy: UIImageView!
     @IBOutlet var ViewCell: UIView!
+    @IBOutlet var lblWonLoose: MarqueeLabel!
     
     
     override func awakeFromNib() {

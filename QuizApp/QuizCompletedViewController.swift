@@ -11,6 +11,7 @@ import Alamofire
 import MBProgressHUD
 import SwiftyJSON
 import Kingfisher
+import MarqueeLabel
 
 var flagCongrates = 0
 
@@ -18,8 +19,10 @@ class QuizCompletedViewController: UIViewController {
 
     @IBOutlet var lblScore: UILabel!
     @IBOutlet var imgUserPic: UIImageView!
-    @IBOutlet var lblQuizName: UILabel!
+    //@IBOutlet var lblQuizName: UILabel!
     @IBOutlet var lblQuizCompletedTime: UILabel!
+    @IBOutlet var lblQuizName: MarqueeLabel!
+    
     
     var QuizTime = Int()
     var QuizName = String()

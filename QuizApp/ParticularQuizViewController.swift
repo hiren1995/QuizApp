@@ -11,11 +11,13 @@ import Alamofire
 import SwiftyJSON
 import MBProgressHUD
 import Kingfisher
+import MarqueeLabel
 
 class ParticularQuizViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     @IBOutlet var ParticularQuizTableView: UITableView!
-    @IBOutlet var lblQuizName: UILabel!
+    //@IBOutlet var lblQuizName: UILabel!
+    @IBOutlet var lblQuizName: MarqueeLabel!
     
     var username = ["User 1","User2","User 3","User 1","User2","User 3","User 1","User2","User 3"]
     var completedTime = ["10","20","30","10","20","30","10","20","30"]

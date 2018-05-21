@@ -351,7 +351,7 @@
                                                     <rect key="frame" x="6" y="5" width="363" height="136"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3h-c5-Qx7">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3h-c5-Qx7" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                             <rect key="frame" x="121" y="8" width="144" height="34"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="20"/>
@@ -432,7 +432,7 @@
                                         <connections>
                                             <outlet property="imgQuiz" destination="lrf-EQ-DM9" id="Lvk-NS-P5a"/>
                                             <outlet property="lblQuizEndTime" destination="33d-ab-gyl" id="DEP-m8-TCf"/>
-                                            <outlet property="lblQuizName" destination="N3h-c5-Qx7" id="V0c-3H-d1T"/>
+                                            <outlet property="lblQuizName" destination="N3h-c5-Qx7" id="3SD-47-iJj"/>
                                             <outlet property="lblQuizStartTime" destination="ePx-uI-1gx" id="jMv-ty-3qy"/>
                                             <outlet property="lblQuizStatus" destination="Bz0-cc-ZOH" id="Yav-yV-IpD"/>
                                         </connections>
@@ -463,9 +463,9 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0I-O1-MO0">
-                                        <rect key="frame" x="0.0" y="15" width="375" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0I-O1-MO0" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                        <rect key="frame" x="56" y="15" width="263" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <string key="text" base64-UTF8="YES">
 UXVpeiAQTmFtZQ
 </string>
@@ -503,7 +503,7 @@ UXVpeiAQTmFtZQ
                                                     <rect key="frame" x="6" y="5" width="363" height="118"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rH-UB-Bjo">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rH-UB-Bjo" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                             <rect key="frame" x="121" y="19" width="187" height="30"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="20"/>
@@ -579,7 +579,7 @@ UXVpeiAQTmFtZQ
                                             <outlet property="imgUser" destination="uoe-ul-Zh5" id="GZP-M6-JVC"/>
                                             <outlet property="lblCompletionTime" destination="ck9-rB-E4q" id="tYY-ZU-L8D"/>
                                             <outlet property="lblLevel" destination="BGg-YQ-oL1" id="dk7-g6-tLF"/>
-                                            <outlet property="lblUserName" destination="6rH-UB-Bjo" id="oT4-DB-0iX"/>
+                                            <outlet property="lblUserName" destination="6rH-UB-Bjo" id="Yyp-Eq-UT3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -590,7 +590,7 @@ UXVpeiAQTmFtZQ
                     </view>
                     <connections>
                         <outlet property="ParticularQuizTableView" destination="i9U-OG-P3Q" id="xs1-X1-IOE"/>
-                        <outlet property="lblQuizName" destination="F0I-O1-MO0" id="Jke-KA-2gt"/>
+                        <outlet property="lblQuizName" destination="F0I-O1-MO0" id="vZy-gg-Wqi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u1Z-eh-lZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -635,7 +635,7 @@ UXVpeiAQTmFtZQ
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awI-pO-e7l">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awI-pO-e7l" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                             <rect key="frame" x="121" y="79" width="187" height="20"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="Raleway" family="Raleway" pointSize="17"/>
@@ -704,8 +704,8 @@ UXVpeiAQTmFtZQ
                                             <outlet property="imgUser" destination="uWe-5M-xIW" id="IVV-Zu-mCv"/>
                                             <outlet property="lblCompletionTime" destination="ngu-bD-fmU" id="3qg-9A-Nyh"/>
                                             <outlet property="lblLevel" destination="Oag-1a-GQo" id="ALe-D9-NPU"/>
-                                            <outlet property="lblQuizName" destination="awI-pO-e7l" id="ZUO-jq-AvR"/>
-                                            <outlet property="lblUserName" destination="24m-eg-sw1" id="w63-Rm-OEO"/>
+                                            <outlet property="lblQuizName" destination="awI-pO-e7l" id="Rwb-Gk-l7f"/>
+                                            <outlet property="lblUserName" destination="24m-eg-sw1" id="jdo-h4-Omf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -905,7 +905,7 @@ UXVpeiAQTmFtZQ
                                             <outlet property="ViewQuiz" destination="CK0-qx-FvB" id="rX5-a6-6wO"/>
                                             <outlet property="btnJoinQuiz" destination="xzb-5a-E3a" id="51a-Cm-WjU"/>
                                             <outlet property="imgQuiz" destination="9E3-y7-MsZ" id="vr1-uO-VNN"/>
-                                            <outlet property="lblQuiz" destination="Vgg-6h-P3M" id="6Va-ke-EwE"/>
+                                            <outlet property="lblQuiz" destination="Vgg-6h-P3M" id="GnN-kq-fNs"/>
                                             <outlet property="lblTimer" destination="beg-xV-AGX" id="oOD-Hf-Pze"/>
                                         </connections>
                                     </collectionViewCell>
@@ -946,9 +946,9 @@ UXVpeiAQTmFtZQ
                                 <rect key="frame" x="0.0" y="20" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pya-9h-9BO">
-                                        <rect key="frame" x="0.0" y="15" width="375" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pya-9h-9BO" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                        <rect key="frame" x="56" y="15" width="262" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <string key="text" base64-UTF8="YES">
 UXVpeiAQTmFtZQ
 </string>
@@ -1010,7 +1010,7 @@ UXVpeiAQTmFtZQ
                     <connections>
                         <outlet property="QuizQuestionTableView" destination="t3V-TA-TSa" id="0Uf-Ue-BS7"/>
                         <outlet property="QuizTimer" destination="8ea-Ol-gem" id="h0U-oN-4Tn"/>
-                        <outlet property="lblQuizName" destination="pya-9h-9BO" id="Ckt-wW-T0g"/>
+                        <outlet property="lblQuizName" destination="pya-9h-9BO" id="3Ij-cM-Lgz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9C-Ry-MFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1029,9 +1029,9 @@ UXVpeiAQTmFtZQ
                                 <rect key="frame" x="0.0" y="20" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aC-Dx-L11">
-                                        <rect key="frame" x="0.0" y="15" width="375" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aC-Dx-L11" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                        <rect key="frame" x="56" y="15" width="262" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <string key="text" base64-UTF8="YES">
 UXVpeiAQTmFtZQ
 </string>
@@ -1109,7 +1109,7 @@ UXVpeiAQTmFtZQ
                     <connections>
                         <outlet property="imgUserPic" destination="bsF-cR-ZZy" id="jkF-e8-AgL"/>
                         <outlet property="lblQuizCompletedTime" destination="Iqy-kI-rJx" id="BB5-rE-fmt"/>
-                        <outlet property="lblQuizName" destination="8aC-Dx-L11" id="rE6-bz-0Js"/>
+                        <outlet property="lblQuizName" destination="8aC-Dx-L11" id="FKf-gY-vNP"/>
                         <outlet property="lblScore" destination="csw-4s-zQq" id="XR6-hm-xr9"/>
                     </connections>
                 </viewController>
@@ -1343,8 +1343,30 @@ UXVpeiAQTmFtZQ
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BM8-Pn-Lew">
-                                <rect key="frame" x="133" y="400" width="108" height="40"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XEK-z3-xV9">
+                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comodo Pintup Challenge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxz-yL-xhM" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                        <rect key="frame" x="56" y="15" width="262" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="1OE-3R-Fbq">
+                                        <rect key="frame" x="18" y="20" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1R-Gd-Gwe">
+                                        <rect key="frame" x="8" y="10" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8980392157" green="0.098039215690000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BM8-Pn-Lew">
+                                <rect key="frame" x="133" y="446" width="108" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="20"/>
@@ -1402,8 +1424,8 @@ UXVpeiAQTmFtZQ
                                                     <rect key="frame" x="6" y="5" width="363" height="136"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6b-Dm-c7O">
-                                                            <rect key="frame" x="121" y="8" width="149" height="34"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6b-Dm-c7O" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                                            <rect key="frame" x="121" y="8" width="234" height="34"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="20"/>
                                                             <nil key="textColor"/>
@@ -1476,7 +1498,7 @@ UXVpeiAQTmFtZQ
                                         <connections>
                                             <outlet property="imgQuiz" destination="mfZ-IO-dDW" id="1cU-Oe-mQm"/>
                                             <outlet property="lblQuizEndTime" destination="wyS-vy-zho" id="wG5-O0-IeO"/>
-                                            <outlet property="lblQuizName" destination="R6b-Dm-c7O" id="Nab-BP-qru"/>
+                                            <outlet property="lblQuizName" destination="R6b-Dm-c7O" id="f4k-n7-td5"/>
                                             <outlet property="lblQuizStartTime" destination="3Wd-Zb-8nM" id="8u9-mj-KL6"/>
                                         </connections>
                                     </tableViewCell>
@@ -1506,9 +1528,9 @@ UXVpeiAQTmFtZQ
                                 <rect key="frame" x="0.0" y="20" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrf-x5-ewO">
-                                        <rect key="frame" x="0.0" y="15" width="375" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrf-x5-ewO" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                        <rect key="frame" x="56" y="15" width="264" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <string key="text" base64-UTF8="YES">
 UXVpeiAQTmFtZQ
 </string>
@@ -1600,7 +1622,7 @@ UXVpeiAQTmFtZQ
                                                             <color key="textColor" red="0.83529411760000005" green="0.090196078430000007" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPF-K0-Xwg">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPF-K0-Xwg" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                             <rect key="frame" x="148" y="78" width="207" height="20"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="Raleway" family="Raleway" pointSize="14"/>
@@ -1636,7 +1658,7 @@ UXVpeiAQTmFtZQ
                                             <outlet property="lblCompletionTime" destination="mF7-0w-PJf" id="6BU-hf-wnN"/>
                                             <outlet property="lblLevel" destination="MoJ-NW-9jX" id="rhH-y0-NSE"/>
                                             <outlet property="lblUserName" destination="pf3-Uf-aAg" id="vm9-Xg-In8"/>
-                                            <outlet property="lblWonLoose" destination="lPF-K0-Xwg" id="elw-A3-eXX"/>
+                                            <outlet property="lblWonLoose" destination="lPF-K0-Xwg" id="F1o-xf-cvW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1647,7 +1669,7 @@ UXVpeiAQTmFtZQ
                     </view>
                     <connections>
                         <outlet property="MyQuizLeaderboardTableView" destination="Otj-AE-yfe" id="EOU-3T-8SK"/>
-                        <outlet property="lblQuizName" destination="Hrf-x5-ewO" id="hbz-rY-HlH"/>
+                        <outlet property="lblQuizName" destination="Hrf-x5-ewO" id="Uns-4D-UOs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrN-fv-Hj5" userLabel="First Responder" sceneMemberID="firstResponder"/>

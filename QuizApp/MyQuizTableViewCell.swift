@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import MarqueeLabel
 
 class MyQuizTableViewCell: UITableViewCell {
 
     
     @IBOutlet var imgQuiz: UIImageView!
-    @IBOutlet var lblQuizName: UILabel!
+    //@IBOutlet var lblQuizName: UILabel!
     @IBOutlet var lblQuizStatus: UILabel!
+    @IBOutlet var lblQuizName: MarqueeLabel!
     
     @IBOutlet var lblQuizTime: UILabel!
     

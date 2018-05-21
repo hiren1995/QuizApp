@@ -10,6 +10,7 @@ import UIKit
 import MBProgressHUD
 import Alamofire
 import SwiftyJSON
+import MarqueeLabel
 
 var totalPoints = 5
 var scoredPoints = 0
@@ -42,7 +43,9 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
     var Result_id = Int()
     var QuizName = String()
     var QuestionList = JSON()
-    @IBOutlet var lblQuizName: UILabel!
+    //@IBOutlet var lblQuizName: UILabel!
+    @IBOutlet var lblQuizName: MarqueeLabel!
+    
     
     
     

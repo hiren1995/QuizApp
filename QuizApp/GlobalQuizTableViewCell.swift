@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MarqueeLabel
 
 class GlobalQuizTableViewCell: UITableViewCell {
 
@@ -14,7 +15,10 @@ class GlobalQuizTableViewCell: UITableViewCell {
     @IBOutlet var lblUserName: UILabel!
     @IBOutlet var lblCompletionTime: UILabel!
     @IBOutlet var lblLevel: UILabel!
-    @IBOutlet var lblQuizName: UILabel!
+    //@IBOutlet var lblQuizName: UILabel!
+    @IBOutlet var lblQuizName: MarqueeLabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import MarqueeLabel
 
 class QuizListCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var ViewQuiz: UIView!
     @IBOutlet var imgQuiz: UIImageView!
-    @IBOutlet var lblQuiz: UILabel!
+    //@IBOutlet var lblQuiz: UILabel!
     @IBOutlet var btnJoinQuiz: UIButton!
     @IBOutlet var lblTimer: UILabel!
+    @IBOutlet var lblQuiz: UILabel!
     
     
 }

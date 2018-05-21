@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import MarqueeLabel
 
 class ParticularQuizTableViewCell: UITableViewCell {
     
     @IBOutlet var imgUser: UIImageView!
-    @IBOutlet var lblUserName: UILabel!
+    //@IBOutlet var lblUserName: UILabel!
     @IBOutlet var lblCompletionTime: UILabel!
     @IBOutlet var lblLevel: UILabel!
-   
+    @IBOutlet var lblUserName: MarqueeLabel!
+    
     
 
     override func awakeFromNib() {
