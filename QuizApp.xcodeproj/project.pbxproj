@@ -779,6 +779,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = QuizApp/QuizApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Janak Mehta (AL6SSH4JJ3)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = S6BT78C69G;
 				INFOPLIST_FILE = QuizApp/Info.plist;
@@ -789,7 +790,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adweb.QuizApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a5e7f3e2-711b-4648-a039-03bf4f0233f1";
+				PROVISIONING_PROFILE = "bfe3e524-edab-4afa-99ee-2e041742e0c3";
 				PROVISIONING_PROFILE_SPECIFIER = QuizApp_adweb_Development1;
 				SWIFT_OBJC_BRIDGING_HEADER = "QuizApp/QuizApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -805,6 +806,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = QuizApp/QuizApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Janak Mehta (AL6SSH4JJ3)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = S6BT78C69G;
 				INFOPLIST_FILE = QuizApp/Info.plist;
@@ -815,7 +817,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adweb.QuizApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a5e7f3e2-711b-4648-a039-03bf4f0233f1";
+				PROVISIONING_PROFILE = "bfe3e524-edab-4afa-99ee-2e041742e0c3";
 				PROVISIONING_PROFILE_SPECIFIER = QuizApp_adweb_Development1;
 				SWIFT_OBJC_BRIDGING_HEADER = "QuizApp/QuizApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

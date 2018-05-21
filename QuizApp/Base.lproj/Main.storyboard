@@ -29,7 +29,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quiz__app_logo" translatesAutoresizingMaskIntoConstraints="NO" id="k8o-Tb-ZU7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="k8o-Tb-ZU7">
                                 <rect key="frame" x="147" y="55" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1327,7 +1327,7 @@ UXVpeiAQTmFtZQ
                                 <color key="textColor" red="0.8980392157" green="0.098039215690000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quiz__app_logo" translatesAutoresizingMaskIntoConstraints="NO" id="hIk-Gk-9CA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="hIk-Gk-9CA">
                                 <rect key="frame" x="147" y="130" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1700,10 +1700,10 @@ UXVpeiAQTmFtZQ
         <image name="ic_leader_gray" width="21" height="21"/>
         <image name="ic_quiz_list_gray" width="21" height="21"/>
         <image name="ic_settings_gray" width="21" height="21"/>
+        <image name="logo" width="1024" height="1024"/>
         <image name="menu" width="64" height="64"/>
         <image name="next_arrow" width="64" height="64"/>
         <image name="pencil" width="32" height="32"/>
-        <image name="quiz__app_logo" width="128" height="128"/>
         <image name="reload" width="64" height="64"/>
         <image name="trophy" width="32" height="32"/>
         <image name="user" width="64" height="64"/>
