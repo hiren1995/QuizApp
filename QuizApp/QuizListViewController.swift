@@ -52,18 +52,19 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         
         
         totalTime = 0
+        countDownTotalTimeArray = []
         
-        //AppForegroundNotification = NotificationCenter.default.addObserver(forName: .UIApplicationWillEnterForeground, object: nil, queue: .main) {
-        //    [unowned self] notification in
+        AppForegroundNotification = NotificationCenter.default.addObserver(forName: .UIApplicationWillEnterForeground, object: nil, queue: .main) {
+            [unowned self] notification in
             
-        //    self.ResumeApp()
-        //}
+            self.ResumeApp()
+        }
         
-       // AppBackgroundNotification = NotificationCenter.default.addObserver(forName: .UIApplicationDidEnterBackground, object: nil, queue: .main) {
-       //     [unowned self] notification in
+        AppBackgroundNotification = NotificationCenter.default.addObserver(forName: .UIApplicationDidEnterBackground, object: nil, queue: .main) {
+            [unowned self] notification in
             
-       //     self.PauseApp()
-       // }
+            self.PauseApp()
+        }
         
         
         //loadQuizList()
@@ -88,13 +89,18 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     override func viewDidAppear(_ animated: Bool) {
         
+        totalTime = 0
+        countDownTotalTimeArray = []
+        
+        print(countDownTotalTimeArray)
+        
         loadQuizList()
         
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         
-        //endTimer()
+        endTimer()
 
     }
     
@@ -130,8 +136,6 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         
         
         
-        
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
@@ -142,10 +146,6 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         let EndTimeMillis = EndTime?.timeIntervalSince1970
         
         currentTime = Date()
-        
-        
-        
-        
         
         
         
@@ -182,42 +182,6 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
             
             if(Double(startTimeMillis!) > Double (currentTimeMillis))
             {
-                
-                /*
-                if countdownTimer.isValid
-                {
-                    countdownTimer.invalidate()
-                    
-                    startTimer()
-                    
-                    cell.lblTimer.isHidden = false
-                    
-                    cell.btnJoinQuiz.isUserInteractionEnabled = false
-                    
-                    cell.btnJoinQuiz.setTitleColor(UIColor.gray, for: .normal)
-                    
-                    Joinbtn = cell.btnJoinQuiz
-                    
-                    totalTime = Int(startTimeMillis! - currentTimeMillis)
-                    
-                    countDownTotalTimeArray.append(totalTime)
-                }
-                else
-                {
-                    cell.lblTimer.isHidden = false
-                    
-                    cell.btnJoinQuiz.isUserInteractionEnabled = false
-                    
-                    cell.btnJoinQuiz.setTitleColor(UIColor.gray, for: .normal)
-                    
-                    Joinbtn = cell.btnJoinQuiz
-                    
-                    totalTime = Int(startTimeMillis! - currentTimeMillis)
-                    
-                    countDownTotalTimeArray.append(totalTime)
-                }
- 
-                */
                 
                 cell.lblTimer.isHidden = false
                 
@@ -386,6 +350,8 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
                         WinnerTimeOut = self.QuizList["quiz_winner_timeout"].intValue
                         LooserTimeOut = self.QuizList["quiz_looser_timeout"].intValue
                         
+                        print(self.countDownTotalTimeArray)
+                        
                         self.QuizListCollectionView.reloadData()
                         
                         self.startTimer()
@@ -465,20 +431,19 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     @IBAction func btnRefresh(_ sender: UIButton) {
         
+        totalTime = 0
+        countDownTotalTimeArray = []
         
-        loadQuizList()
+        print(countDownTotalTimeArray)
         
-        /*
-        if countdownTimer.isValid
-        {
-            endTimer()
-            loadQuizList()
-        }
-        else
-        {
-            loadQuizList()
-        }
-        */
+        
+        endTimer()
+        viewDidAppear(true)
+        
+        //endTimer()
+        //loadQuizList()
+        
+        
     }
     
     
@@ -487,6 +452,8 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     func startTimer() {
         
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+        
+        
     }
     
     @objc func updateTime() {
@@ -499,25 +466,28 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
             
             //cell.btnJoinQuiz.setTitle(timeFormatted(countDownTotalTimeArray[indexPath.row]), for: .normal)
             
-            
-            cell.lblTimer.text = timeFormatted(countDownTotalTimeArray[indexPath.row])
-            
-            if countDownTotalTimeArray[indexPath.row] != 0 {
-                
-                countDownTotalTimeArray[indexPath.row] -= 1
-                
-            }
-            else if countDownTotalTimeArray[indexPath.row] != -1
+            if countDownTotalTimeArray.count != 0
             {
-                cell.lblTimer.isHidden = true
-                cell.btnJoinQuiz.setTitle("Join", for: .normal)
-                cell.btnJoinQuiz.setTitleColor(UIColor(red: 80/255, green: 124/255, blue: 255/255, alpha: 1.0), for: .normal)
-                cell.btnJoinQuiz.isUserInteractionEnabled = true
+                cell.lblTimer.text = timeFormatted(countDownTotalTimeArray[indexPath.row])
+                
+                if countDownTotalTimeArray[indexPath.row] != 0 {
+                    
+                    countDownTotalTimeArray[indexPath.row] -= 1
+                    
+                }
+                else if countDownTotalTimeArray[indexPath.row] != -1
+                {
+                    cell.lblTimer.isHidden = true
+                    cell.btnJoinQuiz.setTitle("Join", for: .normal)
+                    cell.btnJoinQuiz.setTitleColor(UIColor(red: 80/255, green: 124/255, blue: 255/255, alpha: 1.0), for: .normal)
+                    cell.btnJoinQuiz.isUserInteractionEnabled = true
+                }
+                else
+                {
+                    endTimer()
+                }
             }
-            else
-            {
-                endTimer()
-            }
+            
         }
  
         
@@ -539,7 +509,13 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     
     func endTimer() {
         
-        countdownTimer.invalidate()
+        //countdownTimer.invalidate()
+        
+        if(countdownTimer != nil)
+        {
+            countdownTimer.invalidate()
+        }
+        
     }
     
     func timeFormatted(_ totalSeconds: Int) -> String {
@@ -565,12 +541,14 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
     {
         print("Application running again from background")
         
+        endTimer()
+        
         currentTime = Date()
         print(currentTime.timeIntervalSince1970)
         
-        //self.loadFastLog(From_Date : self.from_date , To_Date : self.to_date)
+        totalTimeOut = 0
         
-        loadQuizList()
+        viewDidAppear(true)
         
     }
     
