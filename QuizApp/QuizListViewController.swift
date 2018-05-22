@@ -358,7 +358,16 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
                         
                         self.QuizListCollectionView.reloadData()
                         
-                        self.startTimer()
+                        if self.countdownTimer != nil
+                        {
+                            self.countdownTimer.invalidate()
+                            self.startTimer()
+                        }
+                        else
+                        {
+                            self.startTimer()
+                        }
+                        
                         
                     }
                         
