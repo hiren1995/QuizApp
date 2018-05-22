@@ -108,7 +108,7 @@
 		18E842D220B3FD1B004FD52E /* AboutUsSecondIndexTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsSecondIndexTableViewCell.xib; sourceTree = "<group>"; };
 		18E842D720B3FDDC004FD52E /* AboutUsThirdIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsThirdIndexTableViewCell.swift; sourceTree = "<group>"; };
 		18E842D820B3FDDC004FD52E /* AboutUsThirdIndexTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsThirdIndexTableViewCell.xib; sourceTree = "<group>"; };
-		18F6CB0E20A2BD5F0087955D /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18F6CB0E20A2BD5F0087955D /* Comodo Pintup Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Comodo Pintup Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F6CB1120A2BD5F0087955D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18F6CB1620A2BD5F0087955D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18F6CB1820A2BD610087955D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 		18F6CB0F20A2BD5F0087955D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18F6CB0E20A2BD5F0087955D /* QuizApp.app */,
+				18F6CB0E20A2BD5F0087955D /* Comodo Pintup Challenge.app */,
 				18F6CB2220A2BD610087955D /* QuizAppTests.xctest */,
 				18F6CB2D20A2BD610087955D /* QuizAppUITests.xctest */,
 			);
@@ -335,7 +335,7 @@
 			);
 			name = QuizApp;
 			productName = QuizApp;
-			productReference = 18F6CB0E20A2BD5F0087955D /* QuizApp.app */;
+			productReference = 18F6CB0E20A2BD5F0087955D /* Comodo Pintup Challenge.app */;
 			productType = "com.apple.product-type.application";
 		};
 		18F6CB2120A2BD610087955D /* QuizAppTests */ = {
@@ -813,7 +813,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adweb.QuizApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Comodo Pintup Challenge";
 				PROVISIONING_PROFILE = "a5e7f3e2-711b-4648-a039-03bf4f0233f1";
 				PROVISIONING_PROFILE_SPECIFIER = QuizApp_adweb_Development1;
 				SWIFT_OBJC_BRIDGING_HEADER = "QuizApp/QuizApp-Bridging-Header.h";
@@ -840,7 +840,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adweb.QuizApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Comodo Pintup Challenge";
 				PROVISIONING_PROFILE = "a5e7f3e2-711b-4648-a039-03bf4f0233f1";
 				PROVISIONING_PROFILE_SPECIFIER = QuizApp_adweb_Development1;
 				SWIFT_OBJC_BRIDGING_HEADER = "QuizApp/QuizApp-Bridging-Header.h";

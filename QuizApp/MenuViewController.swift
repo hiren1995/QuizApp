@@ -73,6 +73,11 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 userdefault.removeObject(forKey: userId)
                 userdefault.removeObject(forKey: userToken)
                 userdefault.removeObject(forKey: userData)
+                userdefault.removeObject(forKey: contactNoToVerify)
+                userdefault.removeObject(forKey: LoginMobileNo)
+                userdefault.removeObject(forKey: LoginPassword)
+                userdefault.removeObject(forKey: TotalTimeOutDefault)
+                
                 
                 GIDSignIn.sharedInstance().signOut()
                 fbLoginManager.logOut()

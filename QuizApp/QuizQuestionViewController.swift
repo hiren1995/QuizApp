@@ -285,7 +285,6 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
                 self.showAlert(title: "Select One Option", message: "Please Select atleast one Option")
             }
             
-            
         }
         else
         {
@@ -375,6 +374,8 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
             
             totalTimeOut = Int(EndTime.timeIntervalSince1970) + (WinnerTimeOut * 60)
             
+            userdefault.set(totalTimeOut, forKey: TotalTimeOutDefault)
+            
             print("diff \(totalTimeOut - Int(EndTime.timeIntervalSince1970))")
         }
         else
@@ -383,6 +384,9 @@ class QuizQuestionViewController: UIViewController,UITableViewDelegate,UITableVi
             
             print(LooserTimeOut)
             totalTimeOut = Int(EndTime.timeIntervalSince1970) + (LooserTimeOut * 60)
+            
+            userdefault.set(totalTimeOut, forKey: TotalTimeOutDefault)
+            
             print("diff \(totalTimeOut - Int(EndTime.timeIntervalSince1970))")
         }
         

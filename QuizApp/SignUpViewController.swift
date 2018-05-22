@@ -67,10 +67,12 @@ class SignUpViewController: UIViewController,UITextFieldDelegate,UIImagePickerCo
             {
                 self.showAlert(title: "Alert", message: "Mobile Number must of 10 digits")
             }
+            /*
             else if(imgProfilePic.image == UIImage(named: "dummy"))
             {
                  self.showAlert(title: "Alert", message: "Please Select Profile Pic for your Account")
             }
+            */
             else
             {
                 let imgData = UIImageJPEGRepresentation(imgProfilePic.image!, 0.1)
@@ -313,6 +315,10 @@ class SignUpViewController: UIViewController,UITextFieldDelegate,UIImagePickerCo
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func btnBack(_ sender: UIButton) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

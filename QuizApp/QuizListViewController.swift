@@ -327,9 +327,21 @@ class QuizListViewController: UIViewController,UICollectionViewDelegate,UICollec
         print(currentTime.timeIntervalSince1970)
         print(totalTimeOut)
         
+        //if(Int(currentTime.timeIntervalSince1970) >= totalTimeOut)
+        //{
+        
+        if(userdefault.value(forKey: TotalTimeOutDefault)  != nil)
+        {
+            totalTimeOut = userdefault.value(forKey: TotalTimeOutDefault) as! Int
+            
+
+        }
+        
         if(Int(currentTime.timeIntervalSince1970) >= totalTimeOut)
         {
             totalTimeOut = 0
+            
+            userdefault.set(nil, forKey: TotalTimeOutDefault)
             
             lblDisplay.isHidden = true
             

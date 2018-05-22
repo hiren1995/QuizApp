@@ -21,6 +21,7 @@ var LoginMobileNo = "LoginMobileNo"
 var LoginPassword = "LoginPassword"
 var DeviceToken = "DeviceToken"
 var DeviceId = "DeviceToken"
+var TotalTimeOutDefault = "TotalTimeOutDefault"
 
 var LoginParameters = "LoginParameters"
 
