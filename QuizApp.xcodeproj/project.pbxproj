@@ -25,6 +25,8 @@
 		18C2F40920A5C5DC00B627BF /* QuizQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2F40720A5C5DC00B627BF /* QuizQuestionTableViewCell.xib */; };
 		18E04D0E20AC10CB00A0A880 /* MyQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E04D0D20AC10CA00A0A880 /* MyQuizViewController.swift */; };
 		18E04D1020AC10F600A0A880 /* MyQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E04D0F20AC10F600A0A880 /* MyQuizTableViewCell.swift */; };
+		18E53ED720B53A9C00401485 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E53ED620B53A9C00401485 /* ForgetPasswordViewController.swift */; };
+		18E53ED920B566CC00401485 /* QuizRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E53ED820B566CC00401485 /* QuizRulesViewController.swift */; };
 		18E842CF20B3F36B004FD52E /* AboutUsFirstIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E842CD20B3F36B004FD52E /* AboutUsFirstIndexTableViewCell.swift */; };
 		18E842D020B3F36B004FD52E /* AboutUsFirstIndexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E842CE20B3F36B004FD52E /* AboutUsFirstIndexTableViewCell.xib */; };
 		18E842D320B3FD1B004FD52E /* AboutUsSecondIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E842D120B3FD1B004FD52E /* AboutUsSecondIndexTableViewCell.swift */; };
@@ -102,6 +104,8 @@
 		18C2F40720A5C5DC00B627BF /* QuizQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizQuestionTableViewCell.xib; sourceTree = "<group>"; };
 		18E04D0D20AC10CA00A0A880 /* MyQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuizViewController.swift; sourceTree = "<group>"; };
 		18E04D0F20AC10F600A0A880 /* MyQuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuizTableViewCell.swift; sourceTree = "<group>"; };
+		18E53ED620B53A9C00401485 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		18E53ED820B566CC00401485 /* QuizRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRulesViewController.swift; sourceTree = "<group>"; };
 		18E842CD20B3F36B004FD52E /* AboutUsFirstIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsFirstIndexTableViewCell.swift; sourceTree = "<group>"; };
 		18E842CE20B3F36B004FD52E /* AboutUsFirstIndexTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsFirstIndexTableViewCell.xib; sourceTree = "<group>"; };
 		18E842D120B3FD1B004FD52E /* AboutUsSecondIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsSecondIndexTableViewCell.swift; sourceTree = "<group>"; };
@@ -241,6 +245,8 @@
 				18C2F40620A5C5DC00B627BF /* QuizQuestionTableViewCell.swift */,
 				18C2F40720A5C5DC00B627BF /* QuizQuestionTableViewCell.xib */,
 				188A805320A6DB7E00475AE0 /* QuizCompletedViewController.swift */,
+				18E53ED620B53A9C00401485 /* ForgetPasswordViewController.swift */,
+				18E53ED820B566CC00401485 /* QuizRulesViewController.swift */,
 				18F6CB1820A2BD610087955D /* Assets.xcassets */,
 				18F6CB1A20A2BD610087955D /* LaunchScreen.storyboard */,
 				18F6CB1D20A2BD610087955D /* Info.plist */,
@@ -615,6 +621,8 @@
 				18E04D0E20AC10CB00A0A880 /* MyQuizViewController.swift in Sources */,
 				18F839A420A4546500E8523E /* QuizListCollectionViewCell.swift in Sources */,
 				18E842D920B3FDDC004FD52E /* AboutUsThirdIndexTableViewCell.swift in Sources */,
+				18E53ED920B566CC00401485 /* QuizRulesViewController.swift in Sources */,
+				18E53ED720B53A9C00401485 /* ForgetPasswordViewController.swift in Sources */,
 				18C2F40520A5BA2500B627BF /* QuizQuestionViewController.swift in Sources */,
 				18F8399E20A4499100E8523E /* QuizListViewController.swift in Sources */,
 				18F6CB1220A2BD5F0087955D /* AppDelegate.swift in Sources */,
@@ -803,7 +811,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = QuizApp/QuizApp.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Janak Mehta (AL6SSH4JJ3)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ADWEB TECHNOLOGIES PRIVATE LIMITED (S6BT78C69G)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = S6BT78C69G;
 				INFOPLIST_FILE = QuizApp/Info.plist;
@@ -814,8 +822,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adweb.QuizApp;
 				PRODUCT_NAME = "Comodo Pintup Challenge";
-				PROVISIONING_PROFILE = "a5e7f3e2-711b-4648-a039-03bf4f0233f1";
-				PROVISIONING_PROFILE_SPECIFIER = QuizApp_adweb_Development1;
+				PROVISIONING_PROFILE = "d7cce247-c967-45ad-bd7f-bec5619a48e5";
+				PROVISIONING_PROFILE_SPECIFIER = QuizApp_Distribution1;
 				SWIFT_OBJC_BRIDGING_HEADER = "QuizApp/QuizApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -830,7 +838,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = QuizApp/QuizApp.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Janak Mehta (AL6SSH4JJ3)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ADWEB TECHNOLOGIES PRIVATE LIMITED (S6BT78C69G)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = S6BT78C69G;
 				INFOPLIST_FILE = QuizApp/Info.plist;
@@ -841,8 +849,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adweb.QuizApp;
 				PRODUCT_NAME = "Comodo Pintup Challenge";
-				PROVISIONING_PROFILE = "a5e7f3e2-711b-4648-a039-03bf4f0233f1";
-				PROVISIONING_PROFILE_SPECIFIER = QuizApp_adweb_Development1;
+				PROVISIONING_PROFILE = "d7cce247-c967-45ad-bd7f-bec5619a48e5";
+				PROVISIONING_PROFILE_SPECIFIER = QuizApp_Distribution1;
 				SWIFT_OBJC_BRIDGING_HEADER = "QuizApp/QuizApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

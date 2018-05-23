@@ -23,6 +23,7 @@ var DeviceToken = "DeviceToken"
 var DeviceId = "DeviceToken"
 var TotalTimeOutDefault = "TotalTimeOutDefault"
 
+
 var LoginParameters = "LoginParameters"
 
 var baseUrl = "https://bulale.in/quiz/index.php/api/"
@@ -41,3 +42,4 @@ var aboutUsDetailsAPI = "\(baseUrl)/user/about_us_details"
 var myQuizListAPI = "\(baseUrl)/user/my_quiz_list"
 var myQuizResultAPI = "\(baseUrl)/user/my_quiz_result"
 var resendOTPAPI = "\(baseUrl)/user/resend_otp"
+var ForgetPasswordAPI = "\(baseUrl)/user/forgot_password"

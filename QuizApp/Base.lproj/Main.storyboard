@@ -24,7 +24,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="signInViewController" id="BYZ-38-t0r" customClass="SignInViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signInViewController" id="BYZ-38-t0r" customClass="SignInViewController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,6 +166,17 @@
                                     <action selector="btnGoogleSignin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kGJ-kz-Z8D"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8M-Fd-bD3">
+                                <rect key="frame" x="16" y="546" width="343" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="15"/>
+                                <state key="normal" title="Forget Password ? ">
+                                    <color key="titleColor" red="0.31372549020000001" green="0.48627450979999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnForgetPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lbV-Jh-LjA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -184,7 +195,7 @@
         <!--Menu View Controller-->
         <scene sceneID="bHq-GY-CPb">
             <objects>
-                <viewController storyboardIdentifier="menuViewController" id="1wG-N1-QwC" customClass="MenuViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="menuViewController" id="1wG-N1-QwC" customClass="MenuViewController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tYz-fQ-QN4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,7 +205,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuTableViewCell" rowHeight="70" id="aCS-NV-JSv" customClass="MenuTableViewCell" customModule="QuizApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuTableViewCell" rowHeight="70" id="aCS-NV-JSv" customClass="MenuTableViewCell" customModule="Comodo_Pintup_Challenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aCS-NV-JSv" id="Ds2-EL-UmP">
@@ -267,7 +278,7 @@
         <!--Slide View Controller-->
         <scene sceneID="OaK-Jf-Igo">
             <objects>
-                <viewController storyboardIdentifier="slideViewController" id="eGl-o9-M0Y" customClass="SlideViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="slideViewController" id="eGl-o9-M0Y" customClass="SlideViewController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BSF-lK-ccL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,7 +293,7 @@
         <!--LEADERBOARD-->
         <scene sceneID="NbH-dW-zPA">
             <objects>
-                <viewController storyboardIdentifier="leaderBoardViewController" id="DYi-iX-Mht" customClass="LeaderBoardViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="leaderBoardViewController" id="DYi-iX-Mht" customClass="LeaderBoardViewController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E9k-mr-jyx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,7 +341,7 @@
         <!--All Quiz View Controller-->
         <scene sceneID="NwO-2e-12q">
             <objects>
-                <viewController storyboardIdentifier="allQuizViewController" id="IYS-r1-L6f" customClass="AllQuizViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="allQuizViewController" id="IYS-r1-L6f" customClass="AllQuizViewController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uJ3-LW-Mc6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -340,7 +351,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98431372549019602" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="allQuizTableViewCell" rowHeight="146" id="aCJ-Az-P7Z" customClass="AllQuizTableViewCell" customModule="QuizApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="allQuizTableViewCell" rowHeight="146" id="aCJ-Az-P7Z" customClass="AllQuizTableViewCell" customModule="Comodo_Pintup_Challenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="375" height="146"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aCJ-Az-P7Z" id="I0P-QB-fij">
@@ -454,7 +465,7 @@
         <!--Particular Quiz View Controller-->
         <scene sceneID="4Xh-qp-fu2">
             <objects>
-                <viewController storyboardIdentifier="particularQuizViewController" id="hj0-6e-gXa" customClass="ParticularQuizViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="particularQuizViewController" id="hj0-6e-gXa" customClass="ParticularQuizViewController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lGl-41-3CL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -492,7 +503,7 @@ UXVpeiAQTmFtZQ
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="particularQuizTableViewCell" rowHeight="128" id="6jX-et-DlG" customClass="ParticularQuizTableViewCell" customModule="QuizApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="particularQuizTableViewCell" rowHeight="128" id="6jX-et-DlG" customClass="ParticularQuizTableViewCell" customModule="Comodo_Pintup_Challenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="375" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6jX-et-DlG" id="t3l-Y6-fKV">
@@ -600,7 +611,7 @@ UXVpeiAQTmFtZQ
         <!--Global Quiz View Controller-->
         <scene sceneID="VW6-rV-7at">
             <objects>
-                <viewController storyboardIdentifier="globalQuizViewController" id="2qa-Wa-mvn" customClass="GlobalQuizViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="globalQuizViewController" id="2qa-Wa-mvn" customClass="GlobalQuizViewController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DKi-Kd-oiY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -610,7 +621,7 @@ UXVpeiAQTmFtZQ
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="globalQuizTableViewCell" rowHeight="128" id="lsX-Ng-4cG" customClass="GlobalQuizTableViewCell" customModule="QuizApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="globalQuizTableViewCell" rowHeight="128" id="lsX-Ng-4cG" customClass="GlobalQuizTableViewCell" customModule="Comodo_Pintup_Challenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="375" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lsX-Ng-4cG" id="nlJ-06-e42">
@@ -721,10 +732,63 @@ UXVpeiAQTmFtZQ
             </objects>
             <point key="canvasLocation" x="2240.8000000000002" y="1730.2848575712146"/>
         </scene>
+        <!--Quiz Rules View Controller-->
+        <scene sceneID="qWF-y8-jRH">
+            <objects>
+                <viewController storyboardIdentifier="quizRulesViewController" id="4Gg-aS-DLQ" customClass="QuizRulesViewController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OXr-rC-Jmg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ocM-Ya-qTn">
+                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quiz Rules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqC-ge-OIg" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                        <rect key="frame" x="56" y="15" width="263" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="4dp-Vd-9Tc">
+                                        <rect key="frame" x="18" y="20" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4i-On-Deu">
+                                        <rect key="frame" x="8" y="10" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="btnBack:" destination="4Gg-aS-DLQ" eventType="touchUpInside" id="V5h-XK-Eml"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8980392157" green="0.098039215690000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xHT-pk-mgP">
+                                <rect key="frame" x="16" y="88" width="343" height="559"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6rW-Mg-u1s"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtRules" destination="xHT-pk-mgP" id="poB-Am-AR8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hIE-wy-PZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639.20000000000005" y="1438.8305847076463"/>
+        </scene>
         <!--ABOUT US-->
         <scene sceneID="AdV-RY-kuv">
             <objects>
-                <viewController storyboardIdentifier="aboutUsViewController" id="tzA-gH-fAS" customClass="AboutUsViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="aboutUsViewController" id="tzA-gH-fAS" customClass="AboutUsViewController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7hC-TC-XR2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -789,7 +853,7 @@ UXVpeiAQTmFtZQ
         <!--QUIZ LIST-->
         <scene sceneID="VRE-8N-cHu">
             <objects>
-                <viewController storyboardIdentifier="quizListViewController" id="SX6-bI-jBu" customClass="QuizListViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="quizListViewController" id="SX6-bI-jBu" customClass="QuizListViewController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dqd-C7-8Lg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -836,7 +900,7 @@ UXVpeiAQTmFtZQ
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="quizListCollectionViewCell" id="4zZ-1o-fzK" customClass="QuizListCollectionViewCell" customModule="QuizApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="quizListCollectionViewCell" id="4zZ-1o-fzK" customClass="QuizListCollectionViewCell" customModule="Comodo_Pintup_Challenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="185" height="185"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -943,7 +1007,7 @@ UXVpeiAQTmFtZQ
         <!--Quiz Question View Controller-->
         <scene sceneID="wjC-ix-wWI">
             <objects>
-                <viewController storyboardIdentifier="quizQuestionViewController" id="Fdq-S8-8pP" customClass="QuizQuestionViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="quizQuestionViewController" id="Fdq-S8-8pP" customClass="QuizQuestionViewController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c8q-2k-2gW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1026,7 +1090,7 @@ UXVpeiAQTmFtZQ
         <!--Quiz Completed View Controller-->
         <scene sceneID="zs1-Qw-eMc">
             <objects>
-                <viewController storyboardIdentifier="quizCompletedViewController" id="hgu-hG-K3y" customClass="QuizCompletedViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="quizCompletedViewController" id="hgu-hG-K3y" customClass="QuizCompletedViewController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QbY-KL-I92">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1126,7 +1190,7 @@ UXVpeiAQTmFtZQ
         <!--Dash Board Tab Bar Controller-->
         <scene sceneID="uIM-xE-kVY">
             <objects>
-                <tabBarController storyboardIdentifier="dashBoardTabBarController" id="Yak-8K-DgS" customClass="DashBoardTabBarController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="dashBoardTabBarController" id="Yak-8K-DgS" customClass="DashBoardTabBarController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="afh-eI-TnP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1147,12 +1211,12 @@ UXVpeiAQTmFtZQ
         <!--Sign Up View Controller-->
         <scene sceneID="eOJ-B4-8Qq">
             <objects>
-                <viewController storyboardIdentifier="signUpViewController" id="zFf-2N-7qF" customClass="SignUpViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signUpViewController" id="zFf-2N-7qF" customClass="SignUpViewController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="65t-LU-OZO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" misplaced="YES" text="Registration" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irS-WF-dRX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Registration" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irS-WF-dRX">
                                 <rect key="frame" x="16" y="209" width="343" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="20"/>
@@ -1289,7 +1353,7 @@ UXVpeiAQTmFtZQ
                                 </subviews>
                                 <color key="backgroundColor" red="0.8980392157" green="0.098039215690000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" misplaced="YES" image="dummy" translatesAutoresizingMaskIntoConstraints="NO" id="rqL-wg-ZHE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="rqL-wg-ZHE">
                                 <rect key="frame" x="137" y="94" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
@@ -1304,14 +1368,14 @@ UXVpeiAQTmFtZQ
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2T-kH-QTI">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2T-kH-QTI">
                                 <rect key="frame" x="137" y="94" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="btnAddPic:" destination="zFf-2N-7qF" eventType="touchUpInside" id="xph-fv-t2R"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zgN-gs-OFc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zgN-gs-OFc">
                                 <rect key="frame" x="207" y="164" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8980392157" green="0.098039215690000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1322,7 +1386,7 @@ UXVpeiAQTmFtZQ
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" misplaced="YES" image="pencil" translatesAutoresizingMaskIntoConstraints="NO" id="eeM-eE-bUa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pencil" translatesAutoresizingMaskIntoConstraints="NO" id="eeM-eE-bUa">
                                 <rect key="frame" x="215" y="172" width="15" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1347,7 +1411,7 @@ UXVpeiAQTmFtZQ
         <!--VerifyOTP View Controller-->
         <scene sceneID="qdD-XT-J6Z">
             <objects>
-                <viewController storyboardIdentifier="verifyOTPViewController" id="KOb-5B-Dz2" customClass="VerifyOTPViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="verifyOTPViewController" id="KOb-5B-Dz2" customClass="VerifyOTPViewController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MK3-q8-uAi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1402,7 +1466,7 @@ UXVpeiAQTmFtZQ
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a44-TX-34H">
                                 <rect key="frame" x="133" y="400" width="108" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="18"/>
                                 <state key="normal" title="Resend OTP">
                                     <color key="titleColor" red="0.31372549020000001" green="0.48627450979999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1449,7 +1513,7 @@ UXVpeiAQTmFtZQ
         <!--My Quiz View Controller-->
         <scene sceneID="9s6-In-pv5">
             <objects>
-                <viewController storyboardIdentifier="myQuizViewController" id="Vru-WK-Jun" customClass="MyQuizViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myQuizViewController" id="Vru-WK-Jun" customClass="MyQuizViewController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Q0-ta-Y5o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1459,7 +1523,7 @@ UXVpeiAQTmFtZQ
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myQuizTableViewCell" rowHeight="146" id="64M-Us-X7h" customClass="MyQuizTableViewCell" customModule="QuizApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myQuizTableViewCell" rowHeight="146" id="64M-Us-X7h" customClass="MyQuizTableViewCell" customModule="Comodo_Pintup_Challenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="375" height="146"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="64M-Us-X7h" id="5u4-xH-B4k">
@@ -1565,7 +1629,7 @@ UXVpeiAQTmFtZQ
         <!--My Quiz Leaderboard View Controller-->
         <scene sceneID="ox9-OG-607">
             <objects>
-                <viewController storyboardIdentifier="myQuizLeaderboardViewController" id="rEE-Xs-Fmy" customClass="MyQuizLeaderboardViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myQuizLeaderboardViewController" id="rEE-Xs-Fmy" customClass="MyQuizLeaderboardViewController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6TJ-59-Enf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1603,7 +1667,7 @@ UXVpeiAQTmFtZQ
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myQuizleaderboardTableViewCell" rowHeight="128" id="J9G-hW-Gjx" customClass="MyQuizleaderboardTableViewCell" customModule="QuizApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myQuizleaderboardTableViewCell" rowHeight="128" id="J9G-hW-Gjx" customClass="MyQuizleaderboardTableViewCell" customModule="Comodo_Pintup_Challenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="375" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J9G-hW-Gjx" id="Y7h-KS-ImM">
@@ -1721,6 +1785,97 @@ UXVpeiAQTmFtZQ
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrN-fv-Hj5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2928.8000000000002" y="2408.5457271364321"/>
+        </scene>
+        <!--Forget Password View Controller-->
+        <scene sceneID="BVx-it-j1g">
+            <objects>
+                <viewController storyboardIdentifier="forgetPasswordViewController" id="u2R-Gu-GYg" customClass="ForgetPasswordViewController" customModule="Comodo_Pintup_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LNs-l5-z3T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter your contact number to get password on mobile." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aif-qD-zMJ">
+                                <rect key="frame" x="16" y="253" width="343" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="9SH-SA-sYE">
+                                <rect key="frame" x="147" y="130" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Mobile Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dY1-8Y-xuy">
+                                <rect key="frame" x="80" y="318" width="214" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2L3-Ca-IbK">
+                                <rect key="frame" x="80" y="370" width="214" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ca-0h-rEl">
+                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="LpE-xW-dD4">
+                                        <rect key="frame" x="18" y="20" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6W5-fR-K7H">
+                                        <rect key="frame" x="8" y="10" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="btnBack:" destination="u2R-Gu-GYg" eventType="touchUpInside" id="C3z-HG-km4"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forget Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpr-m5-Tc8" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                        <rect key="frame" x="56" y="15" width="262" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8980392157" green="0.098039215690000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGd-BD-g1H">
+                                <rect key="frame" x="133" y="398" width="108" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="20"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.8980392157" green="0.098039215690000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.91372549020000005" green="0.92941176469999998" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnSend:" destination="u2R-Gu-GYg" eventType="touchUpInside" id="hKC-Ur-lcJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ckO-Gk-HYk"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtMobileNo" destination="dY1-8Y-xuy" id="o2R-S3-eGP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gSJ-zf-Zd0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="-1375.8620689655174"/>
         </scene>
     </scenes>
     <resources>

@@ -18,8 +18,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBOutlet var imgProfilePic: UIImageView!
     @IBOutlet var lblUserName: UILabel!
     
-    var list = ["Quiz List","LeaderBoard","About Us","Logout"]
-    var imglist = ["ic_quiz_list","ic_leader","ic_settings","logout"]
+    var list = ["Quiz List","LeaderBoard","About Us","Quiz Rules","Logout"]
+    var imglist = ["ic_quiz_list","ic_leader","ic_settings","info","logout"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,17 +50,31 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
-        if(indexPath.row != 3)
+        if(indexPath.row != 4)
         {
-            print(indexPath.row)
             
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if(indexPath.row != 3)
+            {
+                print(indexPath.row)
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                
+                enteredFromMenuIndex = indexPath.row
+                
+                let slideViewController = storyboard.instantiateViewController(withIdentifier: "slideViewController") as! SlideViewController
+                
+                self.present(slideViewController, animated: false, completion: nil)
+                
+            }
+            else
+            {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                
+                let quizRulesViewController = storyboard.instantiateViewController(withIdentifier: "quizRulesViewController") as! QuizRulesViewController
+                
+                self.present(quizRulesViewController, animated: false, completion: nil)
+            }
             
-            enteredFromMenuIndex = indexPath.row
-            
-            let slideViewController = storyboard.instantiateViewController(withIdentifier: "slideViewController") as! SlideViewController
-            
-            self.present(slideViewController, animated: false, completion: nil)
         }
         else
         {
@@ -77,7 +91,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 userdefault.removeObject(forKey: LoginMobileNo)
                 userdefault.removeObject(forKey: LoginPassword)
                 userdefault.removeObject(forKey: TotalTimeOutDefault)
-                
+                totalTimeOut = 0
+                userdefault.setValue(nil, forKey: TotalTimeOutDefault)
                 
                 GIDSignIn.sharedInstance().signOut()
                 fbLoginManager.logOut()

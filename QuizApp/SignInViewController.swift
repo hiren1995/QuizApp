@@ -156,7 +156,7 @@ class SignInViewController: UIViewController,UITextFieldDelegate,GIDSignInUIDele
                 
                 print(JSON(response.result.value))
                 
-                let tempDict = JSON(response.result.value!)
+                var tempDict = JSON(response.result.value!)
                 
                 if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 1)
                 {
@@ -172,6 +172,14 @@ class SignInViewController: UIViewController,UITextFieldDelegate,GIDSignInUIDele
                     let slideViewController = storyboard.instantiateViewController(withIdentifier: "slideViewController") as! SlideViewController
                     
                     self.present(slideViewController, animated: true, completion: nil)
+                    
+                    
+                    
+                    //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    
+                    //let slideViewController = storyboard.instantiateViewController(withIdentifier: "slideViewController") as! SlideViewController
+                    
+                    //self.present(slideViewController, animated: true, completion: nil)
                     
                     
                     
@@ -300,6 +308,14 @@ class SignInViewController: UIViewController,UITextFieldDelegate,GIDSignInUIDele
         
     }
     
+    @IBAction func btnForgetPassword(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let forgetPasswordViewController = storyboard.instantiateViewController(withIdentifier: "forgetPasswordViewController") as! ForgetPasswordViewController
+        
+        self.present(forgetPasswordViewController, animated: true, completion: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

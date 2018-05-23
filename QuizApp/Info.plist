@@ -36,7 +36,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>FacebookAppID</key>
 	<string>823595921362285</string>
 	<key>FacebookDisplayName</key>
@@ -66,17 +66,17 @@
 		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>$(PRODUCT_NAME) wants to use your Camera for Capturing images</string>
+	<string>$(PRODUCT_NAME) wants to use your Camera for Capturing images for profile pictures</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>$(PRODUCT_NAME) wants to use your Photo Library for your Location</string>
+	<string>$(PRODUCT_NAME) wants to use your Location Coordinates for determinig from which region user is playing Quiz</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>$(PRODUCT_NAME) wants to use your Photo Library for your Location</string>
+	<string>$(PRODUCT_NAME) wants to use your Location Coordinates for determinig from which region user is playing Quiz</string>
 	<key>NSLocationUsageDescription</key>
-	<string>$(PRODUCT_NAME) wants to use your Photo Library for your Location</string>
+	<string>$(PRODUCT_NAME) wants to use your Location Coordinates for determinig from which region user is playing Quiz</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>$(PRODUCT_NAME) wants to use your Photo Library for your Location</string>
+	<string>$(PRODUCT_NAME) wants to use your Location Coordinates for determinig from which region user is playing Quiz</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>$(PRODUCT_NAME) wants to use your Photo Library for accessing images</string>
+	<string>$(PRODUCT_NAME) wants to use your Photo Library for accessing images for profile pictures</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Raleway_Bold.ttf</string>

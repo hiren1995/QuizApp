@@ -117,6 +117,11 @@ class GlobalQuizViewController: UIViewController,UITableViewDelegate,UITableView
                     
                     self.GlobalQuizTableView.reloadData()
                 }
+                else if(self.GlobalLeaders["status"] == "failure" && self.GlobalLeaders["status_code"].intValue == 0)
+                {
+                    
+                    self.showAlert(title: "Alert", message: "No winner available.")
+                }
                     
                 else
                 {
