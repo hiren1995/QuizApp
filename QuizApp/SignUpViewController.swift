@@ -79,7 +79,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate,UIImagePickerCo
                 
                 let spinnerActivity = MBProgressHUD.showAdded(to: self.view, animated: true)
                 
-                let updateParameters:Parameters = ["user_name": txtFirstName.text! + txtLastName.text! , "user_contact_no" : txtContactNumber.text! , "user_email" : txtEmail.text! , "user_device_type" : 2 , "user_device_id" : userdefault.value(forKey: DeviceId)!, "user_device_token": userdefault.value(forKey: DeviceToken)! , "user_lat" : tempLatitude! , "user_long" : tempLongitude! , "user_signin": 1 ,"user_password" : txtPassword.text!]
+                let updateParameters:Parameters = ["user_name": txtFirstName.text! + " " + txtLastName.text! , "user_contact_no" : txtContactNumber.text! , "user_email" : txtEmail.text! , "user_device_type" : 2 , "user_device_id" : userdefault.value(forKey: DeviceId)!, "user_device_token": userdefault.value(forKey: DeviceToken)! , "user_lat" : tempLatitude! , "user_long" : tempLongitude! , "user_signin": 1 ,"user_password" : txtPassword.text!]
                 
                 
                 Alamofire.upload(multipartFormData: { (multipartFormData) in

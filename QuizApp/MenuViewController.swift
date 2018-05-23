@@ -121,24 +121,50 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     {
         let userdata = JSON(userdefault.value(forKey: userData))
         
-        let imgurl = userdata["login_user"][0]["user_profile_photo"].stringValue
-        
-        lblUserName.text = userdata["login_user"][0]["user_name"].stringValue
-        
-        KingfisherManager.shared.downloader.downloadImage(with: NSURL(string: imgurl)! as URL, retrieveImageTask: RetrieveImageTask.empty, options: [], progressBlock: nil, completionHandler: { (image,error, imageURL, imageData) in
+        if(userdata["login_user"].exists())
+        {
+            let imgurl = userdata["login_user"][0]["user_profile_photo"].stringValue
             
+            lblUserName.text = userdata["login_user"][0]["user_name"].stringValue
             
-            if(error == nil)
-            {
-                self.imgProfilePic.image = image
+            KingfisherManager.shared.downloader.downloadImage(with: NSURL(string: imgurl)! as URL, retrieveImageTask: RetrieveImageTask.empty, options: [], progressBlock: nil, completionHandler: { (image,error, imageURL, imageData) in
                 
-            }
-            else
-            {
-                self.showAlert(title: "Alert", message: "Something Went Wrong while downloading Profile Image")
-            }
+                
+                if(error == nil)
+                {
+                    self.imgProfilePic.image = image
+                    
+                }
+                else
+                {
+                    self.showAlert(title: "Alert", message: "Something Went Wrong while downloading Profile Image")
+                }
+                
+            })
+        }
+        else
+        {
+            let imgurl = userdata["user_data"][0]["user_profile_photo"].stringValue
             
-        })
+            lblUserName.text = userdata["user_data"][0]["user_name"].stringValue
+            
+            KingfisherManager.shared.downloader.downloadImage(with: NSURL(string: imgurl)! as URL, retrieveImageTask: RetrieveImageTask.empty, options: [], progressBlock: nil, completionHandler: { (image,error, imageURL, imageData) in
+                
+                
+                if(error == nil)
+                {
+                    self.imgProfilePic.image = image
+                    
+                }
+                else
+                {
+                    self.showAlert(title: "Alert", message: "Something Went Wrong while downloading Profile Image")
+                }
+                
+            })
+        }
+        
+        
         
     }
     
